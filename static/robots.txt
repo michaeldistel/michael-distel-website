@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /50x.html
+Disallow: /404.html
+Disallow: /nginx-health
+
+Sitemap: https://michaeldistel.com/sitemap.xml
