@@ -3,6 +3,40 @@
 	<head>
 		<meta charset="utf-8" />
 
+		<script>
+			// Define dataLayer and the gtag function
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+
+			// Default consent state configuration
+			gtag('consent', 'default', {
+				ad_storage: 'denied',
+				ad_user_data: 'denied',
+				ad_personalization: 'denied',
+				analytics_storage: 'denied',
+				functionality_storage: 'denied',
+				personalization_storage: 'denied',
+				security_storage: 'granted'
+			});
+		</script>
+
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-KG6VCVB');
+		</script>
+		<!-- End Google Tag Manager -->
+
 		<!-- Standard Favicon -->
 		<link rel="icon" href="%sveltekit.assets%/favicon.ico" type="image/x-icon" />
 
@@ -41,6 +75,20 @@
 	</head>
 
 	<body class="bg-slate-900 text-gray-100">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-KG6VCVB"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
 		<div style="display: contents">%sveltekit.body%</div>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+		</script>
 	</body>
 </html>
