@@ -3,23 +3,36 @@
 	<head>
 		<meta charset="utf-8" />
 
+		<!-- Consent Mode Default State (must be before GTM) -->
 		<script>
-			// Define dataLayer and the gtag function
 			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
+			function gtag(){dataLayer.push(arguments);}
+			// Try to read consent from localStorage
+			let consent = null;
+			try {
+				consent = JSON.parse(localStorage.getItem('cookieConsent'));
+			} catch (e) {}
+			if (consent) {
+				gtag('consent', 'default', {
+					ad_storage: 'denied',
+					ad_user_data: 'denied',
+					ad_personalization: 'denied',
+					analytics_storage: consent.analytics_storage || 'denied',
+					functionality_storage: consent.functionality_storage || 'denied',
+					personalization_storage: consent.personalization_storage || 'denied',
+					security_storage: 'granted'
+				});
+			} else {
+				gtag('consent', 'default', {
+					ad_storage: 'denied',
+					ad_user_data: 'denied',
+					ad_personalization: 'denied',
+					analytics_storage: 'denied',
+					functionality_storage: 'denied',
+					personalization_storage: 'denied',
+					security_storage: 'granted'
+				});
 			}
-
-			// Default consent state configuration
-			gtag('consent', 'default', {
-				ad_storage: 'denied',
-				ad_user_data: 'denied',
-				ad_personalization: 'denied',
-				analytics_storage: 'denied',
-				functionality_storage: 'denied',
-				personalization_storage: 'denied',
-				security_storage: 'granted'
-			});
 		</script>
 
 		<!-- Google Tag Manager -->
@@ -32,6 +45,9 @@
 					dl = l != 'dataLayer' ? '&l=' + l : '';
 				j.async = true;
 				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				j.onerror = () => {
+					console.error('Failed to load GTM');
+				};
 				f.parentNode.insertBefore(j, f);
 			})(window, document, 'script', 'dataLayer', 'GTM-KG6VCVB');
 		</script>
@@ -87,8 +103,5 @@
 		<!-- End Google Tag Manager (noscript) -->
 
 		<div style="display: contents">%sveltekit.body%</div>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-		</script>
 	</body>
 </html>

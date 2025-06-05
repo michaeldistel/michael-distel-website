@@ -1,13 +1,14 @@
 <script context="module" lang="ts">
+	import { updateConsentState, trackConsentUpdate } from '$lib/gtm';
+	
 	// Declare gtag as a global function
 	declare function gtag(...args: any[]): void;
 </script>
 
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	interface ConsentSettings {
-		ad_storage: 'granted' | 'denied';
-		ad_user_data: 'granted' | 'denied';
-		ad_personalization: 'granted' | 'denied';
 		analytics_storage: 'granted' | 'denied';
 		functionality_storage: 'granted' | 'denied';
 		personalization_storage: 'granted' | 'denied';
@@ -20,10 +21,7 @@
 	let fadeOut = false;
 
 	const defaultConsent: ConsentSettings = {
-		ad_storage: 'denied',
 		analytics_storage: 'denied',
-		ad_user_data: 'granted',
-		ad_personalization: 'granted',
 		personalization_storage: 'denied',
 		functionality_storage: 'denied',
 		security_storage: 'granted'
@@ -33,6 +31,14 @@
 
 	// Initialize consent state on page load
 	function initializeConsent() {
+		if (typeof window.gtag === 'function') {
+			window.gtag('consent', 'default', {
+				analytics_storage: 'denied',
+				personalization_storage: 'denied',
+				functionality_storage: 'denied',
+				security_storage: 'granted'
+			});
+		}
 		window.dataLayer = window.dataLayer || [];
 		window.dataLayer.push({
 			event: 'default_consent',
@@ -46,31 +52,42 @@
 	}
 
 	function updateConsent() {
-		window.dataLayer = window.dataLayer || [];
-		// Use gtag for consent updates
-		gtag('consent', 'update', {
-			...consentSettings,
-			url_passthrough: true
-		});
-
+		if (typeof window.gtag === 'function') {
+			console.log('Calling gtag consent update with:', consentSettings);
+			window.gtag('consent', 'update', {
+				analytics_storage: consentSettings.analytics_storage,
+				functionality_storage: consentSettings.functionality_storage,
+				personalization_storage: consentSettings.personalization_storage,
+				security_storage: 'granted'
+			});
+		}
+		updateConsentState(consentSettings);
+		trackConsentUpdate('updated', 'custom');
 		localStorage.setItem('cookieConsent', JSON.stringify(consentSettings));
 		accepted = true;
 	}
 
 	function acceptAll() {
 		consentSettings = {
-			ad_storage: 'granted',
-			ad_user_data: 'granted',
-			ad_personalization: 'granted',
 			analytics_storage: 'granted',
 			functionality_storage: 'granted',
 			personalization_storage: 'granted',
 			security_storage: 'granted'
 		};
-		gtag('consent', 'update', {
-			...consentSettings,
-			url_passthrough: true
-		});
+		updateConsentState(consentSettings);
+		trackConsentUpdate('updated', 'accept_all');
+		updateConsent();
+	}
+
+	function essentialOnly() {
+		consentSettings = {
+			analytics_storage: 'denied',
+			functionality_storage: 'denied',
+			personalization_storage: 'denied',
+			security_storage: 'granted'
+		};
+		updateConsentState(consentSettings);
+		trackConsentUpdate('updated', 'essential_only');
 		updateConsent();
 	}
 
@@ -79,6 +96,8 @@
 		if (urlParams.get('reset') === 'true') {
 			accepted = false;
 			visible = true;
+			fadeOut = false;
+			consentSettings = { ...defaultConsent };
 			initializeConsent();
 			window.history.replaceState({}, '', window.location.pathname);
 			return;
@@ -92,20 +111,17 @@
 			setTimeout(() => {
 				accepted = true;
 			}, 500);
-			window.dataLayer.push({
-				event: 'consent_update',
-				consent_state: 'restored',
-				user_choice: 'previous',
-				'gtm.uniqueEventId': Date.now() % 1000000,
-				page_location: window.location.href,
-				page_path: window.location.pathname,
-				...consentSettings
-			});
+			trackConsentUpdate('restored', 'previous');
 		} else {
 			visible = true;
+			fadeOut = false;
 			initializeConsent();
 		}
 	}
+
+	onMount(() => {
+		checkCookieConsent();
+	});
 </script>
 
 {#if !accepted || fadeOut}
@@ -116,10 +132,23 @@
 	>
 		<div class="container mx-auto flex flex-col gap-4">
 			<div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-				<p class="text-sm">
-					We use cookies to enhance your experience. Choose your preferences below.
-				</p>
+				<div class="flex-1">
+					<p class="text-sm">
+						We use cookies to enhance your experience. Choose your preferences below. Read our 
+						<a href="/privacy" class="text-[rgb(96,165,250)] hover:text-[rgb(96,165,250)]/80 transition-colors">Privacy & Cookie Policy</a> 
+						for more information.
+					</p>
+					<p class="text-xs text-gray-400 mt-1">
+						Cookies will expire after 12 months unless cleared earlier.
+					</p>
+				</div>
 				<div class="flex gap-2">
+					<button
+						on:click={essentialOnly}
+						class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm"
+					>
+						Essential Only
+					</button>
 					<button
 						on:click={() => (showDetails = !showDetails)}
 						class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm"
@@ -151,42 +180,6 @@
 								<p class="text-xs text-gray-400 mt-1">
 									Helps us understand how visitors interact with our website to improve user
 									experience.
-								</p>
-							</div>
-						</label>
-					</div>
-
-					<div class="mb-4">
-						<label class="flex items-center gap-2">
-							<input
-								type="checkbox"
-								checked={consentSettings.ad_storage === 'granted'}
-								on:change={() =>
-									(consentSettings.ad_storage =
-										consentSettings.ad_storage === 'granted' ? 'denied' : 'granted')}
-							/>
-							<div>
-								<span class="font-semibold">Advertising Storage</span>
-								<p class="text-xs text-gray-400 mt-1">
-									Enables features related to advertising and conversion tracking.
-								</p>
-							</div>
-						</label>
-					</div>
-
-					<div class="mb-4">
-						<label class="flex items-center gap-2">
-							<input
-								type="checkbox"
-								checked={consentSettings.ad_personalization === 'granted'}
-								on:change={() =>
-									(consentSettings.ad_personalization =
-										consentSettings.ad_personalization === 'granted' ? 'denied' : 'granted')}
-							/>
-							<div>
-								<span class="font-semibold">Ad Personalization</span>
-								<p class="text-xs text-gray-400 mt-1">
-									Allows for personalized advertising experiences.
 								</p>
 							</div>
 						</label>
