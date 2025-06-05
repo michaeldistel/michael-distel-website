@@ -7,8 +7,6 @@ try {
   commit = execSync('git rev-parse --short HEAD').toString().trim();
 } catch (e) {}
 
-const timestamp = new Date().toISOString();
-
 const content = `// This file is auto-generated at build time
 export const BUILD_COMMIT = '${commit}';
 `;
