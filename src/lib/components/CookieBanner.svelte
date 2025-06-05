@@ -1,24 +1,25 @@
 <script context="module" lang="ts">
 	import { updateConsentState, trackConsentUpdate } from '$lib/gtm';
-	
+	import { onMount } from 'svelte';
+
 	// Declare gtag as a global function
 	declare function gtag(...args: any[]): void;
 </script>
 
 <script lang="ts">
-	import { onMount } from 'svelte';
-
 	interface ConsentSettings {
 		analytics_storage: 'granted' | 'denied';
 		functionality_storage: 'granted' | 'denied';
 		personalization_storage: 'granted' | 'denied';
 		security_storage: 'granted';
+		[key: string]: 'granted' | 'denied'; // Add index signature
 	}
 
 	let accepted = false;
 	let showDetails = false;
 	let visible = false;
 	let fadeOut = false;
+	let mounted = false;
 
 	const defaultConsent: ConsentSettings = {
 		analytics_storage: 'denied',
@@ -31,14 +32,7 @@
 
 	// Initialize consent state on page load
 	function initializeConsent() {
-		if (typeof window.gtag === 'function') {
-			window.gtag('consent', 'default', {
-				analytics_storage: 'denied',
-				personalization_storage: 'denied',
-				functionality_storage: 'denied',
-				security_storage: 'granted'
-			});
-		}
+		if (!mounted) return;
 		window.dataLayer = window.dataLayer || [];
 		window.dataLayer.push({
 			event: 'default_consent',
@@ -52,22 +46,19 @@
 	}
 
 	function updateConsent() {
-		if (typeof window.gtag === 'function') {
-			console.log('Calling gtag consent update with:', consentSettings);
-			window.gtag('consent', 'update', {
-				analytics_storage: consentSettings.analytics_storage,
-				functionality_storage: consentSettings.functionality_storage,
-				personalization_storage: consentSettings.personalization_storage,
-				security_storage: 'granted'
-			});
-		}
+		if (!mounted) return;
 		updateConsentState(consentSettings);
 		trackConsentUpdate('updated', 'custom');
 		localStorage.setItem('cookieConsent', JSON.stringify(consentSettings));
 		accepted = true;
+		fadeOut = true;
+		setTimeout(() => {
+			visible = false;
+		}, 300);
 	}
 
 	function acceptAll() {
+		if (!mounted) return;
 		consentSettings = {
 			analytics_storage: 'granted',
 			functionality_storage: 'granted',
@@ -80,6 +71,7 @@
 	}
 
 	function essentialOnly() {
+		if (!mounted) return;
 		consentSettings = {
 			analytics_storage: 'denied',
 			functionality_storage: 'denied',
@@ -92,12 +84,12 @@
 	}
 
 	function checkCookieConsent() {
+		if (!mounted) return;
 		const urlParams = new URLSearchParams(window.location.search);
 		if (urlParams.get('reset') === 'true') {
 			accepted = false;
-			visible = true;
 			fadeOut = false;
-			consentSettings = { ...defaultConsent };
+			visible = true;
 			initializeConsent();
 			window.history.replaceState({}, '', window.location.pathname);
 			return;
@@ -105,37 +97,47 @@
 
 		const saved = localStorage.getItem('cookieConsent');
 		if (saved) {
-			consentSettings = JSON.parse(saved);
-			visible = true;
-			fadeOut = true;
-			setTimeout(() => {
-				accepted = true;
-			}, 500);
-			trackConsentUpdate('restored', 'previous');
+			try {
+				consentSettings = JSON.parse(saved);
+				visible = true;
+				fadeOut = true;
+				setTimeout(() => {
+					accepted = true;
+				}, 300);
+				trackConsentUpdate('restored', 'previous');
+			} catch (e) {
+				console.error('Error parsing saved consent:', e);
+				visible = true;
+				initializeConsent();
+			}
 		} else {
 			visible = true;
-			fadeOut = false;
 			initializeConsent();
 		}
 	}
 
 	onMount(() => {
+		mounted = true;
 		checkCookieConsent();
 	});
 </script>
 
-{#if !accepted || fadeOut}
+{#if visible}
 	<div
-		class="fixed bottom-0 left-0 right-0 bg-gray-800 p-4 shadow-lg z-50 {visible
-			? 'banner-enter-active'
-			: 'banner-enter'} {fadeOut ? 'banner-exit-active' : ''}"
+		class="fixed bottom-0 left-0 right-0 bg-gray-800 p-4 shadow-lg z-50 transition-all duration-300 ease-in-out {fadeOut
+			? 'opacity-0 translate-y-full'
+			: 'opacity-100 translate-y-0'}"
 	>
 		<div class="container mx-auto flex flex-col gap-4">
 			<div class="flex flex-col sm:flex-row items-center justify-between gap-4">
 				<div class="flex-1">
 					<p class="text-sm">
-						We use cookies to enhance your experience. Choose your preferences below. Read our 
-						<a href="/privacy" class="text-[rgb(96,165,250)] hover:text-[rgb(96,165,250)]/80 transition-colors">Privacy & Cookie Policy</a> 
+						We use cookies to enhance your experience. Choose your preferences below. Read our
+						<a
+							href="/privacy"
+							class="text-[rgb(96,165,250)] hover:text-[rgb(96,165,250)]/80 transition-colors"
+							>Privacy & Cookie Policy</a
+						>
 						for more information.
 					</p>
 					<p class="text-xs text-gray-400 mt-1">
@@ -233,8 +235,6 @@
 		</div>
 	</div>
 {/if}
-
-<svelte:window on:load={checkCookieConsent} />
 
 <style>
 	.banner-enter {

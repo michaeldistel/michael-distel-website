@@ -7,6 +7,8 @@ declare global {
 }
 
 export const initializeGTM = () => {
+    if (typeof window === 'undefined') return;
+
     // Define dataLayer and the gtag function
     window.dataLayer = window.dataLayer || [];
     function gtag(...args: any[]) {
@@ -49,17 +51,23 @@ export const initializeGTM = () => {
 
 // Update consent state
 export const updateConsentState = (consentSettings: Record<string, 'granted' | 'denied'>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window === 'undefined' || !window.gtag) return;
+
+    try {
         window.gtag('consent', 'update', {
             ...consentSettings,
             wait_for_update: 500
         });
+    } catch (error) {
+        console.error('Error updating consent state:', error);
     }
 };
 
 // Track consent state changes
 export const trackConsentUpdate = (consentState: string, userChoice: string) => {
-    if (typeof window !== 'undefined' && window.dataLayer) {
+    if (typeof window === 'undefined' || !window.dataLayer) return;
+
+    try {
         window.dataLayer.push({
             event: 'consent_update',
             consent_state: consentState,
@@ -68,5 +76,7 @@ export const trackConsentUpdate = (consentState: string, userChoice: string) => 
             page_location: window.location.href,
             page_path: window.location.pathname
         });
+    } catch (error) {
+        console.error('Error tracking consent update:', error);
     }
 }; 
