@@ -10,14 +10,7 @@
 	<p class="mb-6 md:text-xl sm:text-base">
 		I’ve been calling Singapore home since 2005. When I first arrived, I had little more than a few
 		dreams and a backpack, no job, just the hope of building a life here. Not long after settling
-		in, I spent time at
-		<a
-			href="https://www.schneider-electric.com"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Citect</a
-		>
-		(2006–2008) and then
+		in, I spent time at Citect (2006–2008) and then
 		<a
 			href="https://www.se.com"
 			target="_blank"
