@@ -87,10 +87,33 @@
 			content="A simple website dedicated to sharing information about myself, Michael Distel"
 		/>
 		<meta name="author" content="Michael Distel" />
+		<!-- Add relevant keywords for your site -->
+		<meta name="keywords" content="michael distel, personal website, portfolio, sveltekit" /> 
+
+		<!-- Open Graph Meta Tags (for social media like Facebook, LinkedIn) -->
+		<!-- Ensure 'your-social-image.png' exists in your 'static' folder or update the path -->
+		<meta property="og:title" content="Michael Distel's Website" />
+		<meta property="og:description" content="A simple website dedicated to sharing information about myself, Michael Distel." />
+		<meta property="og:type" content="website" />
+		<!-- Replace with your actual deployed website URL -->
+		<meta property="og:url" content="https://www.michaeldistel.com/" /> 
+		<meta property="og:image" content="%sveltekit.assets%/android-chrome-512x512.png" />
+		<!-- Recommended image size: 1200x630 pixels -->
+
+		<!-- Twitter Card Meta Tags -->
+		<!-- Ensure 'your-twitter-image.png' exists in your 'static' folder or update the path -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Michael Distel's Website" />
+		<meta name="twitter:description" content="A simple website dedicated to sharing information about myself, Michael Distel." />
+		<meta name="twitter:image" content="%sveltekit.assets%/android-chrome-512x512.png" />
+		<!-- Recommended image size: Same as og:image or specific Twitter sizes -->
+		<!-- <meta name="twitter:site" content="@yourTwitterHandle"> -->
+		<!-- <meta name="twitter:creator" content="@yourTwitterHandle"> -->
+
 		%sveltekit.head%
 	</head>
 
-	<body class="bg-slate-900 text-gray-100">
+	<body class="bg-slate-900 text-gray-100" data-sveltekit-preload-data="hover">
 		<!-- Google Tag Manager (noscript) -->
 		<noscript
 			><iframe
