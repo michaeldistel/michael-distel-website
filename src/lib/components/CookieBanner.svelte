@@ -237,22 +237,5 @@
 {/if}
 
 <style>
-	.banner-enter {
-		opacity: 0;
-		transform: translateY(100%);
-	}
-	.banner-enter-active {
-		opacity: 1;
-		transform: translateY(0);
-		transition:
-			opacity 0.3s,
-			transform 0.3s;
-	}
-	.banner-exit-active {
-		opacity: 0;
-		transform: translateY(100%);
-		transition:
-			opacity 0.3s,
-			transform 0.3s;
-	}
+	/* Custom styles removed - using Tailwind transitions instead */
 </style>

@@ -118,6 +118,24 @@
 		<!-- <meta name="twitter:site" content="@yourTwitterHandle"> -->
 		<!-- <meta name="twitter:creator" content="@yourTwitterHandle"> -->
 
+		<!-- Speculation Rules API for Speed Brain functionality -->
+		<script type="speculationrules">
+			{
+				"prerender": [
+					{
+						"where": { "href_matches": "/*" },
+						"eagerness": "moderate"
+					}
+				],
+				"prefetch": [
+					{
+						"where": { "href_matches": "/*" },
+						"eagerness": "conservative"
+					}
+				]
+			}
+		</script>
+
 		%sveltekit.head%
 	</head>
 
