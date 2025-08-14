@@ -14,13 +14,23 @@
 					class="text-[rgb(96,165,250)] hover:text-[rgb(96,165,250)]/80 transition-colors">About</a
 				>
 				<a
+					href="/vc"
+					class="text-[rgb(96,165,250)] hover:text-[rgb(96,165,250)]/80 transition-colors"
+					>VC Notes</a
+				>
+				<a
+					href="/web3"
+					class="text-[rgb(96,165,250)] hover:text-[rgb(96,165,250)]/80 transition-colors">Web3</a
+				>
+				<a
+					href="/industrial"
+					class="text-[rgb(96,165,250)] hover:text-[rgb(96,165,250)]/80 transition-colors"
+					>Industrial</a
+				>
+				<a
 					href="/adventures"
 					class="text-[rgb(96,165,250)] hover:text-[rgb(96,165,250)]/80 transition-colors"
 					>Adventures</a
-				>
-				<a
-					href="/blog"
-					class="text-[rgb(96,165,250)] hover:text-[rgb(96,165,250)]/80 transition-colors">Blog</a
 				>
 				<a
 					href="/contact"

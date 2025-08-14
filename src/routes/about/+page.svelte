@@ -79,7 +79,7 @@
 	<!-- Section: Recent Work and What's Next -->
 	<h3 class="text-lg sm:text-xl font-semibold mb-2">What's Next</h3>
 	<p class="mb-6 md:text-xl sm:text-base">
-		I spent 2024 working at
+		I spent 2024 and early 2025 working at
 		<a
 			href="https://buildbear.io"
 			target="_blank"
