@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-SvelteKit-based personal website with static site generation, Docker containerization, and remote deployment pipeline. Built for simplicity with comprehensive privacy/cookie consent management and production-ready infrastructure.
+SvelteKit-based personal website with static site generation, Docker containerization, and remote deployment pipeline. Built for simplicity with production-ready infrastructure.
 
 ## Architecture & Stack
 
@@ -11,13 +11,15 @@ SvelteKit-based personal website with static site generation, Docker containeriz
 - **Build**: Vite, TypeScript, pnpm package manager
 - **Deployment**: Docker + nginx, deployed to homelab via rsync + Docker Compose
 - **Analytics**: Google Tag Manager with GDPR-compliant consent management
+- **CDN**: Cloudflare (free tier) for DNS, caching, and security
+- **Git Management**: GitHub CLI (`gh`) for repository operations and workflow management
 
 ## Key Development Patterns
 
 ### Routing & Page Structure
 
 - Uses SvelteKit file-based routing in `src/routes/`
-- Global layout in `+layout.svelte` includes Footer, CookieBanner, and canonical URLs
+- Global layout in `+layout.svelte` includes Footer and canonical URLs
 - All pages prerendered via `export const prerender = true` in `+layout.ts`
 - Error pages: `404/+page.svelte` and `50x/+page.svelte` for custom error handling
 
@@ -28,12 +30,11 @@ SvelteKit-based personal website with static site generation, Docker containeriz
 - Link styling: `font-medium text-blue-600 dark:text-blue-500 hover:underline` with `target="_blank" rel="noopener noreferrer"`
 - Responsive text: `md:text-xl sm:text-base` pattern throughout
 
-### Privacy & Consent Management
+### Privacy & Analytics
 
-- Sophisticated GDPR consent system in `src/lib/components/CookieBanner.svelte`
-- GTM integration with consent mode v2 in `src/lib/gtm.ts`
-- Consent state managed via localStorage and dataLayer events
-- Privacy settings page at `/privacy-settings` for user control
+- Basic Google Tag Manager integration loaded directly in `src/app.html`
+- GTM loads without compliance requirements
+- Simple analytics setup without consent management
 
 ## Critical Workflows
 
@@ -66,10 +67,11 @@ pnpm prod:deploy     # Full deployment pipeline:
 ### nginx Configuration (`nginx/default.conf`)
 
 - Domain redirect: `distel.me` → `michaeldistel.com`
-- Cloudflare IP trust configuration for real IP detection
+- Cloudflare IP trust configuration for real IP detection (free tier limitations considered)
 - Static asset caching with `expires 1y` for immutable assets
 - Comprehensive security headers including CSP, HSTS, permissions policy
 - Health check endpoint at `/nginx-health` returns configuration version
+- Works with Cloudflare's free tier proxy and caching features
 
 ### Docker Setup
 
@@ -82,9 +84,7 @@ pnpm prod:deploy     # Full deployment pipeline:
 
 ### Shared Components (`src/lib/components/`)
 
-- `Footer.svelte`: Displays build commit hash, copyright, privacy links
-- `CookieBanner.svelte`: Complex consent management with gtag integration
-- `Toast.svelte`: User notifications (referenced but check if used)
+- `Footer.svelte`: Displays build commit hash, copyright, navigation links
 
 ### Page Content Patterns
 
@@ -97,7 +97,7 @@ pnpm prod:deploy     # Full deployment pipeline:
 
 - `package.json`: Scripts show deployment pipeline and build process
 - `src/routes/+layout.svelte`: Global layout patterns and canonical URL handling
-- `src/lib/gtm.ts`: Analytics and consent management integration
+- `src/app.html`: GTM analytics integration and meta tags
 - `nginx/default.conf`: Production server configuration and security setup
 - `prod.compose.yml`: Containerization and deployment configuration
 
@@ -106,10 +106,9 @@ pnpm prod:deploy     # Full deployment pipeline:
 - All external links use `target="_blank" rel="noopener noreferrer"`
 - Build commit tracking via auto-generated `build-info.ts`
 - Consistent dark theme color palette throughout
-- Privacy-first approach with granular consent controls
 - Mobile-responsive design with consistent breakpoint usage
 
-When making changes, ensure they align with the existing dark theme, maintain the privacy-compliant analytics setup, and follow the established Tailwind class patterns for consistency.
+When making changes, ensure they align with the existing dark theme, maintain the simple analytics setup, and follow the established Tailwind class patterns for consistency.
 
 ## Writing and Content
 

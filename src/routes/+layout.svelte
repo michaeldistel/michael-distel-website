@@ -1,6 +1,5 @@
 <script>
 	import '../app.css';
-	import CookieBanner from '$lib/components/CookieBanner.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import { page } from '$app/stores';
 	
@@ -17,5 +16,3 @@
 	</main>
 	<Footer />
 </div>
-
-<CookieBanner />

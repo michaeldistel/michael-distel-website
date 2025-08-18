@@ -28,19 +28,9 @@
 					>Industrial</a
 				>
 				<a
-					href="/adventures"
-					class="text-[rgb(96,165,250)] hover:text-[rgb(96,165,250)]/80 transition-colors"
-					>Adventures</a
-				>
-				<a
 					href="/contact"
 					class="text-[rgb(96,165,250)] hover:text-[rgb(96,165,250)]/80 transition-colors"
 					>Contact</a
-				>
-				<a
-					href="/privacy"
-					class="text-[rgb(96,165,250)] hover:text-[rgb(96,165,250)]/80 transition-colors"
-					>Privacy & Cookie Policy</a
 				>
 			</div>
 			<div>
