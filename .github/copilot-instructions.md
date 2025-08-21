@@ -25,10 +25,13 @@ SvelteKit-based personal website with statiion, Docker containerization, and rem
 
 ### Styling Conventions
 
-- Consistent container pattern: `<div class="container mx-auto px-4 py-8 max-w-4xl">`
-- Typography hierarchy: `text-3xl sm:text-4xl font-bold` for h1, `text-xl sm:text-2xl font-semibold` for h2
-- Link styling: `font-medium text-blue-600 dark:text-blue-500 hover:underline` with `target="_blank" rel="noopener noreferrer"`
-- Responsive text: `md:text-xl sm:text-base` pattern throughout
+**Use components instead of repeating patterns:**
+- Page containers: Use `PageLayout.svelte` instead of manual container divs
+- Typography hierarchy: Use `PageHeader.svelte` for titles and descriptions  
+- Link styling: Use `ExternalLink.svelte` for all external links (auto-adds security attributes)
+- Card grids: Use `CardGrid.svelte` + `Card.svelte` instead of manual grid layouts
+- CTA buttons: Use `ActionButton.svelte` for consistent button styling
+- Responsive design: Built into all components, avoid custom breakpoint classes
 
 ### Privacy & Analytics
 
@@ -80,18 +83,55 @@ pnpm prod:deploy     # Full deployment pipeline:
 - External proxy network for reverse proxy integration
 - Health checks via curl to nginx-health endpoint
 
-## Component Patterns
+## Component Architecture
+
+### Core Principle: Avoid Code Duplication
+
+Use the established component system to maintain visual consistency and eliminate repeated patterns. Never copy-paste layout or styling code - use components instead.
+
+### Layout Components (`src/lib/components/layout/`)
+
+- `PageLayout.svelte`: Universal page container (replaces `<div class="container mx-auto px-4 py-8 max-w-4xl">`)
+- `PageHeader.svelte`: Consistent page titles, subtitles, descriptions
+- `PrintablePage.svelte`: Print-optimized wrapper for documents and analysis notes
+
+### Content Components (`src/lib/components/content/`)
+
+- `CardGrid.svelte`: Flexible grid system (1-4 columns, configurable gaps)
+- `Card.svelte`: Reusable cards with variants (default, placeholder, category)
+
+### Navigation Components (`src/lib/components/navigation/`)
+
+- `ExternalLink.svelte`: Auto-handles external links with security attributes
+- `BackLink.svelte`: Consistent "← Back to..." navigation pattern  
+- `ActionButton.svelte`: CTA buttons with primary/secondary variants
+
+### Analysis Note System (`src/lib/components/analysis/`)
+
+- `AnalysisNote.svelte`: Interactive wrapper with TOC, reading progress, print handling
+- `CollapsibleSection.svelte`: Expandable content sections
+- `MetricsCard.svelte`: Data visualization cards with trend indicators
+- `Tooltip.svelte`: Contextual information display
 
 ### Shared Components (`src/lib/components/`)
 
 - `Footer.svelte`: Displays build commit hash, copyright, navigation links
 
+### Component Usage Rules
+
+- **Always use PageLayout** instead of manual container divs
+- **All external links** must use ExternalLink component for security
+- **Card layouts** must use CardGrid + Card components
+- **CTA buttons** must use ActionButton component
+- **Page headers** should use PageHeader for consistency
+- **Analysis notes** must use the complete analysis note system
+
 ### Page Content Patterns
 
 - Use semantic HTML with proper heading hierarchy
 - Section comments: `<!-- Section: Name -->`
-- External links always include security attributes
-- Contact sections with consistent email/social link styling
+- Compose pages from components rather than custom HTML/CSS
+- Maintain visual consistency through component usage
 
 ## Key Files to Reference
 

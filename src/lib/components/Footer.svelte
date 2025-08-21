@@ -14,9 +14,9 @@
 					class="text-[rgb(96,165,250)] hover:text-[rgb(96,165,250)]/80 transition-colors">About</a
 				>
 				<a
-					href="/vc"
+					href="/startup"
 					class="text-[rgb(96,165,250)] hover:text-[rgb(96,165,250)]/80 transition-colors"
-					>VC Notes</a
+					>Startup</a
 				>
 				<a
 					href="/web3"

@@ -1,5 +1,11 @@
-<div class="container mx-auto px-4 py-8 max-w-3xl">
-	<h1 class="text-4xl font-bold mb-6">Research Bot Information</h1>
+<script>
+	import PageLayout from '$lib/components/layout/PageLayout.svelte';
+	import PageHeader from '$lib/components/layout/PageHeader.svelte';
+	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
+</script>
+
+<PageLayout maxWidth="3xl">
+	<PageHeader title="Research Bot Information" />
 
 	<section class="mb-8">
 		<h2 class="text-2xl font-semibold mb-4">About the Bot</h2>
@@ -73,10 +79,7 @@ Disallow: /</pre>
 				above), or
 			</li>
 			<li>
-				Contact Michael Distel directly at <a
-					href="mailto:bot@distel.me"
-					class="text-blue-400 hover:text-blue-300">bot@distel.me</a
-				> with your request.
+				Contact Michael Distel directly at <ExternalLink href="mailto:bot@distel.me">bot@distel.me</ExternalLink> with your request.
 			</li>
 		</ul>
 
@@ -87,7 +90,7 @@ Disallow: /</pre>
 		<h2 class="text-2xl font-semibold mb-4">Contact Information</h2>
 		<p>
 			If you have any questions or concerns about this bot's behavior, please contact me through:
-			<a href="mailto:bot@distel.me" class="text-blue-400 hover:text-blue-300"> bot@distel.me </a>
+			<ExternalLink href="mailto:bot@distel.me">bot@distel.me</ExternalLink>
 		</p>
 	</section>
-</div>
+</PageLayout>

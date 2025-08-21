@@ -1,68 +1,74 @@
-<div class="container mx-auto px-4 py-8 max-w-4xl">
-	<!-- Main Heading -->
-	<h1 class="text-3xl sm:text-4xl font-bold mb-4">Slow Adventures</h1>
-	<h2 class="text-xl sm:text-2xl font-semibold mb-6 text-gray-300">
-		Notes on Travel, Persistence, and Small Daily Progress
-	</h2>
+<script>
+	import PageLayout from '$lib/components/layout/PageLayout.svelte';
+	import PageHeader from '$lib/components/layout/PageHeader.svelte';
+	import CardGrid from '$lib/components/content/CardGrid.svelte';
+	import Card from '$lib/components/content/Card.svelte';
+	import ActionButton from '$lib/components/navigation/ActionButton.svelte';
+</script>
+
+<PageLayout>
+	<PageHeader 
+		title="Slow Adventures"
+		subtitle="Notes on Travel, Persistence, and Small Daily Progress"
+	/>
 
 	<!-- Adventures Grid -->
-	<div class="grid md:grid-cols-2 gap-6 mb-8">
+	<CardGrid columns={2} className="mb-8">
 		<!-- Kicking Miles Japan 2017 -->
-		<div class="bg-slate-800 p-6 rounded-lg hover:bg-slate-750 transition-colors">
-			<h3 class="text-lg font-semibold mb-2 text-blue-400">Kicking Miles Japan 2017</h3>
-			<div class="text-sm text-gray-400 mb-3">March 1 - April 9, 2017 • 40 days • 1,800km</div>
+		<Card 
+			title="Kicking Miles Japan 2017"
+			badge="March 1 - April 9, 2017 • 40 days • 1,800km"
+			titleColor="text-blue-400"
+		>
 			<p class="text-sm text-gray-300 mb-4">
 				Four friends, kick-scooters, and 35 cities from Fukuoka to Hakodate. A lesson in persistence
 				and the value of small daily progress.
 			</p>
 			<div class="flex justify-between items-center">
-				<a
-					href="/adventures/kicking-miles-japan-2017"
-					class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline"
-				>
+				<ActionButton href="/adventures/kicking-miles-japan-2017" size="sm">
 					Read the full journey →
-				</a>
+				</ActionButton>
 				<div class="text-xs text-gray-500">Interactive map • Daily logs • Equipment details</div>
 			</div>
-		</div>
+		</Card>
 
 		<!-- Placeholder for Next Adventure -->
-		<div class="bg-slate-800 p-6 rounded-lg border-2 border-dashed border-slate-600">
-			<h3 class="text-lg font-semibold mb-2 text-gray-400">Next Adventure</h3>
-			<div class="text-sm text-gray-500 mb-3">TBD • Planning stage</div>
+		<Card 
+			title="Next Adventure"
+			badge="TBD • Planning stage"
+			variant="placeholder"
+			titleColor="text-gray-400"
+		>
 			<p class="text-sm text-gray-400 mb-4">
 				The next slow adventure is in the planning stages. Each journey builds on lessons from the
 				previous ones.
 			</p>
 			<div class="text-xs text-gray-500">Coming when the timing is right...</div>
-		</div>
-	</div>
+		</Card>
+	</CardGrid>
 
 	<!-- Adventure Categories -->
 	<div class="mb-8">
 		<h3 class="text-lg font-semibold mb-4 text-gray-300">Adventure Types</h3>
-		<div class="grid md:grid-cols-3 gap-4">
-			<div class="bg-slate-800 p-4 rounded-lg text-center">
+		<CardGrid columns={3}>
+			<Card variant="category" title="Human-Powered" titleColor="text-blue-400">
 				<div class="text-2xl mb-2">🛴</div>
-				<h4 class="font-semibold text-sm mb-1">Human-Powered</h4>
 				<p class="text-xs text-gray-400">Kick-scooters, walking, cycling</p>
 				<div class="text-xs text-blue-400 mt-2">1 completed</div>
-			</div>
+			</Card>
 
-			<div class="bg-slate-800 p-4 rounded-lg text-center opacity-60">
+			<Card variant="category" title="Mountain & Remote" titleColor="text-gray-400" className="opacity-60">
 				<div class="text-2xl mb-2">🏔️</div>
-				<h4 class="font-semibold text-sm mb-1">Mountain & Remote</h4>
 				<p class="text-xs text-gray-400">High altitude, wilderness</p>
 				<div class="text-xs text-gray-500 mt-2">Future category</div>
-			</div>
+			</Card>
 
-			<div class="bg-slate-800 p-4 rounded-lg text-center opacity-60">
+			<Card variant="category" title="Water & Islands" titleColor="text-gray-400" className="opacity-60">
 				<div class="text-2xl mb-2">🌊</div>
-				<h4 class="font-semibold text-sm mb-1">Water & Islands</h4>
 				<p class="text-xs text-gray-400">Coastal routes, island hopping</p>
 				<div class="text-xs text-gray-500 mt-2">Future category</div>
-			</div>
-		</div>
+			</Card>
+		</CardGrid>
 	</div>
 
 	<!-- Adventure Philosophy -->
@@ -78,4 +84,4 @@
 			learned about persistence and planning.
 		</p>
 	</div>
-</div>
+</PageLayout>

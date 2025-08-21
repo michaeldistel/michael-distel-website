@@ -1,4 +1,5 @@
-<script>
+<!-- Example: Refactoring the About page using new components -->
+<script lang="ts">
 	import PageLayout from '$lib/components/layout/PageLayout.svelte';
 	import PageHeader from '$lib/components/layout/PageHeader.svelte';
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';

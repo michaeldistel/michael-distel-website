@@ -17,7 +17,7 @@ Investment memos are public explorations of startups and market opportunities, w
 ## File Structure
 
 ```
-src/routes/vc/memos/
+src/routes/startup/memos/
 ├── +page.svelte              # Memos index page (manually maintained list)
 ├── README.md                 # This documentation
 ├── sample-memo/
@@ -30,13 +30,13 @@ src/routes/vc/memos/
 
 ### Step 1: Create Memo Directory
 ```bash
-mkdir src/routes/vc/memos/your-memo-slug
+mkdir src/routes/startup/memos/your-memo-slug
 ```
 
 ### Step 2: Copy Template
 Copy `sample-memo/+page.svelte` as your starting template:
 ```bash
-cp src/routes/vc/memos/sample-memo/+page.svelte src/routes/vc/memos/your-memo-slug/+page.svelte
+cp src/routes/startup/memos/sample-memo/+page.svelte src/routes/startup/memos/your-memo-slug/+page.svelte
 ```
 
 ### Step 3: Update Content
@@ -52,7 +52,7 @@ Manually add your memo to the index page (`+page.svelte`) by uncommenting and up
 ### Step 5: Test
 ```bash
 pnpm dev
-# Visit /vc/memos/your-memo-slug
+# Visit /startup/memos/your-memo-slug
 ```
 
 ## Content Standards & Style Guide
@@ -185,7 +185,7 @@ Every memo must include these sections in this order:
 
 ### Step 1: Add Memo Data
 
-Add your memo to `src/routes/vc/memos/[slug]/+page.ts`:
+Add your memo to `src/routes/startup/memos/[slug]/+page.ts`:
 
 ## Memo Template Structure
 
@@ -222,8 +222,8 @@ Each memo page should include:
 ## URLs and Navigation
 
 - **Main VC page**: `/vc` (links to memos section)
-- **Memos index**: `/vc/memos` (manually maintained list)
-- **Individual memo**: `/vc/memos/your-memo-slug` (static page)
+- **Memos index**: `/startup/memos` (manually maintained list)
+- **Individual memo**: `/startup/memos/your-memo-slug` (static page)
 
 Navigation flow: VC Notes → Investment Memos → Individual Memo → Print/PDF
 

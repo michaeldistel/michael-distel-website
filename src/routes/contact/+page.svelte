@@ -1,46 +1,45 @@
-<div class="container mx-auto px-4 py-8 max-w-4xl">
-	<!-- Main Heading -->
-	<h1 class="text-3xl sm:text-4xl font-bold mb-4">Contact</h1>
+<script>
+	import PageLayout from '$lib/components/layout/PageLayout.svelte';
+	import PageHeader from '$lib/components/layout/PageHeader.svelte';
+	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
+</script>
 
-	<!-- Introduction -->
-	<p class="mb-6 md:text-xl sm:text-base text-gray-300">
-		If you want to get in touch, these are the best ways to reach me. I try to respond to emails
-		within a reasonable time, though I am not always quick about it.
-	</p>
+<PageLayout>
+	<PageHeader 
+		title="Contact"
+		description="If you want to get in touch, these are the best ways to reach me. I try to respond to emails within a reasonable time, though I am not always quick about it."
+	/>
 
 	<!-- Contact Details -->
 	<div class="space-y-4">
 		<div class="mb-4">
 			<h3 class="text-lg font-semibold mb-2">Email</h3>
-			<a
+			<ExternalLink 
 				href="mailto:michael@distel.me"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="font-medium text-blue-600 dark:text-blue-500 hover:underline md:text-xl sm:text-base"
-				>michael@distel.me</a
+				linkClass="font-medium text-blue-600 dark:text-blue-500 hover:underline md:text-xl sm:text-base"
 			>
+				michael@distel.me
+			</ExternalLink>
 		</div>
 
 		<div class="mb-4">
 			<h3 class="text-lg font-semibold mb-2">LinkedIn</h3>
-			<a
+			<ExternalLink 
 				href="https://www.linkedin.com/in/michaeldistel/"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="font-medium text-blue-600 dark:text-blue-500 hover:underline md:text-xl sm:text-base"
-				>linkedin.com/in/michaeldistel/</a
+				linkClass="font-medium text-blue-600 dark:text-blue-500 hover:underline md:text-xl sm:text-base"
 			>
+				linkedin.com/in/michaeldistel/
+			</ExternalLink>
 		</div>
 
 		<div class="mb-4">
 			<h3 class="text-lg font-semibold mb-2">Telegram</h3>
-			<a
+			<ExternalLink 
 				href="https://t.me/michaeldistel"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="font-medium text-blue-600 dark:text-blue-500 hover:underline md:text-xl sm:text-base"
-				>@michaeldistel</a
+				linkClass="font-medium text-blue-600 dark:text-blue-500 hover:underline md:text-xl sm:text-base"
 			>
+				@michaeldistel
+			</ExternalLink>
 		</div>
 	</div>
-</div>
+</PageLayout>

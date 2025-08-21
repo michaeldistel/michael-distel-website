@@ -1,10 +1,10 @@
-<script>
+<!-- Example: Refactoring the Homepage using new components -->
+<script lang="ts">
 	import PageLayout from '$lib/components/layout/PageLayout.svelte';
 	import PageHeader from '$lib/components/layout/PageHeader.svelte';
 	import CardGrid from '$lib/components/content/CardGrid.svelte';
 	import Card from '$lib/components/content/Card.svelte';
 	import ActionButton from '$lib/components/navigation/ActionButton.svelte';
-	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
 </script>
 
 <PageLayout>
@@ -46,13 +46,22 @@
 
 		<Card 
 			title="Industrial Automation" 
+			description="Workflow improvements, small utilities that save effort, and the practicalities of reliable systems."
 			titleColor="text-orange-400"
 		>
-			<p class="text-sm text-gray-300 mb-3">
-				Small workflow improvements, VS Code extensions, testing patterns. Including work on 
-				<ExternalLink href="https://controlforge.dev">controlforge.dev</ExternalLink>.
-			</p>
-			<ActionButton href="/industrial" size="sm">View projects →</ActionButton>
+			<ActionButton href="/industrial" size="sm">Learn more →</ActionButton>
 		</Card>
 	</CardGrid>
+
+	<!-- Contact Section -->
+	<div class="bg-slate-800 p-6 rounded-lg">
+		<h3 class="text-lg font-semibold mb-3 text-gray-300">Get in Touch</h3>
+		<p class="text-sm text-gray-300 mb-4">
+			If something here resonates or if you want to challenge an idea, feel free to reach out. 
+			I am always interested in learning from people who see things differently.
+		</p>
+		<ActionButton href="/contact" variant="secondary" size="sm">
+			Contact details →
+		</ActionButton>
+	</div>
 </PageLayout>

@@ -7,7 +7,7 @@ Simple static page system for investment memos using Markdown as the source of t
 ## File Structure
 
 ```
-src/routes/vc/memos/
+src/routes/startup/memos/
 ├── +page.svelte              # Memos index page (manually maintained list)
 ├── TECHNICAL.md              # This technical documentation
 ├── TEMPLATE.md               # Content structure and style guide
@@ -23,19 +23,19 @@ src/routes/vc/memos/
 
 ### Step 1: Create Memo Directory
 ```bash
-mkdir src/routes/vc/memos/your-memo-slug
+mkdir src/routes/startup/memos/your-memo-slug
 ```
 
 ### Step 2: Create Markdown Reference
 Create `memo.md` with your content (see [TEMPLATE.md](./TEMPLATE.md) for structure):
 ```bash
-touch src/routes/vc/memos/your-memo-slug/memo.md
+touch src/routes/startup/memos/your-memo-slug/memo.md
 ```
 
 ### Step 3: Copy Svelte Template
 Copy the Svelte page template:
 ```bash
-cp src/routes/vc/memos/sample-memo/+page.svelte src/routes/vc/memos/your-memo-slug/+page.svelte
+cp src/routes/startup/memos/sample-memo/+page.svelte src/routes/startup/memos/your-memo-slug/+page.svelte
 ```
 
 ### Step 4: Convert with AI
@@ -56,7 +56,7 @@ Manually add your memo to the index page (`+page.svelte`) by adding the memo ent
 ### Step 6: Test
 ```bash
 pnpm dev
-# Visit /vc/memos/your-memo-slug
+# Visit /startup/memos/your-memo-slug
 ```
 
 ## Content Workflow (AI-Assisted)
@@ -139,7 +139,7 @@ Use semantic HTML with proper styling:
 ```html
 <footer class="mt-12 pt-6 border-t border-gray-700">
     <p class="text-sm text-gray-400">
-        This memo was published on <strong>michaeldistel.com/vc/memos/your-slug</strong> 
+        This memo was published on <strong>michaeldistel.com/startup/memos/your-slug</strong> 
         on 21 August 2025. These are exploratory thoughts and not investment advice.
     </p>
 </footer>
@@ -162,8 +162,8 @@ Use semantic HTML with proper styling:
 ## URLs and Navigation
 
 - **Main VC page**: `/vc` (links to memos section)
-- **Memos index**: `/vc/memos` (manually maintained list)
-- **Individual memo**: `/vc/memos/your-memo-slug` (static page)
+- **Memos index**: `/startup/memos` (manually maintained list)
+- **Individual memo**: `/startup/memos/your-memo-slug` (static page)
 
 ## Development Commands
 

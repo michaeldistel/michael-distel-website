@@ -1,0 +1,191 @@
+/* Analysis Note Shared Styles */
+
+/* Reading progress and navigation styles */
+.analysis-note-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgb(30 41 59);
+    /* slate-800 */
+    z-index: 50;
+}
+
+.analysis-note-progress-bar {
+    height: 100%;
+    background: rgb(59 130 246);
+    /* blue-500 */
+    transition: width 0.3s ease-out;
+}
+
+/* Table of Contents styles */
+.analysis-toc-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 30;
+}
+
+.analysis-toc-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 20rem;
+    /* 320px */
+    background: rgb(15 23 42);
+    /* slate-900 */
+    border-left: 1px solid rgb(51 65 85);
+    /* slate-700 */
+    z-index: 40;
+    overflow-y: auto;
+}
+
+/* Section styling */
+.analysis-section {
+    margin-bottom: 3rem;
+}
+
+.analysis-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.analysis-section-toggle {
+    color: rgb(156 163 175);
+    /* gray-400 */
+    transition: color 0.2s;
+}
+
+.analysis-section-toggle:hover {
+    color: rgb(255 255 255);
+    /* white */
+}
+
+/* Metrics cards */
+.analysis-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.analysis-metrics-card {
+    background: rgb(30 41 59);
+    /* slate-800 */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(51 65 85);
+    /* slate-700 */
+}
+
+.analysis-metrics-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(96 165 250);
+    /* blue-400 */
+}
+
+.analysis-metrics-label {
+    font-size: 0.875rem;
+    color: rgb(209 213 219);
+    /* gray-300 */
+    margin-top: 0.25rem;
+}
+
+.analysis-metrics-trend {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+/* Tooltip styles */
+.analysis-tooltip {
+    position: relative;
+    display: inline;
+}
+
+.analysis-tooltip-text {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: rgb(96 165 250);
+    /* blue-400 */
+    cursor: help;
+}
+
+.analysis-tooltip-popup {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    background: rgb(51 65 85);
+    /* slate-700 */
+    color: white;
+    border-radius: 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 10;
+    transition: opacity 0.2s;
+}
+
+.analysis-tooltip:hover .analysis-tooltip-popup {
+    opacity: 1;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt !important;
+        line-height: 1.5 !important;
+        color: black !important;
+        background: white !important;
+    }
+
+    .container {
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li {
+        color: black !important;
+    }
+
+    .analysis-metrics-card {
+        border: 1px solid #ccc;
+        background: white;
+    }
+
+    .analysis-metrics-value,
+    .analysis-metrics-label {
+        color: black !important;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .analysis-toc-sidebar {
+        width: 100vw;
+    }
+
+    .analysis-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}
