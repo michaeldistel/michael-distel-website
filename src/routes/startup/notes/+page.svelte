@@ -20,7 +20,8 @@
 
 	<!-- Notes List -->
 	<div class="space-y-6">
-		<!-- BuildBear Labs Note -->
+		<!-- BuildBear Labs Note - Hidden for now -->
+		<!-- 
 		<article class="border border-gray-700 rounded-lg p-6 hover:border-gray-600 transition-colors">
 			<h2 class="text-xl font-semibold mb-2">
 				<ExternalLink 
@@ -51,5 +52,6 @@
 				</ExternalLink>
 			</div>
 		</article>
+		-->
 	</div>
 </PageLayout>
