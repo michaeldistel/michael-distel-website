@@ -11,7 +11,7 @@
 	/>
 
 	<!-- Section: A Path to Singapore -->
-	<h3 class="text-lg sm:text-xl font-semibold mb-2">A Path to Singapore</h3>
+	<h3 class="heading-subheading">A Path to Singapore</h3>
 	<p class="mb-6 md:text-xl sm:text-base">
 		I have been calling Singapore home since 2005. When I first arrived, I had little more than a
 		few dreams and a backpack, no job, just the hope of building something here. Not long after
@@ -24,7 +24,7 @@
 	</p>
 
 	<!-- Section: Early Ventures -->
-	<h3 class="text-lg sm:text-xl font-semibold mb-2">Early Ventures</h3>
+	<h3 class="heading-subheading">Early Ventures</h3>
 	<p class="mb-6 md:text-xl sm:text-base">
 		In 2011, I co-founded Feel Beautiful, importing skincare products across Southeast Asia. It
 		sounds simple but taught me about logistics, compliance, and the daily reality of running a
@@ -37,7 +37,7 @@
 	</p>
 
 	<!-- Section: Learning about VC -->
-	<h3 class="text-lg sm:text-xl font-semibold mb-2">Learning about VC</h3>
+	<h3 class="heading-subheading">Learning about VC</h3>
 	<p class="mb-6 md:text-xl sm:text-base">
 		In 2018, I became CTO at
 		<ExternalLink href="https://foodrazor.com">FoodRazor</ExternalLink>
@@ -51,7 +51,7 @@
 	</p>
 
 	<!-- Section: Recent Work and What's Next -->
-	<h3 class="text-lg sm:text-xl font-semibold mb-2">What's Next</h3>
+	<h3 class="heading-subheading">What's Next</h3>
 	<p class="mb-6 md:text-xl sm:text-base">
 		I spent 2024 and early 2025 working at
 		<ExternalLink href="https://buildbear.io">BuildBear Labs</ExternalLink>

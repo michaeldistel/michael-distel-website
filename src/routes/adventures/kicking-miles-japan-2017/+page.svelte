@@ -1,12 +1,12 @@
 <div class="container mx-auto px-4 py-8 max-w-4xl">
 	<!-- Main Heading -->
-	<h1 class="text-3xl sm:text-4xl font-bold mb-4">Kicking Miles Japan 2017</h1>
-	<h2 class="text-xl sm:text-2xl font-semibold mb-6 text-gray-300">
+	<h1 class="heading-page-title">Kicking Miles Japan 2017</h1>
+	<h2 class="heading-page-subtitle">
 		1,800 kilometres across Japan by kick-scooter
 	</h2>
 
 	<!-- Journey Overview -->
-	<h3 class="text-lg sm:text-xl font-semibold mb-2">The Journey</h3>
+	<h3 class="heading-adventure">The Journey</h3>
 	<p class="mb-6 md:text-xl sm:text-base">
 		In March 2017, three friends and I kick-scootered 1,800 kilometres from Fukuoka to Hakodate.
 		Forty days, 35 cities, averaging about 45 kilometres daily. The plan seemed reasonable on paper.
@@ -20,7 +20,7 @@
 	</p>
 
 	<!-- Documentation -->
-	<h3 class="text-lg sm:text-xl font-semibold mb-2">Documentation</h3>
+	<h3 class="heading-adventure">Documentation</h3>
 	<p class="mb-6 md:text-xl sm:text-base">
 		We documented the journey on
 		<a
@@ -40,7 +40,7 @@
 
 	<!-- Route Map -->
 	<!-- Interactive Route Map -->
-	<h3 class="text-lg sm:text-xl font-semibold mb-2">Interactive Route Map</h3>
+	<h3 class="heading-adventure">Interactive Route Map</h3>
 	<p class="mb-4 md:text-xl sm:text-base">
 		Our complete route from Fukuoka to Hakodate, documented with waypoints and major stops:
 	</p>
@@ -239,7 +239,7 @@
 	</div>
 
 	<!-- Daily Entries -->
-	<h3 class="text-lg sm:text-xl font-semibold mb-2">Daily Entries</h3>
+	<h3 class="heading-adventure">Daily Entries</h3>
 	<p class="mb-4 text-sm text-gray-400">
 		Selected moments from the journey, reconstructed from Instagram posts and memory.
 	</p>

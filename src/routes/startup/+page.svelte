@@ -44,7 +44,7 @@
 
 	<!-- Section: Notes -->
 	<section class="mb-12">
-		<h3 class="text-2xl font-semibold mb-4">Notes</h3>
+		<h3 class="heading-section">Notes</h3>
 		<p class="mb-6 text-gray-300">
 			My working thoughts on companies, markets, and opportunities. These are public to invite 
 			conversation and challenge assumptions.

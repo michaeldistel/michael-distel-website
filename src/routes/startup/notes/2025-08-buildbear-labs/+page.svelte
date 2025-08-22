@@ -39,47 +39,40 @@
 >
 	<!-- Startup Overview in the overview slot -->
 	<section slot="overview" class="mb-12 p-6 bg-slate-800 rounded-lg border border-slate-700">
-		<h2 class="text-xl font-semibold mb-6 text-blue-400">Startup Overview</h2>
+		<h2 class="note-heading-h3">Startup Overview</h2>
 
 		<div class="grid md:grid-cols-2 gap-8">
 			<!-- Company Details -->
 			<div>
-				<h3 class="text-lg font-medium mb-4 text-gray-200">Company Details</h3>
+				<h3 class="note-heading-card">Company Details</h3>
 				<div class="space-y-2 text-gray-300">
-					<p><strong class="text-gray-200">Registered Name:</strong> BuildBear Labs</p>
+					<p><strong class="text-gray-200">Registered Name:</strong> BuildBear Labs Pte Ltd</p>
 					<p><strong class="text-gray-200">Founders:</strong> Dipesh Sukhani, Emmanuel Antony</p>
-					<p><strong class="text-gray-200">Founder Equity:</strong> [To be confirmed]</p>
 					<p><strong class="text-gray-200">Location:</strong> Singapore</p>
-					<p><strong class="text-gray-200">Operations:</strong> Global (remote-first)</p>
 					<p>
-						<strong class="text-gray-200">Team Size:</strong> [To be confirmed - approximately 8-12 people]
+						<strong class="text-gray-200">Team Size:</strong> 12
 					</p>
 				</div>
 			</div>
 
 			<!-- Stage & Investment -->
 			<div>
-				<h3 class="text-lg font-medium mb-4 text-gray-200">Stage & Investment</h3>
+				<h3 class="note-heading-card">Stage & Investment</h3>
 				<div class="space-y-2 text-gray-300">
 					<p>
 						<strong class="text-gray-200">Startup Stage:</strong> Growth (established product, scaling)
 					</p>
-					<p><strong class="text-gray-200">Investment Stage:</strong> Series A</p>
-					<p><strong class="text-gray-200">Accelerator:</strong> N/A</p>
-					<p>
-						<strong class="text-gray-200">Funds Raised:</strong> [Previous rounds including syndicate
-						2023]
-					</p>
-					<p>
-						<strong class="text-gray-200">Current Round:</strong> Series A targeting institutional growth
-					</p>
+					<p><strong class="text-gray-200">Investment Stage:</strong> Seed</p>
+					<p><strong class="text-gray-200">Funds Raised to Date:</strong> USD 1.9 million</p>
+					<p><strong class="text-gray-200">Key Investors:</strong> 1kx, Superscrypt, Tribe Capital</p>
+					<p><strong class="text-gray-200">Incubators:</strong> Iterative, Plug and Play</p>
 				</div>
 			</div>
 		</div>
 
 		<!-- Transparency Disclosure -->
 		<div class="bg-slate-800 border-l-4 border-yellow-500 p-6 mt-8 rounded-r-md">
-			<h3 class="text-lg font-semibold mb-3 text-yellow-400">Transparency</h3>
+			<h3 class="note-heading-special">Transparency</h3>
 			<div class="text-sm text-gray-300 space-y-3">
 				<p>
 					I am a shareholder of BuildBear Labs, as a member of a syndicate that invested in 2023. I
@@ -101,7 +94,7 @@
 	<!-- Main Analysis Content -->
 	<section id="quick-take">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Quick Take</h2>
+			<h2 class="note-heading-h2">Quick Take</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('quick-take')}
@@ -127,7 +120,7 @@
 
 	<section id="company-summary">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Company Summary</h2>
+			<h2 class="note-heading-h2">Company Summary</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('company-summary')}
@@ -160,7 +153,7 @@
 
 	<section id="problem-statement">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Problem Statement</h2>
+			<h2 class="note-heading-h2">Problem Statement</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('problem-statement')}
@@ -203,7 +196,7 @@
 
 	<section id="vision">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Vision</h2>
+			<h2 class="note-heading-h2">Vision</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('vision')}
@@ -245,7 +238,7 @@
 
 	<section id="market-opportunity">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Market Opportunity</h2>
+			<h2 class="note-heading-h2">Market Opportunity</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('market-opportunity')}
@@ -311,7 +304,7 @@
 
 	<section id="competitive-analysis">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Competitive Analysis</h2>
+			<h2 class="note-heading-h2">Competitive Analysis</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('competitive-analysis')}
@@ -378,7 +371,7 @@
 
 	<section id="strategic-positioning">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Strategic Positioning</h2>
+			<h2 class="note-heading-h2">Strategic Positioning</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('strategic-positioning')}
@@ -415,7 +408,7 @@
 
 	<section id="business-model">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Business & Revenue Model</h2>
+			<h2 class="note-heading-h2">Business & Revenue Model</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('business-model')}
@@ -442,9 +435,9 @@
 				across user segments.
 			</p>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Revenue Streams</h3>
+			<h3 class="note-heading-h3">Revenue Streams</h3>
 
-			<h4 class="text-lg font-medium mb-2 text-gray-200">1. Tiered Subscription Plans</h4>
+			<h4 class="note-heading-h4">1. Tiered Subscription Plans</h4>
 			<ul class="list-disc ml-6 space-y-1 mb-4 text-gray-300">
 				<li>
 					<strong>Free Tier ($0/month):</strong> 5 active sandboxes, 1,000 transactions/month, limited
@@ -461,13 +454,13 @@
 				</li>
 			</ul>
 
-			<h4 class="text-lg font-medium mb-2 text-gray-200">2. Usage-Based Pricing</h4>
+			<h4 class="note-heading-h4">2. Usage-Based Pricing</h4>
 			<p class="mb-4 text-gray-300">
 				Transaction throughput and sandbox count scale dynamically across tiers. This usage model
 				ensures monetisation increases proportionally with customer growth and engagement.
 			</p>
 
-			<h4 class="text-lg font-medium mb-2 text-gray-200">
+			<h4 class="note-heading-h4">
 				3. Plugin Marketplace (30% Revenue Share)
 			</h4>
 			<ul class="list-disc ml-6 space-y-1 mb-4 text-gray-300">
@@ -481,7 +474,7 @@
 				</li>
 			</ul>
 
-			<h4 class="text-lg font-medium mb-2 text-gray-200">4. Enterprise Integrations</h4>
+			<h4 class="note-heading-h4">4. Enterprise Integrations</h4>
 			<ul class="list-disc ml-6 space-y-1 mb-4 text-gray-300">
 				<li>
 					Custom deployments for large institutions include on-premise/VPC support, SLAs, and
@@ -490,7 +483,7 @@
 				<li>High ACV ($10,000+/yr) with strategic long-term retention and upsell potential</li>
 			</ul>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Growth Levers</h3>
+			<h3 class="note-heading-h3">Growth Levers</h3>
 			<ul class="list-disc ml-6 space-y-2 mb-4 text-gray-300">
 				<li>
 					<strong>Freemium Funnel → Paid Expansion:</strong> Developers start free, scale into Professional
@@ -521,7 +514,7 @@
 
 	<section id="traction">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Traction</h2>
+			<h2 class="note-heading-h2">Traction</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('traction')}
@@ -565,7 +558,7 @@
 				</div>
 			</div>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">User Growth & Activity</h3>
+			<h3 class="note-heading-h3">User Growth & Activity</h3>
 			<p class="mb-4">
 				Monthly Active Users (MAU) rose from 552 in November 2024 to 820 by April 2025, representing
 				nearly 50% growth in just six months. Average month-over-month growth in active users during
@@ -574,7 +567,7 @@
 				stickiness and onboarding effectiveness.
 			</p>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Platform Usage Metrics</h3>
+			<h3 class="note-heading-h3">Platform Usage Metrics</h3>
 			<p class="mb-4">
 				Sandbox creation shows explosive growth, with total sandboxes reaching approximately 250,000
 				by March 2025. Monthly new sandbox creation has accelerated dramatically, jumping from under
@@ -588,7 +581,7 @@
 				through Q1 2025.
 			</p>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Growth Trajectory</h3>
+			<h3 class="note-heading-h3">Growth Trajectory</h3>
 			<p class="mb-4">
 				The data shows BuildBear Labs hitting an inflection point in late 2024, with both user
 				acquisition and platform utilization accelerating simultaneously. The compound growth in
@@ -601,7 +594,7 @@
 
 	<section id="strategy-roadmap">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Strategy & Roadmap</h2>
+			<h2 class="note-heading-h2">Strategy & Roadmap</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('strategy-roadmap')}
@@ -621,7 +614,7 @@
 			</button>
 		</div>
 		{#if !collapsedSections?.has('strategy-roadmap')}
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">
+			<h3 class="note-heading-h3">
 				Short-Term Strategy (Next 12-18 Months)
 			</h3>
 			<p class="mb-4">
@@ -654,7 +647,7 @@
 				</li>
 			</ul>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Long-Term Strategy (2+ Years)</h3>
+			<h3 class="note-heading-h3">Long-Term Strategy (2+ Years)</h3>
 			<p class="mb-4">
 				In the long term, BuildBear Labs aims to own the pre-deployment and simulation layer for all
 				decentralised software. Its broader ambition is to provide developers with an operating
@@ -685,7 +678,7 @@
 
 	<section id="financial-forecast">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Financial Forecast</h2>
+			<h2 class="note-heading-h2">Financial Forecast</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('financial-forecast')}
@@ -713,7 +706,7 @@
 				revenue streams.
 			</p>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Revenue Breakdown & Growth Strategy</h3>
+			<h3 class="note-heading-h3">Revenue Breakdown & Growth Strategy</h3>
 			<ul class="list-disc ml-6 space-y-2 mb-4">
 				<li>
 					<strong>Subscription Revenue</strong> (Professional & Enterprise plans) will provide predictable
@@ -733,7 +726,7 @@
 				</li>
 			</ul>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Strategic Monetisation Approach</h3>
+			<h3 class="note-heading-h3">Strategic Monetisation Approach</h3>
 			<p class="mb-4">
 				BuildBear Labs is deliberately prioritising developer adoption in the near term, with
 				monetisation scaling as usage compounds. This mirrors the land-and-expand model successfully
@@ -753,7 +746,7 @@
 
 	<section id="risk-factors">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Risk Factors & Mitigation</h2>
+			<h2 class="note-heading-h2">Risk Factors & Mitigation</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('risk-factors')}
@@ -773,7 +766,7 @@
 			</button>
 		</div>
 		{#if !collapsedSections?.has('risk-factors')}
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Market Risk</h3>
+			<h3 class="note-heading-h3">Market Risk</h3>
 			<p class="mb-2">
 				<strong>Risk:</strong> The broader Web3 market remains volatile, with cyclical funding, uncertain
 				regulation, and inconsistent developer activity. A slowdown in blockchain adoption, especially
@@ -795,7 +788,7 @@
 				</li>
 			</ul>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">External Risk</h3>
+			<h3 class="note-heading-h3">External Risk</h3>
 			<p class="mb-2">
 				<strong>Risk:</strong> BuildBear's growth depends on integration with external toolchains, protocols,
 				and developer ecosystems. Shifts in open standards, API deprecations, or ecosystem fragmentation
@@ -817,7 +810,7 @@
 				</li>
 			</ul>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Company Risk</h3>
+			<h3 class="note-heading-h3">Company Risk</h3>
 			<p class="mb-2">
 				<strong>Risk:</strong> As an early-stage company, BuildBear Labs faces classic execution risks,
 				including product scaling, hiring, revenue timing, and organisational focus.
@@ -844,7 +837,7 @@
 
 	<section id="team">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">The Team</h2>
+			<h2 class="note-heading-h2">The Team</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('team')}
@@ -867,7 +860,7 @@
 				development, enterprise software, and blockchain infrastructure.
 			</p>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Leadership Team</h3>
+			<h3 class="note-heading-h3">Leadership Team</h3>
 			<p class="mb-4">
 				<strong
 					>CEO <a
@@ -895,7 +888,7 @@
 				that can scale to large organizations.
 			</p>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Team Assessment</h3>
+			<h3 class="note-heading-h3">Team Assessment</h3>
 			<p class="mb-4">
 				The founding team combines domain expertise (Web3 protocols, enterprise infrastructure) with
 				proven execution experience. Dipesh's DeFi background provides credibility with Web3
@@ -912,7 +905,7 @@
 
 	<section id="investment-thesis">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">My Investment Thesis</h2>
+			<h2 class="note-heading-h2">My Investment Thesis</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('investment-thesis')}
@@ -937,14 +930,14 @@
 				Web3 development matures. Here are the key reasons why this opportunity stands out:
 			</p>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">1. Right Product, Right Time</h3>
+			<h3 class="note-heading-h3">1. Right Product, Right Time</h3>
 			<p class="mb-4">
 				Web3 development is reaching a complexity inflection point where professional-grade tooling
 				becomes essential, not optional. The $471M in H1 2023 security losses due to poor testing
 				creates both urgency and budget justification for better infrastructure.
 			</p>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">2. Platform Economics</h3>
+			<h3 class="note-heading-h3">2. Platform Economics</h3>
 			<p class="mb-4">
 				BuildBear is building platform-level network effects through their plugin marketplace and
 				shared environments. Unlike point solutions, this creates switching costs and defensibility
@@ -959,7 +952,7 @@
 				natives - BuildBear can serve both markets.
 			</p>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Success Metrics to Track</h3>
+			<h3 class="note-heading-h3">Success Metrics to Track</h3>
 			<ul class="list-disc ml-6 space-y-2 mb-4">
 				<li>
 					<strong>Free-to-paid conversion:</strong> Progression from 1,400+ free users to Professional/Enterprise
@@ -980,7 +973,7 @@
 
 	<section id="valuation">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Valuation & Raise Details</h2>
+			<h2 class="note-heading-h2">Valuation & Raise Details</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('valuation')}
@@ -1006,7 +999,7 @@
 				alongside new investors.
 			</p>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Valuation Context</h3>
+			<h3 class="note-heading-h3">Valuation Context</h3>
 			<p class="mb-4">
 				Based on comparable Web3 infrastructure companies at similar stages, Series A valuations in
 				this space typically range from $20M-$100M depending on traction and growth trajectory.
@@ -1019,7 +1012,7 @@
 				BuildBear's more comprehensive platform approach could justify premium pricing.
 			</p>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Use of Funds</h3>
+			<h3 class="note-heading-h3">Use of Funds</h3>
 			<p class="mb-4">
 				While specific allocation is not detailed, Series A funds typically support team scaling,
 				product development acceleration, and go-to-market expansion. For BuildBear, priorities
@@ -1031,7 +1024,7 @@
 
 	<section id="exit-paths">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Exit Paths</h2>
+			<h2 class="note-heading-h2">Exit Paths</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('exit-paths')}
@@ -1056,7 +1049,7 @@
 				infrastructure, though timeline depends on market maturation and company scale.
 			</p>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Strategic Acquisition Candidates</h3>
+			<h3 class="note-heading-h3">Strategic Acquisition Candidates</h3>
 			<ul class="list-disc ml-6 space-y-2 mb-4">
 				<li>
 					<strong>GitHub/Microsoft:</strong> Natural fit for expanding developer tools into Web3, similar
@@ -1076,14 +1069,14 @@
 				</li>
 			</ul>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">IPO Potential</h3>
+			<h3 class="note-heading-h3">IPO Potential</h3>
 			<p class="mb-4">
 				If BuildBear achieves their $60M ARR target by 2027 with strong growth and margins, an
 				independent public listing becomes viable. Developer infrastructure companies with recurring
 				revenue and platform economics can command strong public market multiples.
 			</p>
 
-			<h3 class="text-xl font-semibold mb-3 text-blue-400">Timeline Considerations</h3>
+			<h3 class="note-heading-h3">Timeline Considerations</h3>
 			<p class="mb-4">
 				<strong>3-5 years:</strong> Strategic acquisition most likely as Web3 infrastructure
 				consolidates<br />
@@ -1097,7 +1090,7 @@
 
 	<section id="open-questions">
 		<div class="flex items-center justify-between mb-4">
-			<h2 class="text-2xl font-bold">Open Questions</h2>
+			<h2 class="note-heading-h2">Open Questions</h2>
 			<button
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('open-questions')}

@@ -49,7 +49,7 @@
 
 	<!-- Adventure Categories -->
 	<div class="mb-8">
-		<h3 class="text-lg font-semibold mb-4 text-gray-300">Adventure Types</h3>
+		<h3 class="heading-subheading heading-gray">Adventure Types</h3>
 		<CardGrid columns={3}>
 			<Card variant="category" title="Human-Powered" titleColor="text-blue-400">
 				<div class="text-2xl mb-2">🛴</div>
@@ -73,7 +73,7 @@
 
 	<!-- Adventure Philosophy -->
 	<div class="bg-slate-800 p-6 rounded-lg">
-		<h3 class="text-lg font-semibold mb-3 text-gray-300">On Slow Travel</h3>
+		<h3 class="heading-subheading heading-gray">On Slow Travel</h3>
 		<p class="text-sm text-gray-300 mb-3">
 			These are not typical travel stories. They are about choosing the slow path, finding rhythm in
 			daily progress, and discovering what becomes possible when you break impossible-seeming goals

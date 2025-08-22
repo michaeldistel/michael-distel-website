@@ -8,25 +8,25 @@
 	<PageHeader title="Research Bot Information" />
 
 	<section class="mb-8">
-		<h2 class="text-2xl font-semibold mb-4">About the Bot</h2>
+		<h2 class="heading-section">About the Bot</h2>
 		<p class="mb-4">
 			The MichaelDistelResearchBot (version 1.0) is a web crawler that helps gather information for
 			research purposes. This bot operates under the following user agent string:
 		</p>
-		<h3 class="text-xl font-semibold mb-3">Allow with Restrictions</h3>
+		<h3 class="heading-subsection">Allow with Restrictions</h3>
 		<pre
 			class="bg-slate-800 p-4 rounded-lg mb-4">MichaelDistelResearchBot/1.0 (+https://michaeldistel.com/bot-info)</pre>
 	</section>
 
 	<section class="mb-8">
-		<h2 class="text-2xl font-semibold mb-4">Purpose</h2>
+		<h2 class="heading-section">Purpose</h2>
 		<p class="mb-4">
 			MichaelDistelResearchBot/1.0 is a small-scale, academic research crawler operated by Michael
 			Distel. The bot's mission is to gather publicly available, non-personal data from the web to
 			support a research project on economics within the venture capital (VC) ecosystem.
 		</p>
 
-		<h3 class="text-xl font-semibold mb-3">Research Focus Areas</h3>
+		<h3 class="heading-subsection">Research Focus Areas</h3>
 		<ul class="list-disc pl-6 mb-4 space-y-2">
 			<li>Identifying who participates in the VC space</li>
 			<li>Understanding the primary areas of focus across different VC firms</li>
@@ -34,7 +34,7 @@
 			<li>Tracking general metrics such as investment trends, sector focus, and fund sizes</li>
 		</ul>
 
-		<h3 class="text-xl font-semibold mb-3">Ethical Framework</h3>
+		<h3 class="heading-subsection">Ethical Framework</h3>
 		<p class="mb-4">The bot operates within a strictly ethical framework that includes:</p>
 		<ul class="list-disc pl-6 mb-4 space-y-2">
 			<li>Respecting robots.txt directives</li>
@@ -45,26 +45,26 @@
 	</section>
 
 	<section class="mb-8">
-		<h2 class="text-2xl font-semibold mb-4">Robots.txt Configuration</h2>
+		<h2 class="heading-section">Robots.txt Configuration</h2>
 		<p class="mb-4">
 			Website owners can control this bot's access using their robots.txt file. Here are example
 			configurations:
 		</p>
 
-		<h3 class="text-xl font-semibold mb-3">Allow with Restrictions</h3>
+		<h3 class="heading-subsection">Allow with Restrictions</h3>
 		<pre class="bg-slate-800 p-4 rounded-lg mb-4">
 User-agent: MichaelDistelResearchBot
 Disallow: /private-data/
 Allow: /</pre>
 
-		<h3 class="text-xl font-semibold mb-3">Block Completely</h3>
+		<h3 class="heading-subsection">Block Completely</h3>
 		<pre class="bg-slate-800 p-4 rounded-lg mb-4">
 User-agent: MichaelDistelResearchBot
 Disallow: /</pre>
 	</section>
 
 	<section class="mb-8">
-		<h2 class="text-2xl font-semibold mb-4">Privacy & Opt-Out</h2>
+		<h2 class="heading-section">Privacy & Opt-Out</h2>
 		<p class="mb-4">
 			MichaelDistelResearchBot only collects publicly available data related to the venture capital
 			industry.
@@ -87,7 +87,7 @@ Disallow: /</pre>
 	</section>
 
 	<section class="mb-8">
-		<h2 class="text-2xl font-semibold mb-4">Contact Information</h2>
+		<h2 class="heading-section">Contact Information</h2>
 		<p>
 			If you have any questions or concerns about this bot's behavior, please contact me through:
 			<ExternalLink href="mailto:bot@distel.me">bot@distel.me</ExternalLink>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import '$lib/styles/analysis-notes.css';
 
 	export let title: string;
 	export let description: string;
@@ -159,7 +160,7 @@
 	>
 		<div class="p-6">
 			<div class="flex justify-between items-center mb-6">
-				<h3 class="text-lg font-semibold text-white">Table of Contents</h3>
+				<h3 class="note-heading-toc">Table of Contents</h3>
 				<button
 					on:click={() => (showTOC = false)}
 					class="text-gray-400 hover:text-white transition-colors"
@@ -238,7 +239,7 @@
 
 	<!-- Note Header -->
 	<header class="mb-8">
-		<h1 class="text-3xl sm:text-4xl font-bold mb-2">{title}</h1>
+		<h1 class="note-heading-h1">{title}</h1>
 		<div class="text-gray-400 mb-4">
 			<span>Note</span> •
 			<span>{publishDate}</span> •

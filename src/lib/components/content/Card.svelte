@@ -26,7 +26,7 @@
 		{#if badge}
 			<div class="text-sm text-gray-400 mb-3">{badge}</div>
 		{/if}
-		<h3 class="text-lg font-semibold mb-2 {titleColor}">{title}</h3>
+		<h3 class="heading-card {titleColor}">{title}</h3>
 		{#if description}
 			<p class="text-sm text-gray-300 mb-3">{description}</p>
 		{/if}
@@ -37,7 +37,7 @@
 		{#if badge}
 			<div class="text-sm text-gray-400 mb-3">{badge}</div>
 		{/if}
-		<h3 class="text-lg font-semibold mb-2 {titleColor}">{title}</h3>
+		<h3 class="heading-card {titleColor}">{title}</h3>
 		{#if description}
 			<p class="text-sm text-gray-300 mb-3">{description}</p>
 		{/if}

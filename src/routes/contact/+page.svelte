@@ -13,7 +13,7 @@
 	<!-- Contact Details -->
 	<div class="space-y-4">
 		<div class="mb-4">
-			<h3 class="text-lg font-semibold mb-2">Email</h3>
+			<h3 class="heading-contact">Email</h3>
 			<ExternalLink 
 				href="mailto:michael@distel.me"
 				linkClass="font-medium text-blue-600 dark:text-blue-500 hover:underline md:text-xl sm:text-base"
@@ -23,7 +23,7 @@
 		</div>
 
 		<div class="mb-4">
-			<h3 class="text-lg font-semibold mb-2">LinkedIn</h3>
+			<h3 class="heading-contact">LinkedIn</h3>
 			<ExternalLink 
 				href="https://www.linkedin.com/in/michaeldistel/"
 				linkClass="font-medium text-blue-600 dark:text-blue-500 hover:underline md:text-xl sm:text-base"
@@ -33,7 +33,7 @@
 		</div>
 
 		<div class="mb-4">
-			<h3 class="text-lg font-semibold mb-2">Telegram</h3>
+			<h3 class="heading-contact">Telegram</h3>
 			<ExternalLink 
 				href="https://t.me/michaeldistel"
 				linkClass="font-medium text-blue-600 dark:text-blue-500 hover:underline md:text-xl sm:text-base"

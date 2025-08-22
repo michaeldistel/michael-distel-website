@@ -7,7 +7,7 @@
 
 <section id={sectionId}>
 	<div class="flex items-center justify-between mb-4">
-		<h2 class="text-2xl font-bold">{title}</h2>
+		<h2 class="heading-section">{title}</h2>
 		<button 
 			class="no-print text-gray-400 hover:text-white transition-colors"
 			on:click={() => onToggle(sectionId)}

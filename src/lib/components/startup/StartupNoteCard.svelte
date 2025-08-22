@@ -16,7 +16,7 @@
 		</div>
 	{/if}
 
-	<h2 class="text-xl font-semibold mb-2">
+	<h2 class="heading-card">
 		<ExternalLink 
 			href="/startup/notes/{note.slug}"
 			newTab={false}
