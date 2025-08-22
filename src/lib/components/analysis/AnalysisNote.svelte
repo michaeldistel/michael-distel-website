@@ -7,7 +7,7 @@
 	export let author: string = 'Michael Distel';
 	export let sections: Array<{ id: string; title: string }> = [];
 	export let backUrl: string = '/startup/notes';
-	export let backLabel: string = '← Back to Analysis Notes';
+	export let backLabel: string = '← Back to Notes';
 
 	let printMode = false;
 	let showTOC = false;
@@ -240,7 +240,7 @@
 	<header class="mb-8">
 		<h1 class="text-3xl sm:text-4xl font-bold mb-2">{title}</h1>
 		<div class="text-gray-400 mb-4">
-			<span>Analysis Note</span> •
+			<span>Note</span> •
 			<span>{publishDate}</span> •
 			<span>by {author}</span>
 		</div>

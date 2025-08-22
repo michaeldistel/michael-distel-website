@@ -10,7 +10,7 @@ SvelteKit-based personal website with statiion, Docker containerization, and rem
 - **Styling**: Tailwind CSS with dark theme (`bg-slate-900 text-gray-100`)
 - **Build**: Vite, TypeScript, pnpm package manager
 - **Deployment**: Docker + nginx, deployed to homelab via rsync + Docker Compose
-- **Analytics**: Google Tag Manager with GDPR-compliant consent management
+- **Analytics**: Simple Google Tag Manager integration
 - **CDN**: Cloudflare (free tier) for DNS, caching, and security
 - **Git Management**: GitHub CLI (`gh`) for repository operations and workflow management
 
@@ -36,8 +36,7 @@ SvelteKit-based personal website with statiion, Docker containerization, and rem
 ### Privacy & Analytics
 
 - Basic Google Tag Manager integration loaded directly in `src/app.html`
-- GTM loads without compliance requirements
-- Simple analytics setup without consent management
+- Simple analytics setup without privacy consent requirements
 
 ## Critical Workflows
 

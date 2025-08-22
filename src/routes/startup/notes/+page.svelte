@@ -2,56 +2,55 @@
 	import PageLayout from '$lib/components/layout/PageLayout.svelte';
 	import PageHeader from '$lib/components/layout/PageHeader.svelte';
 	import BackLink from '$lib/components/navigation/BackLink.svelte';
-	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
+	import StartupNoteCard from '$lib/components/startup/StartupNoteCard.svelte';
+	import { getNotesChronological, getDraftNotes } from '$lib/startup-notes';
+
+	const publishedNotes = getNotesChronological();
+	const draftNotes = getDraftNotes();
+
+	// Show drafts in development (you can control this)
+	const showDrafts = false; // Set to true for development preview
 </script>
 
 <svelte:head>
-	<title>Analysis Notes | Michael Distel</title>
-	<meta name="description" content="Public analysis notes exploring different startups and market opportunities" />
+	<title>Notes | Michael Distel</title>
+	<meta name="description" content="Public notes exploring different startups and market opportunities" />
 </svelte:head>
 
 <PageLayout>
 	<BackLink href="/startup" text="Back to Startup Notes" />
 
 	<PageHeader 
-		title="Analysis Notes"
+		title="Notes"
 		description="Public exploration of startups and market opportunities. Each note represents working thoughts shared transparently to invite conversation and challenge assumptions."
 	/>
 
 	<!-- Notes List -->
 	<div class="space-y-6">
-		<!-- BuildBear Labs Note - Hidden for now -->
-		<!-- 
-		<article class="border border-gray-700 rounded-lg p-6 hover:border-gray-600 transition-colors">
-			<h2 class="text-xl font-semibold mb-2">
-				<ExternalLink 
-					href="/startup/notes/2025-08-buildbear-labs"
-					newTab={false}
-					linkClass="text-blue-600 dark:text-blue-500 hover:text-blue-400 transition-colors"
-				>
-					BuildBear Labs Analysis Note
-				</ExternalLink>
-			</h2>
-			
-			<div class="text-sm text-gray-400 mb-3">
-				21 August 2025 • by Michael Distel
+		{#if publishedNotes.length > 0}
+			{#each publishedNotes as note}
+				<StartupNoteCard {note} />
+			{/each}
+		{:else}
+			<!-- No published notes yet -->
+			<div class="text-center py-12 text-gray-400">
+				<h3 class="text-lg font-medium mb-2">No published notes yet</h3>
+				<p>Notes will appear here once they're ready for public viewing.</p>
 			</div>
-			
-			<p class="text-gray-300 mb-4">
-				Analysis of BuildBear Labs' blockchain testing infrastructure platform and Series A opportunity. 
-				Exploring market dynamics, technical differentiation, and investment considerations for this 
-				Singapore-based developer tools company.
-			</p>
-			
-			<div class="flex gap-3">
-				<ExternalLink 
-					href="/startup/notes/2025-08-buildbear-labs"
-					newTab={false}
-				>
-					Read note →
-				</ExternalLink>
+		{/if}
+
+		<!-- Development Preview (only shown when showDrafts is true) -->
+		{#if showDrafts && draftNotes.length > 0}
+			<div class="border-t border-gray-700 pt-8 mt-8">
+				<h3 class="text-lg font-semibold mb-4 text-yellow-400">
+					🚧 Draft Notes (Development Preview)
+				</h3>
+				<div class="space-y-4">
+					{#each draftNotes as note}
+						<StartupNoteCard {note} showStatus={true} />
+					{/each}
+				</div>
 			</div>
-		</article>
-		-->
+		{/if}
 	</div>
 </PageLayout>

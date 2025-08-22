@@ -15,7 +15,12 @@
 		"prod:deploy:copy": "rsync -avz -e 'ssh' ./* homelab:~/ssd-2tb/apps/michael-website --include-from='prod.deploy.files.txt' --exclude '*'",
 		"prod:deploy:run": "ssh homelab 'cd ~/ssd-2tb/apps/michael-website && docker compose -f prod.compose.yml down && docker compose -f prod.compose.yml up -d'",
 		"prebuild": "node scripts/generate-build-info.cjs",
-		"postinstall": "node scripts/generate-build-info.cjs"
+		"postinstall": "node scripts/generate-build-info.cjs",
+		"notes:list": "node scripts/manage-notes.cjs list",
+		"notes:publish": "node scripts/manage-notes.cjs publish",
+		"notes:unpublish": "node scripts/manage-notes.cjs unpublish",
+		"notes:show-drafts": "node scripts/manage-notes.cjs show-drafts",
+		"notes:hide-drafts": "node scripts/manage-notes.cjs hide-drafts"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.1.1",

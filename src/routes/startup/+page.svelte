@@ -42,9 +42,9 @@
 		keep going. Smart people can always be hired.
 	</p>
 
-	<!-- Section: Analysis Notes -->
+	<!-- Section: Notes -->
 	<section class="mb-12">
-		<h3 class="text-2xl font-semibold mb-4">Analysis Notes</h3>
+		<h3 class="text-2xl font-semibold mb-4">Notes</h3>
 		<p class="mb-6 text-gray-300">
 			My working thoughts on companies, markets, and opportunities. These are public to invite 
 			conversation and challenge assumptions.
@@ -52,7 +52,7 @@
 		
 		<div class="space-y-4">
 			<ActionButton href="/startup/notes">
-				View All Analysis Notes →
+				View All Notes →
 			</ActionButton>
 		</div>
 	</section>

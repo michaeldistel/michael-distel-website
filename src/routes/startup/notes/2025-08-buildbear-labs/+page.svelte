@@ -22,22 +22,18 @@
 		{ id: 'open-questions', title: 'Open Questions' }
 	];
 
-	// Get reference to component functions
+	// Component bindings - these will be bound from AnalysisNote component
 	let analysisNote: AnalysisNote;
 	let toggleSection: (sectionId: string) => void;
 	let collapsedSections: Set<string>;
-
-	// Reactive assignments to get the functions from the component
-	$: if (analysisNote) {
-		toggleSection = analysisNote.toggleSection;
-		collapsedSections = analysisNote.collapsedSections;
-	}
 </script>
 
 <AnalysisNote
 	bind:this={analysisNote}
-	title="BuildBear Labs Analysis Note"
-	description="Analysis of BuildBear Labs' blockchain testing infrastructure platform and Series A opportunity."
+	bind:toggleSection
+	bind:collapsedSections
+	title="BuildBear Labs Note"
+	description="Note on BuildBear Labs' blockchain testing infrastructure platform and Series A opportunity."
 	publishDate="21 August 2025"
 	{sections}
 >
