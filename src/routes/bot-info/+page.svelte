@@ -79,7 +79,9 @@ Disallow: /</pre>
 				above), or
 			</li>
 			<li>
-				Contact Michael Distel directly at <ExternalLink href="mailto:bot@distel.me">bot@distel.me</ExternalLink> with your request.
+				Contact Michael Distel directly at <ExternalLink href="mailto:bot@distel.me"
+					>bot@distel.me</ExternalLink
+				> with your request.
 			</li>
 		</ul>
 

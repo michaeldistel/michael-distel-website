@@ -10,7 +10,8 @@
 	<div class="text-sm text-gray-300">{label}</div>
 	{#if trend}
 		<div class="text-xs mt-1 text-{trendColor}-400">
-			{#if trendColor === 'green'}↗{:else if trendColor === 'red'}↘{:else}→{/if} {trend}
+			{#if trendColor === 'green'}↗{:else if trendColor === 'red'}↘{:else}→{/if}
+			{trend}
 		</div>
 	{/if}
 </div>

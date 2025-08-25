@@ -133,6 +133,7 @@
 		on:click={() => (showTOC = !showTOC)}
 		class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
 		title="Table of Contents"
+		aria-label="Toggle Table of Contents"
 	>
 		<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 			<path
@@ -164,6 +165,7 @@
 				<button
 					on:click={() => (showTOC = false)}
 					class="text-gray-400 hover:text-white transition-colors"
+					aria-label="Close Table of Contents"
 				>
 					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path

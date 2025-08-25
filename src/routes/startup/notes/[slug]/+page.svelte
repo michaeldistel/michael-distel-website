@@ -1,19 +1,18 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { getNoteBySlug } from '$lib/startup-notes.js';
-	import type { ComponentType } from 'svelte';
-	
+
 	// Import all possible note components
 	import BuildBearLabsNote from '../2025-08-buildbear-labs/+page.svelte';
-	
-	// Map slugs to components with proper typing
-	const noteComponents: Record<string, ComponentType> = {
+
+	// Map slugs to components
+	const noteComponents: Record<string, any> = {
 		'2025-08-buildbear-labs': BuildBearLabsNote
 	};
-	
+
 	$: slug = $page.params.slug;
-	$: note = getNoteBySlug(slug);
-	$: Component = noteComponents[slug] || null;
+	$: note = getNoteBySlug(slug || '');
+	$: CurrentComponent = slug ? noteComponents[slug] || null : null;
 </script>
 
 <svelte:head>
@@ -23,8 +22,8 @@
 	{/if}
 </svelte:head>
 
-{#if Component}
-	<svelte:component this={Component} />
+{#if CurrentComponent}
+	<svelte:component this={CurrentComponent} />
 {:else}
 	<!-- Fallback for missing components -->
 	<div class="container mx-auto px-4 py-8 max-w-4xl">

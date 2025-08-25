@@ -1,9 +1,7 @@
 <div class="container mx-auto px-4 py-8 max-w-4xl">
 	<!-- Main Heading -->
 	<h1 class="heading-page-title">Kicking Miles Japan 2017</h1>
-	<h2 class="heading-page-subtitle">
-		1,800 kilometres across Japan by kick-scooter
-	</h2>
+	<h2 class="heading-page-subtitle">1,800 kilometres across Japan by kick-scooter</h2>
 
 	<!-- Journey Overview -->
 	<h3 class="heading-adventure">The Journey</h3>

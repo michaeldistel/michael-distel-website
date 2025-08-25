@@ -1,24 +1,37 @@
-    /* Site-wide typography and component styles */
-    @import './lib/styles/analysis-notes.css';
-    
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
+/* Site-wide typography and component styles */
+@import './lib/styles/analysis-notes.css';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-    body {
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
-        color: rgb(243, 244, 246);
-        tab-size: 4;
-    }
+body {
+	font-family:
+		ui-sans-serif,
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		Segoe UI,
+		Roboto,
+		Helvetica Neue,
+		Arial,
+		Noto Sans,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji',
+		Segoe UI Symbol,
+		'Noto Color Emoji';
+	color: rgb(243, 244, 246);
+	tab-size: 4;
+}
 
-    a {
-        color: rgb(0, 4, 255);
-    }
+a {
+	color: rgb(0, 4, 255);
+}
 
-    a:hover {
-        text-decoration-color: rgb(34, 211, 238);
-        text-decoration-line: none;
-        text-decoration-style: solid;
-        text-decoration-thickness: auto;
-    }
+a:hover {
+	text-decoration-color: rgb(34, 211, 238);
+	text-decoration-line: none;
+	text-decoration-style: solid;
+	text-decoration-thickness: auto;
+}

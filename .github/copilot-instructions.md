@@ -26,8 +26,9 @@ SvelteKit-based personal website with statiion, Docker containerization, and rem
 ### Styling Conventions
 
 **Use components instead of repeating patterns:**
+
 - Page containers: Use `PageLayout.svelte` instead of manual container divs
-- Typography hierarchy: Use `PageHeader.svelte` for titles and descriptions  
+- Typography hierarchy: Use `PageHeader.svelte` for titles and descriptions
 - Link styling: Use `ExternalLink.svelte` for all external links (auto-adds security attributes)
 - Card grids: Use `CardGrid.svelte` + `Card.svelte` instead of manual grid layouts
 - CTA buttons: Use `ActionButton.svelte` for consistent button styling
@@ -102,7 +103,7 @@ Use the established component system to maintain visual consistency and eliminat
 ### Navigation Components (`src/lib/components/navigation/`)
 
 - `ExternalLink.svelte`: Auto-handles external links with security attributes
-- `BackLink.svelte`: Consistent "← Back to..." navigation pattern  
+- `BackLink.svelte`: Consistent "← Back to..." navigation pattern
 - `ActionButton.svelte`: CTA buttons with primary/secondary variants
 
 ### Analysis Note System (`src/lib/components/analysis/`)

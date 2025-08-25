@@ -1,22 +1,30 @@
-import { isNotePublic, getNoteBySlug } from '$lib/startup-notes.js';
+import { isNotePublic, getNoteBySlug, getPublishedNotes } from '$lib/startup-notes.js';
 import { error } from '@sveltejs/kit';
+import type { PageServerLoad, EntryGenerator } from './$types';
 
-export async function load({ params }) {
-    const { slug } = params;
+export const entries: EntryGenerator = async () => {
+	// Return all published note slugs for prerendering
+	return getPublishedNotes().map((note) => ({
+		slug: note.slug
+	}));
+};
 
-    // Check if note exists and is public
-    const note = getNoteBySlug(slug);
+export const load: PageServerLoad = async ({ params }) => {
+	const { slug } = params;
 
-    if (!note) {
-        throw error(404, 'Analysis note not found');
-    }
+	// Check if note exists and is public
+	const note = getNoteBySlug(slug);
 
-    if (!isNotePublic(slug)) {
-        // Note exists but is not published
-        throw error(404, 'Analysis note not found');
-    }
+	if (!note) {
+		throw error(404, 'Analysis note not found');
+	}
 
-    return {
-        note
-    };
-}
+	if (!isNotePublic(slug)) {
+		// Note exists but is not published
+		throw error(404, 'Analysis note not found');
+	}
+
+	return {
+		note
+	};
+};

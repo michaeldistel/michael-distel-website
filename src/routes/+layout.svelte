@@ -2,7 +2,7 @@
 	import '../app.css';
 	import Footer from '$lib/components/Footer.svelte';
 	import { page } from '$app/stores';
-	
+
 	$: canonicalUrl = `https://michaeldistel.com${$page.url.pathname}`;
 </script>
 

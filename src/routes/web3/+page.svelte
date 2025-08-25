@@ -4,7 +4,7 @@
 </script>
 
 <PageLayout>
-	<PageHeader 
+	<PageHeader
 		title="Web3"
 		subtitle="Testing infrastructure and practical rails"
 		description="Notes on Web3 development, testing infrastructure, and stablecoins as practical rails. Based on work at BuildBear Labs and other crypto projects, focusing on what actually works rather than the hype."

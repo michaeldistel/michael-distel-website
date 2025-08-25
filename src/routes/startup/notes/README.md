@@ -7,6 +7,7 @@ This system provides controlled publishing and unpublishing of startup analysis 
 ## Publishing Workflow
 
 ### 1. Create a New Note
+
 1. Create note directory: `src/routes/startup/notes/YYYY-MM-company-name/`
 2. Add your analysis note as `+page.svelte` in that directory
 3. Register the note in `src/lib/startup-notes.ts` with status `'draft'`
@@ -15,6 +16,7 @@ This system provides controlled publishing and unpublishing of startup analysis 
 ### 2. Publishing Controls
 
 **Command Line:**
+
 ```bash
 # List all notes and their status
 pnpm notes:list
@@ -34,6 +36,7 @@ pnpm notes:hide-drafts
 
 **Manual Control:**
 Edit `src/lib/startup-notes.ts` and change the note status:
+
 - `'draft'` - Not publicly visible
 - `'published'` - Publicly visible in notes index
 - `'archived'` - Hidden but preserved

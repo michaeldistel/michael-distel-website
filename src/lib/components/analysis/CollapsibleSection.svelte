@@ -8,13 +8,20 @@
 <section id={sectionId}>
 	<div class="flex items-center justify-between mb-4">
 		<h2 class="heading-section">{title}</h2>
-		<button 
+		<button
 			class="no-print text-gray-400 hover:text-white transition-colors"
 			on:click={() => onToggle(sectionId)}
 			title="Toggle section"
+			aria-label="Toggle {title} section"
 		>
-			<svg class="w-5 h-5 transition-transform {isCollapsed ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+			<svg
+				class="w-5 h-5 transition-transform {isCollapsed ? 'rotate-180' : ''}"
+				fill="none"
+				stroke="currentColor"
+				viewBox="0 0 24 24"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"
+				></path>
 			</svg>
 		</button>
 	</div>

@@ -5,10 +5,7 @@
 </script>
 
 <PageLayout>
-	<PageHeader 
-		title="Industrial"
-		subtitle="Automation workflows and small efficiency gains"
-	/>
+	<PageHeader title="Industrial" subtitle="Automation workflows and small efficiency gains" />
 
 	<!-- Introduction -->
 	<p class="mb-6 md:text-xl sm:text-base text-gray-300">

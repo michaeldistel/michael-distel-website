@@ -5,7 +5,7 @@
 </script>
 
 <PageLayout>
-	<PageHeader 
+	<PageHeader
 		title="Michael Distel"
 		description="Writing about yourself feels strange. There is something inherently awkward about summarising a life in a few paragraphs, deciding which parts matter and which to leave out. But this page is not really for anyone else. It is a place for me to reflect and think about my journey so far, to see the connections between different chapters and notice what patterns emerge. It is not complete, and it will probably change, but it is honest enough for now."
 	/>
@@ -29,10 +29,11 @@
 		In 2011, I co-founded Feel Beautiful, importing skincare products across Southeast Asia. It
 		sounds simple but taught me about logistics, compliance, and the daily reality of running a
 		business. The company continues at
-		<ExternalLink href="https://feelbeautiful.com.sg">feelbeautiful.com.sg</ExternalLink>. We grew to around twenty people across multiple countries. I learned more about finance and
-		operations than I expected. After that, I did freelance consulting (2017–2021) and worked as an
-		interim CTO, helping startups with technology questions. This was also when I first encountered
-		Web3, building a Bitcoin exchange for a private bank in Australia and working on other crypto
+		<ExternalLink href="https://feelbeautiful.com.sg">feelbeautiful.com.sg</ExternalLink>. We grew
+		to around twenty people across multiple countries. I learned more about finance and operations
+		than I expected. After that, I did freelance consulting (2017–2021) and worked as an interim
+		CTO, helping startups with technology questions. This was also when I first encountered Web3,
+		building a Bitcoin exchange for a private bank in Australia and working on other crypto
 		projects.
 	</p>
 
@@ -42,12 +43,12 @@
 		In 2018, I became CTO at
 		<ExternalLink href="https://foodrazor.com">FoodRazor</ExternalLink>
 		until 2020, working on restaurant back-end systems. The company raised S$900k in 2021 led by
-		<ExternalLink href="https://cocooncap.com">Cocoon Capital</ExternalLink>. That fundraising process gave me my first real look at how investors think. FoodRazor was
-		acquired by
-		<ExternalLink href="https://orderez.co">OrderEZ</ExternalLink> in February 2023. I had the opportunity to join Cocoon Capital as an Investment Associate (2021–2024),
-		the same firm that had led FoodRazor's investment. This let me sit on the other side of the table
-		and learn about timing, founder-market fit, and how much of early-stage investing comes down to signals
-		versus stories.
+		<ExternalLink href="https://cocooncap.com">Cocoon Capital</ExternalLink>. That fundraising
+		process gave me my first real look at how investors think. FoodRazor was acquired by
+		<ExternalLink href="https://orderez.co">OrderEZ</ExternalLink> in February 2023. I had the opportunity
+		to join Cocoon Capital as an Investment Associate (2021–2024), the same firm that had led FoodRazor's
+		investment. This let me sit on the other side of the table and learn about timing, founder-market
+		fit, and how much of early-stage investing comes down to signals versus stories.
 	</p>
 
 	<!-- Section: Recent Work and What's Next -->

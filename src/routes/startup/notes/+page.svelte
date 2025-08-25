@@ -14,13 +14,16 @@
 
 <svelte:head>
 	<title>Notes | Michael Distel</title>
-	<meta name="description" content="Public notes exploring different startups and market opportunities" />
+	<meta
+		name="description"
+		content="Public notes exploring different startups and market opportunities"
+	/>
 </svelte:head>
 
 <PageLayout>
 	<BackLink href="/startup" text="Back to Startup Notes" />
 
-	<PageHeader 
+	<PageHeader
 		title="Notes"
 		description="Public exploration of startups and market opportunities. Each note represents working thoughts shared transparently to invite conversation and challenge assumptions."
 	/>

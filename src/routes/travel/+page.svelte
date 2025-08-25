@@ -4,7 +4,7 @@
 </script>
 
 <PageLayout>
-	<PageHeader 
+	<PageHeader
 		title="Travel"
 		subtitle="Slow adventures and small daily progress"
 		description="Notes from travels and adventures, including the 1,800 km kick-scooter journey across Japan. This is about slow travel, persistence, and what you learn when you take the long way around."

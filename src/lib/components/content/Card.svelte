@@ -7,17 +7,17 @@
 	export let titleColor: string = 'text-blue-400';
 	export let hoverEffect: boolean = true;
 	export let className: string = '';
-	
-	$: baseClasses = variant === 'placeholder' 
-		? 'bg-slate-800 p-6 rounded-lg border-2 border-dashed border-slate-600'
-		: variant === 'category'
-		? 'bg-slate-800 p-4 rounded-lg text-center'
-		: 'bg-slate-800 p-6 rounded-lg';
-		
-	$: hoverClasses = hoverEffect && variant !== 'placeholder' 
-		? 'hover:bg-slate-750 transition-colors' 
-		: '';
-		
+
+	$: baseClasses =
+		variant === 'placeholder'
+			? 'bg-slate-800 p-6 rounded-lg border-2 border-dashed border-slate-600'
+			: variant === 'category'
+				? 'bg-slate-800 p-4 rounded-lg text-center'
+				: 'bg-slate-800 p-6 rounded-lg';
+
+	$: hoverClasses =
+		hoverEffect && variant !== 'placeholder' ? 'hover:bg-slate-750 transition-colors' : '';
+
 	$: cardClasses = `${baseClasses} ${hoverClasses} ${className}`;
 </script>
 

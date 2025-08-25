@@ -64,7 +64,9 @@
 					</p>
 					<p><strong class="text-gray-200">Investment Stage:</strong> Seed</p>
 					<p><strong class="text-gray-200">Funds Raised to Date:</strong> USD 1.9 million</p>
-					<p><strong class="text-gray-200">Key Investors:</strong> 1kx, Superscrypt, Tribe Capital</p>
+					<p>
+						<strong class="text-gray-200">Key Investors:</strong> 1kx, Superscrypt, Tribe Capital
+					</p>
 					<p><strong class="text-gray-200">Incubators:</strong> Iterative, Plug and Play</p>
 				</div>
 			</div>
@@ -99,6 +101,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('quick-take')}
 				title="Toggle section"
+				aria-label="Toggle Quick Take section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('quick-take')
@@ -125,6 +128,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('company-summary')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('company-summary')
@@ -158,6 +162,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('problem-statement')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('problem-statement')
@@ -201,6 +206,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('vision')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('vision')
@@ -243,6 +249,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('market-opportunity')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('market-opportunity')
@@ -309,6 +316,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('competitive-analysis')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('competitive-analysis')
@@ -376,6 +384,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('strategic-positioning')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('strategic-positioning')
@@ -413,6 +422,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('business-model')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('business-model')
@@ -460,9 +470,7 @@
 				ensures monetisation increases proportionally with customer growth and engagement.
 			</p>
 
-			<h4 class="note-heading-h4">
-				3. Plugin Marketplace (30% Revenue Share)
-			</h4>
+			<h4 class="note-heading-h4">3. Plugin Marketplace (30% Revenue Share)</h4>
 			<ul class="list-disc ml-6 space-y-1 mb-4 text-gray-300">
 				<li>
 					BuildBear's plugin ecosystem enables developers, auditors, and vendors to create and
@@ -519,6 +527,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('traction')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('traction')
@@ -599,6 +608,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('strategy-roadmap')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('strategy-roadmap')
@@ -614,9 +624,7 @@
 			</button>
 		</div>
 		{#if !collapsedSections?.has('strategy-roadmap')}
-			<h3 class="note-heading-h3">
-				Short-Term Strategy (Next 12-18 Months)
-			</h3>
+			<h3 class="note-heading-h3">Short-Term Strategy (Next 12-18 Months)</h3>
 			<p class="mb-4">
 				BuildBear Labs' near-term go-to-market focus is centred on maximising adoption and embedding
 				itself into developer workflows across both Web2 and Web3. The goal is to become the default
@@ -683,6 +691,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('financial-forecast')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('financial-forecast')
@@ -751,6 +760,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('risk-factors')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('risk-factors')
@@ -842,6 +852,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('team')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('team') ? 'rotate-180' : ''}"
@@ -910,6 +921,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('investment-thesis')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('investment-thesis')
@@ -978,6 +990,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('valuation')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('valuation')
@@ -1029,6 +1042,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('exit-paths')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('exit-paths')
@@ -1095,6 +1109,7 @@
 				class="no-print text-gray-400 hover:text-white transition-colors"
 				on:click={() => toggleSection?.('open-questions')}
 				title="Toggle section"
+				aria-label="Toggle Company Summary section"
 			>
 				<svg
 					class="w-5 h-5 transition-transform {collapsedSections?.has('open-questions')

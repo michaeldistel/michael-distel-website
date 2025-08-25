@@ -7,7 +7,7 @@
 </script>
 
 <PageLayout>
-	<PageHeader 
+	<PageHeader
 		title="Slow Adventures"
 		subtitle="Notes on Travel, Persistence, and Small Daily Progress"
 	/>
@@ -15,7 +15,7 @@
 	<!-- Adventures Grid -->
 	<CardGrid columns={2} className="mb-8">
 		<!-- Kicking Miles Japan 2017 -->
-		<Card 
+		<Card
 			title="Kicking Miles Japan 2017"
 			badge="March 1 - April 9, 2017 • 40 days • 1,800km"
 			titleColor="text-blue-400"
@@ -33,7 +33,7 @@
 		</Card>
 
 		<!-- Placeholder for Next Adventure -->
-		<Card 
+		<Card
 			title="Next Adventure"
 			badge="TBD • Planning stage"
 			variant="placeholder"
@@ -57,13 +57,23 @@
 				<div class="text-xs text-blue-400 mt-2">1 completed</div>
 			</Card>
 
-			<Card variant="category" title="Mountain & Remote" titleColor="text-gray-400" className="opacity-60">
+			<Card
+				variant="category"
+				title="Mountain & Remote"
+				titleColor="text-gray-400"
+				className="opacity-60"
+			>
 				<div class="text-2xl mb-2">🏔️</div>
 				<p class="text-xs text-gray-400">High altitude, wilderness</p>
 				<div class="text-xs text-gray-500 mt-2">Future category</div>
 			</Card>
 
-			<Card variant="category" title="Water & Islands" titleColor="text-gray-400" className="opacity-60">
+			<Card
+				variant="category"
+				title="Water & Islands"
+				titleColor="text-gray-400"
+				className="opacity-60"
+			>
 				<div class="text-2xl mb-2">🌊</div>
 				<p class="text-xs text-gray-400">Coastal routes, island hopping</p>
 				<div class="text-xs text-gray-500 mt-2">Future category</div>
