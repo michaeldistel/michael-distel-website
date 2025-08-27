@@ -1,45 +1,49 @@
 <script lang="ts">
 	export let title: string;
-	export let description: string = '';
+	export let subtitle: string = '';
 	export let href: string = '';
 	export let badge: string = '';
 	export let variant: 'default' | 'placeholder' | 'category' = 'default';
 	export let titleColor: string = 'text-blue-400';
 	export let hoverEffect: boolean = true;
+	export let newTab: boolean = false;
 	export let className: string = '';
 
 	$: baseClasses =
 		variant === 'placeholder'
-			? 'bg-slate-800 p-6 rounded-lg border-2 border-dashed border-slate-600'
+			? 'note-card-md border-2 border-dashed border-slate-600'
 			: variant === 'category'
-				? 'bg-slate-800 p-4 rounded-lg text-center'
-				: 'bg-slate-800 p-6 rounded-lg';
+				? 'note-card-sm text-center'
+				: 'note-card-md';
 
 	$: hoverClasses =
 		hoverEffect && variant !== 'placeholder' ? 'hover:bg-slate-750 transition-colors' : '';
+
+	$: linkTarget = newTab ? '_blank' : undefined;
+	$: linkRel = newTab ? 'noopener noreferrer' : undefined;
 
 	$: cardClasses = `${baseClasses} ${hoverClasses} ${className}`;
 </script>
 
 {#if href}
-	<a {href} class={cardClasses}>
+	<a {href} class={cardClasses} target={linkTarget} rel={linkRel}>
 		{#if badge}
-			<div class="text-sm text-gray-400 mb-3">{badge}</div>
+			<div class="note-text-caption-muted note-space-sm">{badge}</div>
 		{/if}
 		<h3 class="heading-card {titleColor}">{title}</h3>
-		{#if description}
-			<p class="text-sm text-gray-300 mb-3">{description}</p>
+		{#if subtitle}
+			<p class="note-text-caption note-space-sm">{subtitle}</p>
 		{/if}
 		<slot />
 	</a>
 {:else}
 	<div class={cardClasses}>
 		{#if badge}
-			<div class="text-sm text-gray-400 mb-3">{badge}</div>
+			<div class="note-text-caption-muted note-space-sm">{badge}</div>
 		{/if}
 		<h3 class="heading-card {titleColor}">{title}</h3>
-		{#if description}
-			<p class="text-sm text-gray-300 mb-3">{description}</p>
+		{#if subtitle}
+			<p class="note-text-caption note-space-sm">{subtitle}</p>
 		{/if}
 		<slot />
 	</div>

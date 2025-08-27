@@ -188,7 +188,7 @@
 		<!-- Condensed Timeline -->
 		<div class="grid md:grid-cols-2 gap-4">
 			<!-- March: Southern Route -->
-			<div class="bg-slate-800 p-4 rounded-lg">
+			<div class="note-bg-surface p-4 rounded-lg">
 				<h5 class="font-semibold text-blue-400 mb-2">March: Southern Route</h5>
 				<div class="space-y-2 text-sm">
 					<div class="flex justify-between">
@@ -215,7 +215,7 @@
 			</div>
 
 			<!-- April: Northern Route -->
-			<div class="bg-slate-800 p-4 rounded-lg">
+			<div class="note-bg-surface p-4 rounded-lg">
 				<h5 class="font-semibold text-blue-400 mb-2">April: Northern Route</h5>
 				<div class="space-y-2 text-sm">
 					<div class="flex justify-between">
@@ -243,7 +243,7 @@
 	</p>
 
 	<!-- March 25 - Pre-Journey -->
-	<div class="mb-6 bg-slate-800 p-4 rounded-lg">
+	<div class="mb-6 note-bg-surface p-4 rounded-lg">
 		<div class="flex flex-col md:flex-row gap-4 mb-4">
 			<div class="md:w-1/3">
 				<a
@@ -285,7 +285,7 @@
 	</div>
 
 	<!-- March 26 - Day One -->
-	<div class="mb-6 bg-slate-800 p-4 rounded-lg">
+	<div class="mb-6 note-bg-surface p-4 rounded-lg">
 		<div class="flex flex-col md:flex-row gap-4 mb-4">
 			<div class="md:w-1/3">
 				<div class="grid grid-cols-2 gap-2">
@@ -340,7 +340,7 @@
 	</div>
 
 	<!-- March 27 - Day Two -->
-	<div class="mb-6 bg-slate-800 p-4 rounded-lg">
+	<div class="mb-6 note-bg-surface p-4 rounded-lg">
 		<div class="flex flex-col md:flex-row gap-4 mb-4">
 			<div class="md:w-1/3">
 				<div class="space-y-2">
@@ -412,7 +412,7 @@
 	</div>
 
 	<!-- March 28 - Day Three -->
-	<div class="mb-6 bg-slate-800 p-4 rounded-lg">
+	<div class="mb-6 note-bg-surface p-4 rounded-lg">
 		<div class="flex flex-col md:flex-row gap-4 mb-4">
 			<div class="md:w-1/3">
 				<div class="space-y-2">
@@ -538,7 +538,7 @@
 
 	<div class="mb-6 grid md:grid-cols-3 gap-4">
 		<!-- Core Equipment -->
-		<div class="bg-slate-800 p-3 rounded-lg">
+		<div class="note-bg-surface p-3 rounded-lg">
 			<h5 class="font-semibold text-blue-400 mb-2 text-sm">Transport</h5>
 			<ul class="space-y-1 text-xs">
 				<li>Xootr MG kick-scooters</li>
@@ -548,7 +548,7 @@
 		</div>
 
 		<!-- Documentation -->
-		<div class="bg-slate-800 p-3 rounded-lg">
+		<div class="note-bg-surface p-3 rounded-lg">
 			<h5 class="font-semibold text-blue-400 mb-2 text-sm">Documentation</h5>
 			<ul class="space-y-1 text-xs">
 				<li>DJI Mavic drone</li>
@@ -559,7 +559,7 @@
 		</div>
 
 		<!-- Practical -->
-		<div class="bg-slate-800 p-3 rounded-lg">
+		<div class="note-bg-surface p-3 rounded-lg">
 			<h5 class="font-semibold text-blue-400 mb-2 text-sm">Practical</h5>
 			<ul class="space-y-1 text-xs">
 				<li>Business cards, promotional materials</li>

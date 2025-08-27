@@ -1,5 +1,6 @@
 /* Site-wide typography and component styles */
-@import './lib/styles/analysis-notes.css';
+@import './lib/styles/typography.css';
+@import './lib/styles/notes.css';
 
 @tailwind base;
 @tailwind components;

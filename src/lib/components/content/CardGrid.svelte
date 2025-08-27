@@ -11,9 +11,9 @@
 	};
 
 	const gapClasses = {
-		sm: 'gap-4',
-		md: 'gap-6',
-		lg: 'gap-8'
+		sm: 'note-gap-md',
+		md: 'note-gap-lg', 
+		lg: 'note-gap-xl'
 	};
 </script>
 

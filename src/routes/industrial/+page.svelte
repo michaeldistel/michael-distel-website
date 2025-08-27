@@ -8,7 +8,7 @@
 	<PageHeader title="Industrial" subtitle="Automation workflows and small efficiency gains" />
 
 	<!-- Introduction -->
-	<p class="mb-6 md:text-xl sm:text-base text-gray-300">
+	<p class="mb-6 note-text-body-lg">
 		Notes on industrial automation, small workflow tweaks, and systems that make everyday work
 		calmer and faster. Based on experience with power plants, water treatment facilities, and the VS
 		Code extension at <ExternalLink href="https://controlforge.dev">controlforge.dev</ExternalLink>.

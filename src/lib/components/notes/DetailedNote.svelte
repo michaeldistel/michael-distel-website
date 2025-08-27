@@ -1,20 +1,19 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import '$lib/styles/analysis-notes.css';
+	import '$lib/styles/typography.css';
 
 	export let title: string;
 	export let description: string;
 	export let publishDate: string;
 	export let author: string = 'Michael Distel';
 	export let sections: Array<{ id: string; title: string }> = [];
-	export let backUrl: string = '/startup/notes';
-	export let backLabel: string = '← Back to Notes';
 
 	let printMode = false;
 	let showTOC = false;
 	let activeSection = '';
-	let collapsedSections = new Set<string>();
 	let readingProgress = 0;
+	let tocScrollable = false;
+	let tocContainer: HTMLElement;
 
 	function handlePrint() {
 		printMode = true;
@@ -24,22 +23,20 @@
 		}, 100);
 	}
 
-	function toggleSection(sectionId: string) {
-		if (collapsedSections.has(sectionId)) {
-			collapsedSections.delete(sectionId);
-		} else {
-			collapsedSections.add(sectionId);
+	function toggleTOC() {
+		showTOC = !showTOC;
+		if (showTOC) {
+			// Check if content is scrollable after the TOC is shown
+			setTimeout(() => {
+				checkTOCScrollable();
+			}, 100);
 		}
-		collapsedSections = collapsedSections;
 	}
-
-	function toggleAllSections() {
-		if (collapsedSections.size === 0) {
-			sections.forEach((s) => collapsedSections.add(s.id));
-		} else {
-			collapsedSections.clear();
+	
+	function checkTOCScrollable() {
+		if (tocContainer) {
+			tocScrollable = tocContainer.scrollHeight > tocContainer.clientHeight;
 		}
-		collapsedSections = collapsedSections;
 	}
 
 	function scrollToSection(sectionId: string) {
@@ -75,15 +72,14 @@
 
 	onMount(() => {
 		window.addEventListener('scroll', updateReadingProgress);
+		window.addEventListener('toggleTOC', toggleTOC);
 		updateReadingProgress();
 
 		return () => {
 			window.removeEventListener('scroll', updateReadingProgress);
+			window.removeEventListener('toggleTOC', toggleTOC);
 		};
 	});
-
-	// Export functions for parent component to use
-	export { toggleSection, collapsedSections, toggleAllSections };
 </script>
 
 <svelte:head>
@@ -127,29 +123,10 @@
 	></div>
 </div>
 
-<!-- Table of Contents Toggle -->
-<div class="fixed bottom-6 right-6 z-40 no-print">
-	<button
-		on:click={() => (showTOC = !showTOC)}
-		class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
-		title="Table of Contents"
-		aria-label="Toggle Table of Contents"
-	>
-		<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M4 6h16M4 12h16M4 18h16"
-			></path>
-		</svg>
-	</button>
-</div>
-
 <!-- Table of Contents Sidebar -->
 {#if showTOC}
 	<div
-		class="fixed inset-0 bg-black bg-opacity-50 z-30 no-print"
+		class="fixed inset-0 bg-black bg-opacity-50 z-40 no-print"
 		on:click={() => (showTOC = false)}
 		on:keydown={(e) => e.key === 'Escape' && (showTOC = false)}
 		role="button"
@@ -157,10 +134,11 @@
 		aria-label="Close table of contents"
 	></div>
 	<div
-		class="fixed top-0 right-0 h-full w-80 bg-slate-900 border-l border-slate-700 z-40 no-print overflow-y-auto"
+		bind:this={tocContainer}
+		class="fixed top-0 right-0 h-full w-80 bg-slate-900 border-l border-slate-700 z-50 no-print overflow-y-auto toc-scroll"
 	>
-		<div class="p-6">
-			<div class="flex justify-between items-center mb-6">
+		<div class="p-6 pb-20 relative">
+			<div class="flex justify-between items-center note-space-lg">
 				<h3 class="note-heading-toc">Table of Contents</h3>
 				<button
 					on:click={() => (showTOC = false)}
@@ -198,7 +176,7 @@
 
 			<!-- Reading Progress in TOC -->
 			<div class="mt-8 pt-6 border-t border-slate-700">
-				<div class="text-xs text-gray-400 mb-2">Reading Progress</div>
+				<div class="text-xs text-gray-400 note-space-xs">Reading Progress</div>
 				<div class="w-full bg-slate-800 rounded-full h-2">
 					<div
 						class="bg-blue-500 h-2 rounded-full transition-all duration-300"
@@ -207,38 +185,44 @@
 				</div>
 				<div class="text-xs text-gray-400 mt-1">{Math.round(readingProgress)}% complete</div>
 			</div>
+
+			<!-- Actions -->
+			<div class="mt-6 pt-6 border-t border-slate-700">
+				<button
+					on:click={handlePrint}
+					class="w-full flex items-center justify-center note-gap-xs px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors text-sm"
+				>
+					<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
+						></path>
+					</svg>
+					Print / Save as PDF
+				</button>
+			</div>
 		</div>
+		
+		<!-- Bottom fade gradient to indicate more content - only show when scrollable -->
+		{#if tocScrollable}
+			<div class="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-slate-900 to-transparent pointer-events-none z-10"></div>
+		{/if}
+		
+		<!-- Scroll hint for mobile - only show when content is scrollable -->
+		{#if tocScrollable}
+			<div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-gray-500 text-xs animate-pulse md:hidden">
+				<svg class="w-4 h-4 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+				</svg>
+				<span>Scroll for more</span>
+			</div>
+		{/if}
 	</div>
 {/if}
 
 <div class="container mx-auto px-4 py-8 max-w-4xl" class:print-optimized={printMode}>
-	<!-- Header with controls -->
-	<div class="no-print mb-6 flex justify-between items-start">
-		<div>
-			<a
-				href={backUrl}
-				class="font-medium text-blue-600 dark:text-blue-500 hover:underline mb-2 inline-block"
-			>
-				{backLabel}
-			</a>
-		</div>
-		<div class="flex gap-3">
-			<button
-				on:click={toggleAllSections}
-				class="px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-600 transition-colors"
-				title="Toggle all sections"
-			>
-				{collapsedSections.size === 0 ? 'Collapse All' : 'Expand All'}
-			</button>
-			<button
-				on:click={handlePrint}
-				class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-			>
-				Print / Save as PDF
-			</button>
-		</div>
-	</div>
-
 	<!-- Note Header -->
 	<header class="mb-8">
 		<h1 class="note-heading-h1">{title}</h1>
@@ -270,6 +254,29 @@
 </div>
 
 <style>
+	/* Better mobile scrollbar styling for TOC */
+	.toc-scroll {
+		scrollbar-width: thin;
+		scrollbar-color: #475569 #1e293b;
+	}
+	
+	.toc-scroll::-webkit-scrollbar {
+		width: 6px;
+	}
+	
+	.toc-scroll::-webkit-scrollbar-track {
+		background: #1e293b;
+	}
+	
+	.toc-scroll::-webkit-scrollbar-thumb {
+		background: #475569;
+		border-radius: 3px;
+	}
+	
+	.toc-scroll::-webkit-scrollbar-thumb:hover {
+		background: #64748b;
+	}
+
 	@media print {
 		:global(body) {
 			background: white !important;

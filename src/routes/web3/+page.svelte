@@ -11,7 +11,7 @@
 	/>
 
 	<!-- Placeholder for content -->
-	<p class="mb-6 md:text-xl sm:text-base">
+	<p class="note-space-lg md:text-xl sm:text-base">
 		Content coming soon. This will cover testing patterns, development workflows, and thoughts on
 		building reliable systems in decentralised environments.
 	</p>

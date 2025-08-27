@@ -7,7 +7,7 @@
 <PageLayout maxWidth="3xl">
 	<PageHeader title="Research Bot Information" />
 
-	<section class="mb-8">
+	<section class="note-space-xl">
 		<h2 class="heading-section">About the Bot</h2>
 		<p class="mb-4">
 			The MichaelDistelResearchBot (version 1.0) is a web crawler that helps gather information for
@@ -15,10 +15,10 @@
 		</p>
 		<h3 class="heading-subsection">Allow with Restrictions</h3>
 		<pre
-			class="bg-slate-800 p-4 rounded-lg mb-4">MichaelDistelResearchBot/1.0 (+https://michaeldistel.com/bot-info)</pre>
+			class="note-bg-surface p-4 rounded-lg mb-4">MichaelDistelResearchBot/1.0 (+https://michaeldistel.com/bot-info)</pre>
 	</section>
 
-	<section class="mb-8">
+	<section class="note-space-xl">
 		<h2 class="heading-section">Purpose</h2>
 		<p class="mb-4">
 			MichaelDistelResearchBot/1.0 is a small-scale, academic research crawler operated by Michael
@@ -44,7 +44,7 @@
 		</ul>
 	</section>
 
-	<section class="mb-8">
+	<section class="note-space-xl">
 		<h2 class="heading-section">Robots.txt Configuration</h2>
 		<p class="mb-4">
 			Website owners can control this bot's access using their robots.txt file. Here are example
@@ -52,18 +52,18 @@
 		</p>
 
 		<h3 class="heading-subsection">Allow with Restrictions</h3>
-		<pre class="bg-slate-800 p-4 rounded-lg mb-4">
+		<pre class="note-bg-surface p-4 rounded-lg mb-4">
 User-agent: MichaelDistelResearchBot
 Disallow: /private-data/
 Allow: /</pre>
 
 		<h3 class="heading-subsection">Block Completely</h3>
-		<pre class="bg-slate-800 p-4 rounded-lg mb-4">
+		<pre class="note-bg-surface p-4 rounded-lg mb-4">
 User-agent: MichaelDistelResearchBot
 Disallow: /</pre>
 	</section>
 
-	<section class="mb-8">
+	<section class="note-space-xl">
 		<h2 class="heading-section">Privacy & Opt-Out</h2>
 		<p class="mb-4">
 			MichaelDistelResearchBot only collects publicly available data related to the venture capital
@@ -88,7 +88,7 @@ Disallow: /</pre>
 		<p class="mb-4">All opt-out requests will be respected and promptly acted upon.</p>
 	</section>
 
-	<section class="mb-8">
+	<section class="note-space-xl">
 		<h2 class="heading-section">Contact Information</h2>
 		<p>
 			If you have any questions or concerns about this bot's behavior, please contact me through:

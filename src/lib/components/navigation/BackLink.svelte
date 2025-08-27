@@ -1,12 +1,11 @@
 <script lang="ts">
 	export let href: string;
 	export let text: string;
-	export let linkClass: string =
-		'font-medium text-blue-600 dark:text-blue-500 hover:underline mb-2 inline-block';
+	export let className: string = 'font-medium note-link-primary note-space-xs inline-block';
 </script>
 
-<div class="mb-6">
-	<a {href} class={linkClass}>
+<div class="note-space-lg">
+	<a {href} class={className}>
 		← {text}
 	</a>
 </div>

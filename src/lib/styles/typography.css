@@ -15,24 +15,24 @@
 
 /* Section Headings (Consistent across site) */
 .heading-section {
-	@apply text-2xl font-bold text-white mb-4;
+	@apply text-2xl font-bold text-amber-300 mb-4;
 }
 
 .heading-subsection {
-	@apply text-xl font-semibold text-blue-400 mb-4;
+	@apply text-xl font-semibold text-emerald-300 mb-4;
 }
 
 .heading-subheading {
-	@apply text-lg font-semibold text-gray-100 mb-3;
+	@apply text-lg font-semibold text-gray-300 mb-3;
 }
 
 /* Card and Component Headings */
 .heading-card {
-	@apply text-lg font-semibold text-gray-100 mb-2;
+	@apply text-lg font-semibold text-emerald-300 mb-2;
 }
 
 .heading-card-small {
-	@apply text-base font-medium text-gray-200 mb-2;
+	@apply text-base font-medium text-gray-300 mb-2;
 }
 
 /* Special Context Headings */
@@ -52,34 +52,8 @@
 	@apply font-semibold text-yellow-400;
 }
 
-/* Analysis Note Specific Headings */
-.note-heading-h1 {
-	@apply text-3xl sm:text-4xl font-bold text-white mb-2;
-}
-
-.note-heading-h2 {
-	@apply text-2xl font-bold text-white mb-4;
-}
-
-.note-heading-h3 {
-	@apply text-xl font-semibold text-blue-400 mb-4;
-}
-
-.note-heading-h4 {
-	@apply text-lg font-medium text-gray-100 mb-3;
-}
-
-.note-heading-card {
-	@apply text-xl font-semibold text-blue-400 mb-4;
-}
-
-.note-heading-special {
-	@apply text-xl font-semibold text-yellow-400 mb-4;
-}
-
-.note-heading-toc {
-	@apply text-lg font-semibold text-white mb-3;
-}
+/* Investment Note Specific Headings - MOVED TO notes.css */
+/* Use notes.css for all note-specific typography */
 
 /* Variant Modifiers */
 .heading-green {
@@ -104,11 +78,11 @@
 
 /* Contact and Technical Headings */
 .heading-contact {
-	@apply text-lg font-semibold text-gray-100 mb-2;
+	@apply text-lg font-semibold text-emerald-300 mb-2;
 }
 
 /* Reading progress and navigation styles */
-.analysis-note-progress {
+.notes-progress {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -119,7 +93,7 @@
 	z-index: 50;
 }
 
-.analysis-note-progress-bar {
+.notes-progress-bar {
 	height: 100%;
 	background: rgb(59 130 246);
 	/* blue-500 */
@@ -127,14 +101,14 @@
 }
 
 /* Table of Contents styles */
-.analysis-toc-overlay {
+.notes-toc-overlay {
 	position: fixed;
 	inset: 0;
 	background: rgba(0, 0, 0, 0.5);
 	z-index: 30;
 }
 
-.analysis-toc-sidebar {
+.notes-toc-sidebar {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -150,37 +124,37 @@
 }
 
 /* Section styling */
-.analysis-section {
+.notes-section {
 	margin-bottom: 3rem;
 }
 
-.analysis-section-header {
+.notes-section-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 1rem;
 }
 
-.analysis-section-toggle {
+.notes-section-toggle {
 	color: rgb(156 163 175);
 	/* gray-400 */
 	transition: color 0.2s;
 }
 
-.analysis-section-toggle:hover {
+.notes-section-toggle:hover {
 	color: rgb(255 255 255);
 	/* white */
 }
 
 /* Metrics cards */
-.analysis-metrics-grid {
+.notes-metrics-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	gap: 1rem;
 	margin: 1.5rem 0;
 }
 
-.analysis-metrics-card {
+.notes-metrics-card {
 	background: rgb(30 41 59);
 	/* slate-800 */
 	padding: 1rem;
@@ -189,32 +163,32 @@
 	/* slate-700 */
 }
 
-.analysis-metrics-value {
+.notes-metrics-value {
 	font-size: 1.5rem;
 	font-weight: 700;
 	color: rgb(96 165 250);
 	/* blue-400 */
 }
 
-.analysis-metrics-label {
+.notes-metrics-label {
 	font-size: 0.875rem;
 	color: rgb(209 213 219);
 	/* gray-300 */
 	margin-top: 0.25rem;
 }
 
-.analysis-metrics-trend {
+.notes-metrics-trend {
 	font-size: 0.75rem;
 	margin-top: 0.25rem;
 }
 
 /* Tooltip styles */
-.analysis-tooltip {
+.notes-tooltip {
 	position: relative;
 	display: inline;
 }
 
-.analysis-tooltip-text {
+.notes-tooltip-text {
 	text-decoration: underline;
 	text-decoration-style: dotted;
 	text-decoration-color: rgb(96 165 250);
@@ -222,7 +196,7 @@
 	cursor: help;
 }
 
-.analysis-tooltip-popup {
+.notes-tooltip-popup {
 	position: absolute;
 	bottom: 100%;
 	left: 50%;
@@ -241,7 +215,7 @@
 	transition: opacity 0.2s;
 }
 
-.analysis-tooltip:hover .analysis-tooltip-popup {
+.notes-tooltip:hover .notes-tooltip-popup {
 	opacity: 1;
 }
 
@@ -275,24 +249,24 @@
 		color: black !important;
 	}
 
-	.analysis-metrics-card {
+	.notes-metrics-card {
 		border: 1px solid #ccc;
 		background: white;
 	}
 
-	.analysis-metrics-value,
-	.analysis-metrics-label {
+	.notes-metrics-value,
+	.notes-metrics-label {
 		color: black !important;
 	}
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-	.analysis-toc-sidebar {
+	.notes-toc-sidebar {
 		width: 100vw;
 	}
 
-	.analysis-metrics-grid {
+	.notes-metrics-grid {
 		grid-template-columns: 1fr;
 	}
 }

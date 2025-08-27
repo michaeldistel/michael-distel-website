@@ -8,6 +8,7 @@ SvelteKit-based personal website with statiion, Docker containerization, and rem
 
 - **Framework**: SvelteKit with `@sveltejs/adapter-static` for static site generation
 - **Styling**: Tailwind CSS with dark theme (`bg-slate-900 text-gray-100`)
+- **Design Philosophy**: Mobile-first responsive design - all components and layouts prioritize mobile experience
 - **Build**: Vite, TypeScript, pnpm package manager
 - **Deployment**: Docker + nginx, deployed to homelab via rsync + Docker Compose
 - **Analytics**: Simple Google Tag Manager integration
@@ -33,6 +34,7 @@ SvelteKit-based personal website with statiion, Docker containerization, and rem
 - Card grids: Use `CardGrid.svelte` + `Card.svelte` instead of manual grid layouts
 - CTA buttons: Use `ActionButton.svelte` for consistent button styling
 - Responsive design: Built into all components, avoid custom breakpoint classes
+- **Mobile-first approach**: Always design for mobile experience first, then enhance for larger screens
 
 ### Privacy & Analytics
 
@@ -102,14 +104,14 @@ Use the established component system to maintain visual consistency and eliminat
 
 ### Navigation Components (`src/lib/components/navigation/`)
 
+- `FloatingNav.svelte`: Mobile-first system-wide navigation pill with smart hide/show behavior
 - `ExternalLink.svelte`: Auto-handles external links with security attributes
 - `BackLink.svelte`: Consistent "← Back to..." navigation pattern
 - `ActionButton.svelte`: CTA buttons with primary/secondary variants
 
-### Analysis Note System (`src/lib/components/analysis/`)
+### Notes System (`src/lib/components/notes/`)
 
-- `AnalysisNote.svelte`: Interactive wrapper with TOC, reading progress, print handling
-- `CollapsibleSection.svelte`: Expandable content sections
+- `DetailedNote.svelte`: Interactive wrapper with TOC, reading progress, print handling
 - `MetricsCard.svelte`: Data visualization cards with trend indicators
 - `Tooltip.svelte`: Contextual information display
 
@@ -124,7 +126,7 @@ Use the established component system to maintain visual consistency and eliminat
 - **Card layouts** must use CardGrid + Card components
 - **CTA buttons** must use ActionButton component
 - **Page headers** should use PageHeader for consistency
-- **Analysis notes** must use the complete analysis note system
+- **Analysis notes** must use the complete notes system
 
 ### Page Content Patterns
 
