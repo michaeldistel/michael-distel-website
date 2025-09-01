@@ -1,12 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import '$lib/styles/typography.css';
+	import Breadcrumbs from '$lib/components/navigation/Breadcrumbs.svelte';
 
 	export let title: string;
 	export let description: string;
 	export let publishDate: string;
 	export let author: string = 'Michael Distel';
 	export let sections: Array<{ id: string; title: string }> = [];
+	export let breadcrumbs: Array<{ label: string; href?: string }> = [];
 
 	let printMode = false;
 	let showTOC = false;
@@ -223,6 +225,11 @@
 {/if}
 
 <div class="container mx-auto px-4 py-8 max-w-4xl" class:print-optimized={printMode}>
+	<!-- Breadcrumbs -->
+	{#if breadcrumbs.length > 0}
+		<Breadcrumbs items={breadcrumbs} />
+	{/if}
+	
 	<!-- Note Header -->
 	<header class="mb-8">
 		<h1 class="note-heading-h1">{title}</h1>

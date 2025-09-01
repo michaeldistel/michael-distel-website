@@ -4,10 +4,51 @@
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
 </script>
 
+<svelte:head>
+	<title>About Michael Distel</title>
+	<meta
+		name="description"
+		content="Personal notes and reflections from someone exploring ideas about startups, industrial automation, and Web3 through direct experience and ongoing learning."
+	/>
+	
+	<!-- Structured Data for Person -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Michael Distel",
+			"url": "https://michaeldistel.com",
+			"sameAs": [
+				"https://www.linkedin.com/in/michaeldistel/",
+				"https://t.me/michaeldistel"
+			],
+			"jobTitle": "Entrepreneur",
+			"worksFor": {
+				"@type": "Organization",
+				"name": "Independent"
+			},
+			"knowsAbout": [
+				"Startup Fundraising",
+				"Web3 Infrastructure", 
+				"Industrial Automation",
+				"Early Stage Investing"
+			],
+			"alumniOf": {
+				"@type": "Organization",
+				"name": "Cocoon Capital"
+			},
+			"address": {
+				"@type": "PostalAddress",
+				"addressCountry": "SG"
+			}
+		}
+	</script>
+</svelte:head>
+
 <PageLayout>
 	<PageHeader
 		title="Michael Distel"
-		description="Writing about yourself feels strange. There is something inherently awkward about summarising a life in a few paragraphs, deciding which parts matter and which to leave out. But this page is not really for anyone else. It is a place for me to reflect and think about my journey so far, to see the connections between different chapters and notice what patterns emerge. It is not complete, and it will probably change, but it is honest enough for now."
+		description="Writing about yourself feels strange. There is something inherently awkward about summarising a life in a few paragraphs, deciding which parts matter and which to leave out. This page is mainly for me to reflect and think about my journey so far, to see the connections between different chapters and notice what patterns emerge. But if any of it is useful or interesting to you, that is a welcome bonus. It is not complete, and it will probably change, but it is honest enough for now."
 	/>
 
 	<!-- Section: A Path to Singapore -->

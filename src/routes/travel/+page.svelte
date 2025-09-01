@@ -3,6 +3,14 @@
 	import PageHeader from '$lib/components/layout/PageHeader.svelte';
 </script>
 
+<svelte:head>
+	<title>Travel Adventures | Michael Distel</title>
+	<meta
+		name="description"
+		content="Slow travel adventures and lessons learned on the road. Including the 1,800 km kick-scooter journey across Japan and thoughts on persistence and deliberate adventure."
+	/>
+</svelte:head>
+
 <PageLayout>
 	<PageHeader
 		title="Travel"

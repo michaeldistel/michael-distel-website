@@ -6,6 +6,14 @@
 	import ActionButton from '$lib/components/navigation/ActionButton.svelte';
 </script>
 
+<svelte:head>
+	<title>Adventures | Michael Distel</title>
+	<meta
+		name="description"
+		content="Adventure stories and lessons in persistence, including the 1,800km kick-scooter journey across Japan. Notes on slow travel, daily progress, and what you learn when you take the long way."
+	/>
+</svelte:head>
+
 <PageLayout>
 	<PageHeader
 		title="Slow Adventures"

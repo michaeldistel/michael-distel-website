@@ -4,6 +4,14 @@
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
 </script>
 
+<svelte:head>
+	<title>Industrial Automation | Michael Distel</title>
+	<meta
+		name="description"
+		content="Industrial automation workflows and efficiency improvements. Experience with power plants, water treatment facilities, and VS Code extension development at controlforge.dev."
+	/>
+</svelte:head>
+
 <PageLayout>
 	<PageHeader title="Industrial" subtitle="Automation workflows and small efficiency gains" />
 

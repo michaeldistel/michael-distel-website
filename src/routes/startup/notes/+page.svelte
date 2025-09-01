@@ -1,7 +1,7 @@
 <script>
 	import PageLayout from '$lib/components/layout/PageLayout.svelte';
 	import PageHeader from '$lib/components/layout/PageHeader.svelte';
-	import BackLink from '$lib/components/navigation/BackLink.svelte';
+	import Breadcrumbs from '$lib/components/navigation/Breadcrumbs.svelte';
 	import StartupNoteCard from '$lib/components/startup/StartupNoteCard.svelte';
 	import { getNotesChronological, getDraftNotes } from '$lib/startup-notes';
 
@@ -10,18 +10,24 @@
 
 	// Show drafts in development (you can control this)
 	const showDrafts = false; // Set to true for development preview
+	
+	const breadcrumbs = [
+		{ label: 'Home', href: '/' },
+		{ label: 'Startup', href: '/startup' },
+		{ label: 'Notes' }
+	];
 </script>
 
 <svelte:head>
-	<title>Notes | Michael Distel</title>
+	<title>Startup Notes | Michael Distel</title>
 	<meta
 		name="description"
-		content="Public notes exploring different startups and market opportunities"
+		content="Personal notes on startups and early-stage investing. Working through ideas about fundraising, timing, and what actually moves companies forward, based on direct experience."
 	/>
 </svelte:head>
 
 <PageLayout>
-	<BackLink href="/startup" text="Back to Startup Notes" />
+	<Breadcrumbs items={breadcrumbs} />
 
 	<PageHeader
 		title="Notes"

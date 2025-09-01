@@ -4,6 +4,14 @@
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
 </script>
 
+<svelte:head>
+	<title>Research Bot Information | Michael Distel</title>
+	<meta
+		name="description"
+		content="Information about MichaelDistelResearchBot web crawler used for investment research and data gathering. Bot policy, contact information, and usage guidelines."
+	/>
+</svelte:head>
+
 <PageLayout maxWidth="3xl">
 	<PageHeader title="Research Bot Information" />
 

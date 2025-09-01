@@ -3,11 +3,19 @@
 	import PageHeader from '$lib/components/layout/PageHeader.svelte';
 </script>
 
+<svelte:head>
+	<title>Web3 Infrastructure | Michael Distel</title>
+	<meta
+		name="description"
+		content="Exploring ideas about Web3 development and testing infrastructure. Notes on blockchain testing environments, stablecoins as practical rails, and development workflows that actually work."
+	/>
+</svelte:head>
+
 <PageLayout>
 	<PageHeader
 		title="Web3"
 		subtitle="Testing infrastructure and practical rails"
-		description="Notes on Web3 development, testing infrastructure, and stablecoins as practical rails. Based on work at BuildBear Labs and other crypto projects, focusing on what actually works rather than the hype."
+		description="Notes on Web3 development, testing infrastructure, and stablecoins as practical rails. Based on work with blockchain testing environments and other crypto projects, focusing on what actually works rather than the hype."
 	/>
 
 	<!-- Placeholder for content -->

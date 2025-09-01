@@ -1,3 +1,15 @@
+<script>
+	// No imports needed for this page currently
+</script>
+
+<svelte:head>
+	<title>Kicking Miles Japan 2017 | 1,800km Kick-Scooter Adventure | Michael Distel</title>
+	<meta
+		name="description"
+		content="The complete story of kick-scootering 1,800 kilometres across Japan in 40 days. From Fukuoka to Hakodate, daily progress, challenges, and lessons learned on the road."
+	/>
+</svelte:head>
+
 <div class="container mx-auto px-4 py-8 max-w-4xl">
 	<!-- Main Heading -->
 	<h1 class="heading-page-title">Kicking Miles Japan 2017</h1>

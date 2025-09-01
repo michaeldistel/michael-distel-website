@@ -26,6 +26,14 @@
 
 	// Component bindings - these will be bound from DetailedNote component
 	let detailedNote: DetailedNote;
+	
+	// Breadcrumbs for this note
+	const breadcrumbs = [
+		{ label: 'Home', href: '/' },
+		{ label: 'Startup', href: '/startup' },
+		{ label: 'Notes', href: '/startup/notes' },
+		{ label: 'BuildBear Labs Note' }
+	];
 
 	// Chart data for Web3 developer growth based on Electric Capital data
 	const developerGrowthData = {
@@ -69,6 +77,7 @@
 	description="Note on BuildBear Labs' blockchain testing infrastructure platform and Series A opportunity."
 	publishDate="21 August 2025"
 	{sections}
+	{breadcrumbs}
 >
 	<!-- Startup Overview in the overview slot -->
 	<section slot="overview" class="note-space-2xl note-card-md">

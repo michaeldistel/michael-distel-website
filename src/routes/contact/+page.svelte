@@ -4,6 +4,14 @@
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
 </script>
 
+<svelte:head>
+	<title>Contact Michael Distel</title>
+	<meta
+		name="description"
+		content="Get in touch with Michael Distel via email, LinkedIn, and Telegram for conversations about startups, automation, or other shared interests."
+	/>
+</svelte:head>
+
 <PageLayout>
 	<PageHeader
 		title="Contact"
