@@ -57,10 +57,4 @@
 			<ActionButton href="/startup/notes">View All Notes →</ActionButton>
 		</div>
 	</section>
-
-	<!-- Placeholder for content -->
-	<p class="mb-6 md:text-xl sm:text-base">
-		Content coming soon. This will be a place for thoughts on what actually moves companies forward,
-		capital efficiency, and the realities of early-stage investment decisions.
-	</p>
 </PageLayout>

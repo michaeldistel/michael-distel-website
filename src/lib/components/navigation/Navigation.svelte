@@ -152,7 +152,7 @@
 
 				<!-- Navigation -->
 				<nav class="flex items-center space-x-8">
-					{#each navItems.slice(1) as item}
+					{#each navItems as item}
 						{@const isActive = checkActivePath(item.path)}
 						<a
 							href={item.path}
