@@ -18,12 +18,12 @@ export const STARTUP_NOTES: StartupNote[] = [
 		title: 'BuildBear Labs Note',
 		description:
 			"Analysis of BuildBear Labs' blockchain testing infrastructure platform and Series A opportunity. Exploring market dynamics, technical differentiation, and investment considerations for this Singapore-based developer tools company.",
-		publishDate: '21 August 2025',
+		publishDate: '2025-08-21',
 		author: 'Michael Distel',
 		status: 'published', // Change to 'published' when ready
 		tags: ['Web3', 'Infrastructure', 'Series A', 'DevOps'],
 		company: 'BuildBear Labs',
-		lastModified: '22 August 2025'
+		lastModified: '2025-08-22'
 	}
 	// Add more notes here as they're created
 ];
