@@ -61,6 +61,8 @@ pnpm prod:deploy     # Full deployment pipeline:
   # 4. Docker Compose restart on remote server
 ```
 
+**IMPORTANT DEPLOYMENT RULE**: Never automatically run `pnpm prod:deploy` or any deployment commands. Always ask for explicit permission before deploying to production. The user must confirm deployment before executing any production deployment commands.
+
 ### Build System
 
 - `scripts/generate-build-info.cjs` creates `src/lib/build-info.ts` with git commit hash
@@ -160,12 +162,10 @@ Tone
 
 - Curious and grounded. Practical over hype.
 - Calm and understated. Light humour is fine.
-- No-bullshit approach. Cut through nonsense and call things as they are.
 - A bit edgy is fine. Occasional swearing acceptable when it serves the point.
 
 Style
 
-- Simple, direct sentences with plain vocabulary.
 - UK/Australian spelling (kilometres, organise, colour).
 - Minimise contractions ("I am", "do not" preferred).
 - Do not use em dashes; use commas or full stops.

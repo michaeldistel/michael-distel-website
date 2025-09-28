@@ -113,7 +113,35 @@
         @apply font-medium text-blue-600 dark:text-blue-500 hover:underline md:text-xl sm:text-base;
     }
 
-    /* Card Text Styles */
+    /* Global link styling for all notes */
+    .note-section a,
+    a {
+        color: rgb(96 165 250) !important;
+        text-decoration: underline;
+        word-break: break-all;
+        overflow-wrap: anywhere;
+        line-height: 1.5;
+    }
+    
+    .note-section a:hover,
+    a:hover {
+        color: rgb(147 197 253) !important;
+    }
+
+    /* Ordered list styling for references */
+    .note-section ol {
+        list-style-type: decimal;
+        margin-left: 1.5rem;
+        counter-reset: list-counter;
+    }
+    
+    .note-section ol li {
+        display: list-item;
+        margin-bottom: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    /* Card Text Styles - For non-semantic titles within cards */
     .note-card-title {
         @apply text-lg font-semibold note-color-primary;
     }
@@ -128,11 +156,21 @@
 
     /* List Styles */
     .note-list {
-        @apply space-y-2 note-text-body;
+        @apply space-y-2 note-text-body list-disc ml-6 note-space-md;
     }
 
     .note-list-sm {
-        @apply space-y-1 note-text-caption;
+        @apply space-y-1 note-text-caption list-disc ml-6 note-space-md;
+    }
+
+    /* Auto-apply bullets to all ul elements in note sections */
+    .note-section ul:not(.note-text-caption) {
+        @apply list-disc ml-6 space-y-2 note-space-md;
+    }
+
+    /* Auto-apply bottom margin to all p elements in note sections */
+    .note-section p {
+        @apply note-space-md;
     }
 
     /* Investment Note Typography */

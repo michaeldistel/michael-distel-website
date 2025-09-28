@@ -14,6 +14,18 @@ export interface StartupNote {
 // Notes registry - manually curated for control
 export const STARTUP_NOTES: StartupNote[] = [
 	{
+		slug: '2025-09-startup-game',
+		title: 'The Startup Game Note',
+		description:
+			"Analysis of a gaming startup creating an educational simulation game about building startups. Exploring the intersection of entertainment, education, and entrepreneurship in the gaming market.",
+		publishDate: '2025-09-26',
+		author: 'Michael Distel',
+		status: 'published',
+		tags: ['Gaming', 'EdTech', 'Simulation', 'Pre-Seed'],
+		company: 'The Startup Game',
+		lastModified: '2025-09-26'
+	},
+	{
 		slug: '2025-08-buildbear-labs',
 		title: 'BuildBear Labs Note',
 		description:
