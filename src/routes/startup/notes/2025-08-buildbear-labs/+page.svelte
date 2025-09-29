@@ -1,6 +1,7 @@
 <script lang="ts">
 	import DetailedNote from '$lib/components/notes/DetailedNote.svelte';
 	import LineChart from '$lib/components/charts/LineChart.svelte';
+	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
 
 	// Section data for navigation
 	const sections = [
@@ -93,24 +94,20 @@
 					<div>
 						<p><strong class="note-text-emphasis">Founders:</strong></p>
 						<p class="ml-4">
-							<a
+							<ExternalLink
 								href="https://www.linkedin.com/in/dipeshsukhani/"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="note-link-primary"
+								className="note-link-primary"
 							>
 								Dipesh Sukhani
-							</a>
+							</ExternalLink>
 						</p>
 						<p class="ml-4">
-							<a
+							<ExternalLink
 								href="https://www.linkedin.com/in/emmanuelantony/"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="note-link-primary"
+								className="note-link-primary"
 							>
 								Emmanuel Antony
-							</a>
+							</ExternalLink>
 						</p>
 					</div>
 					<p><strong class="note-text-emphasis">Location:</strong> Singapore</p>
@@ -304,14 +301,12 @@
 		</p>
 
 		<p class="note-space-md">
-			BuildBear likes to quote projections that Web3 developers will grow to 658,000 by 2032. The <a
+			BuildBear likes to quote projections that Web3 developers will grow to 658,000 by 2032. The <ExternalLink
 				href="https://www.developerreport.com/"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="note-link-primary"
+				className="note-link-primary"
 			>
 				Electric Capital Developer Report 2024
-			</a> shows the reality is much more modest: 23,613 monthly active crypto developers in 2024, down
+			</ExternalLink> shows the reality is much more modest: 23,613 monthly active crypto developers in 2024, down
 			7% year-over-year. Even accounting for private repositories and enterprise development not captured
 			in their GitHub analysis, we are talking about maybe 50,000-80,000 total developers globally, not
 			the hundreds of thousands BuildBear is banking on.

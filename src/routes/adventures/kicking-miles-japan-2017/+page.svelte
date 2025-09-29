@@ -1,5 +1,6 @@
 <script>
-	// No imports needed for this page currently
+	import PageLayout from '$lib/components/layout/PageLayout.svelte';
+	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
 </script>
 
 <svelte:head>
@@ -10,7 +11,7 @@
 	/>
 </svelte:head>
 
-<div class="container mx-auto px-4 py-8 max-w-4xl">
+<PageLayout>
 	<!-- Main Heading -->
 	<h1 class="heading-page-title">Kicking Miles Japan 2017</h1>
 	<h2 class="heading-page-subtitle">1,800 kilometres across Japan by kick-scooter</h2>
@@ -33,25 +34,10 @@
 	<h3 class="heading-adventure">Documentation</h3>
 	<p class="mb-6 md:text-xl sm:text-base">
 		We documented the journey on
-		<a
-			href="https://kickingmiles.com"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Website</a
-		>,
-		<a
-			href="https://www.instagram.com/heykickingmiles/"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Instagram</a
-		>
+		<ExternalLink href="https://kickingmiles.com">Website</ExternalLink>,
+		<ExternalLink href="https://www.instagram.com/heykickingmiles/">Instagram</ExternalLink>
 		and
-		<a
-			href="https://www.facebook.com/HeyKickingMiles/"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Facebook</a
-		>.
+		<ExternalLink href="https://www.facebook.com/HeyKickingMiles/">Facebook</ExternalLink>.
 	</p>
 
 	<!-- Route Map -->
@@ -80,14 +66,14 @@
 		</p>
 	</div>
 	<!-- Route & Planning -->
-	<h3 class="text-lg sm:text-xl font-semibold mb-2">Route & Planning</h3>
+	<h3 class="heading-adventure">Route & Planning</h3>
 	<p class="mb-4 md:text-xl sm:text-base">
 		We started in Fukuoka, aimed for Hakodate, and mapped a route through Japan's spine. Four
 		segments: Kyushu to Osaka, Osaka to Tokyo, Tokyo to Sendai, then north to Hokkaido.
 	</p>
 
 	<div class="mb-6">
-		<h4 class="text-md font-semibold mb-2 text-gray-300">The Route:</h4>
+		<h4 class="heading-subheading">The Route:</h4>
 		<ul class="list-disc list-inside space-y-2 md:text-xl sm:text-base ml-4">
 			<li><strong>Fukuoka to Osaka</strong> - Western coast, learning our rhythm</li>
 			<li><strong>Osaka to Tokyo</strong> - Through Kyoto, Mount Fuji, urban Japan</li>
@@ -102,7 +88,7 @@
 	</p>
 
 	<!-- Major Cities & Stops -->
-	<h3 class="text-lg sm:text-xl font-semibold mb-2">Major Cities & Stops</h3>
+	<h3 class="heading-adventure">Major Cities & Stops</h3>
 	<div class="mb-6">
 		<p class="mb-4 md:text-xl sm:text-base">
 			Over 40 days, we passed through 35 cities, each offering unique experiences and challenges:
@@ -110,7 +96,7 @@
 
 		<div class="grid md:grid-cols-2 gap-4 mb-4">
 			<div>
-				<h4 class="text-md font-semibold mb-2 text-gray-300">
+				<h4 class="heading-subheading">
 					Southern Route (Kyushu & Western Honshu):
 				</h4>
 				<ul class="list-disc list-inside space-y-1 text-base ml-4">
@@ -124,7 +110,7 @@
 			</div>
 
 			<div>
-				<h4 class="text-md font-semibold mb-2 text-gray-300">
+				<h4 class="heading-subheading">
 					Northern Route (Eastern Honshu & Hokkaido):
 				</h4>
 				<ul class="list-disc list-inside space-y-1 text-base ml-4">
@@ -140,7 +126,7 @@
 	</div>
 
 	<!-- Daily Highlights & Challenges -->
-	<h3 class="text-lg sm:text-xl font-semibold mb-2">Daily Rhythm</h3>
+	<h3 class="heading-adventure">Daily Rhythm</h3>
 	<p class="mb-4 md:text-xl sm:text-base">
 		By day 5, we had found our pattern. Early morning planning over convenience store coffee,
 		20-something kilometres before lunch, another 20-something after. Find somewhere to sleep,
@@ -190,4 +176,4 @@
 			<li><strong>Know your limits:</strong> When to push harder, when to rest, when to adjust</li>
 		</ul>
 	</div>
-</div>
+</PageLayout>
