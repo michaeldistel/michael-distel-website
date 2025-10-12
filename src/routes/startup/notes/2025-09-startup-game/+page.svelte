@@ -22,6 +22,11 @@
 		{ id: 'valuation-raise', title: 'Valuation & Raise Details' },
 		{ id: 'exit-paths', title: 'Exit Paths' },
 		{ id: 'open-questions', title: 'Open Questions' },
+		{ id: 'open-questions-problem', title: 'Problem Statement' },
+		{ id: 'open-questions-product', title: 'Product' },
+		{ id: 'open-questions-market', title: 'Market' },
+		{ id: 'open-questions-business', title: 'Business Model' },
+		{ id: 'open-questions-fundraising', title: 'Fundraising' },
 		{ id: 'references', title: 'References' }
 	];
 
@@ -92,15 +97,12 @@
 		<div class="note-section-break"></div>
 
 		<p>
-			This is not a deep analysis but a way to explore and share my thoughts about the founder's
-			business idea. It sits somewhere between an off-the-cuff comment and a full analysis that an
-			associate at a VC firm would do for their investment memo.
+			The purpose was to work with the founder to dig a little deeper into their idea and bring some formal analysis while helping them see how I break down the process of thinking about a new startup or business idea.
 		</p>
 
 		<p>
-			This analysis is based on conversations with the founder, publicly available information, and
-			standard business evaluation frameworks. It represents my personal perspective and should not
-			be considered formal investment advice or a comprehensive due diligence report.
+			This is not a deep analysis, but rather sits somewhere between an off-the-cuff comment and a full analysis that an
+			associate at a VC firm would do for their investment memo.
 		</p>
 	</section>
 
@@ -110,7 +112,7 @@
 		<div class="note-section-break"></div>
 
 		<p class="note-space-md">
-			The Startup Games is an ambitious attempt to reimagine founder education through a gamified
+			The concept is an attempt to reimagine founder education through a gamified
 			simulation powered by AI. The product vision is clear and differentiated, with strong
 			potential for engagement and learning. However, the business side is less convincing. The
 			addressable market is limited, monetisation through consumers will be difficult, and
@@ -127,7 +129,7 @@
 		<div class="note-section-break"></div>
 
 		<p class="note-space-md">
-			The Startup Games is a gamified simulator powered by a custom-built AI engine. At its core is
+			The founder wants to build a gamified simulator powered by a custom-built AI engine. At its core is
 			a rule-based system that generates dynamic scenarios and interactions, combining structured
 			outcomes with randomly generated events. Players take on roles such as founder, investor, or
 			team member and navigate realistic startup situations including fundraising pressure, user
@@ -144,7 +146,7 @@
 		<p class="note-space-md">
 			The result is an experiential and social platform where users can practise the realities of
 			entrepreneurship. Unlike traditional business simulations that focus narrowly on financial
-			models, The Startup Games delivers narrative, role-play, and emotional decision-making through
+			models, this concept delivers narrative, role-play, and emotional decision-making through
 			AI-driven scenarios that feel authentic and immersive.
 		</p>
 
@@ -169,7 +171,7 @@
 			early-stage entrepreneurs often face critical knowledge gaps that undermine their ability to
 			make informed decisions. A 2024 systematic review found that foundational decisions like
 			product strategy, team structure, and market focus are still poorly supported in academic and
-			practical resources, limiting the development of effective tools for founders.
+			practical resources, limiting the development of effective tools for founders<sup><a href="#ref-1">1</a></sup>.
 		</p>
 
 		<p class="note-space-md">
@@ -177,13 +179,13 @@
 			half of small business owners face fiscal challenges linked to insufficient financial literacy
 			even though 55 percent rate their skills as high. Fifteen percent of respondents had not yet
 			recovered from financial missteps. The implications are serious: gaps in budgeting, cash flow,
-			and metrics interpretation create real obstacles for business survival.
+			and metrics interpretation create real obstacles for business survival<sup><a href="#ref-2">2</a></sup>.
 		</p>
 
 		<p class="note-space-md">
 			Taken together, these findings show that founders often venture into building startups with
 			limited support, especially around critical business competencies. This insight lies at the
-			heart of the Founder's vision for The Startup Games, a platform designed to fill that gap by
+			heart of the Founder's vision for this concept, a platform designed to fill that gap by
 			allowing aspiring entrepreneurs to learn through immersive, scenario-based gameplay rather
 			than trial and error.
 		</p>
@@ -219,6 +221,18 @@
 			</li>
 		</ul>
 
+		<div class="note-space-md">
+			<img 
+				src="/2025-09-startup-game/startup-game-dashboard.webp" 
+				alt="Startup game dashboard showing key metrics and decision options"
+				class="w-full max-w-sm mx-auto rounded-lg shadow-md"
+				loading="lazy"
+			/>
+			<p class="text-sm text-gray-400 text-center mt-2 italic">
+				Game dashboard concept showing startup metrics and strategic decision points
+			</p>
+		</div>
+
 		<h3 class="note-heading-h3">Game Mechanics</h3>
 		<p>
 			The game incorporates various mechanics to maintain engagement while delivering educational
@@ -243,6 +257,78 @@
 				</li>
 			</ul>
 		</div>
+
+		<div class="note-space-md grid md:grid-cols-3 gap-4">
+			<div>
+				<img 
+					src="/2025-09-startup-game/startup-scenario-screen.webp" 
+					alt="Scenario-based decision making interface"
+					class="w-full rounded-lg shadow-md"
+					loading="lazy"
+				/>
+				<p class="text-xs text-gray-400 text-center mt-2 italic">
+					AI-driven scenario presentation with decision options
+				</p>
+			</div>
+			<div>
+				<img 
+					src="/2025-09-startup-game/team-roles-interface.webp" 
+					alt="Team roles and collaboration interface"
+					class="w-full rounded-lg shadow-md"
+					loading="lazy"
+				/>
+				<p class="text-xs text-gray-400 text-center mt-2 italic">
+					Multi-player team roles and collaboration system
+				</p>
+			</div>
+			<div>
+				<img 
+					src="/2025-09-startup-game/decision-making-flow.webp" 
+					alt="Decision making flow and consequences"
+					class="w-full rounded-lg shadow-md"
+					loading="lazy"
+				/>
+				<p class="text-xs text-gray-400 text-center mt-2 italic">
+					Decision flow showing action consequences and outcomes
+				</p>
+			</div>
+		</div>
+
+		<div class="note-space-md grid md:grid-cols-3 gap-4">
+			<div>
+				<img 
+					src="/2025-09-startup-game/metrics-analytics-view.webp" 
+					alt="Metrics and analytics dashboard"
+					class="w-full rounded-lg shadow-md"
+					loading="lazy"
+				/>
+				<p class="text-xs text-gray-400 text-center mt-2 italic">
+					Real-time metrics tracking and performance analytics
+				</p>
+			</div>
+			<div>
+				<img 
+					src="/2025-09-startup-game/networking-system-ui.webp" 
+					alt="Networking and relationship building interface"
+					class="w-full rounded-lg shadow-md"
+					loading="lazy"
+				/>
+				<p class="text-xs text-gray-400 text-center mt-2 italic">
+					Networking system for building investor and advisor relationships
+				</p>
+			</div>
+			<div>
+				<img 
+					src="/2025-09-startup-game/dynamic-events-panel.webp" 
+					alt="Dynamic events and market changes panel"
+					class="w-full rounded-lg shadow-md"
+					loading="lazy"
+				/>
+				<p class="text-xs text-gray-400 text-center mt-2 italic">
+					Dynamic event system with market disruptions and opportunities
+				</p>
+			</div>
+		</div>
 	</section>
 
 	<!-- Market Opportunity -->
@@ -253,16 +339,14 @@
 		<p class="note-space-md">
 			Many people worry that the startup market might feel too niche. How many new founders are
 			there, after all? It helps to look at the numbers. Every year, globally, around 50 million new
-			startups are launched that work out to roughly 137,000 new ventures each day DemandSage
-			Source. In the United States alone, over 5 million new business applications were filed in
-			2023, marking a continuing upward trend that started during the pandemic Commerce Institute AP
-			News.
+			startups are launched that work out to roughly 137,000 new ventures each day<sup><a href="#ref-3">3</a></sup>. In the United States alone, over 5 million new business applications were filed in
+			2023, marking a continuing upward trend that started during the pandemic<sup><a href="#ref-4">4</a></sup>.
 		</p>
 
 		<p class="note-space-md">
 			Still, while those figures are large, they also include a wide range of small businesses, many
 			are side hustles or lifestyle ventures, not necessarily high-growth, venture-scale startups
-			that would engage deeply with The Startup Games. And the reality that only a fraction of new
+			that would engage deeply with this concept. And the reality that only a fraction of new
 			businesses aim at building scalable startups means the highly active, growth-focused founder
 			population is smaller than raw numbers might suggest.
 		</p>
@@ -270,10 +354,9 @@
 		<p class="note-space-md">
 			Yet this doesn't weaken the opportunity. In markets like India, the number of formally
 			recognized startups is already approaching 180,000, with over 21,000 new entities added in
-			just the first half of 2025 The Economic Times. Plus, regions around the world are doubling
+			just the first half of 2025<sup><a href="#ref-5">5</a></sup>. Plus, regions around the world are doubling
 			down on entrepreneurship ecosystems, for instance the initiative in Maharashtra, India,
-			targets creating 125,000 entrepreneurs and 50,000 new startups over five years, The Times of
-			India.
+			targets creating 125,000 entrepreneurs and 50,000 new startups over five years<sup><a href="#ref-6">6</a>,<a href="#ref-7">7</a></sup>.
 		</p>
 
 		<p class="note-space-md">
@@ -395,7 +478,7 @@
 			professionals across more than 700 schools have used their simulations, and their vendor
 			includes instructor support tools, LMS integration, and structured learning scaffolds. The
 			simulations target second- and third-year undergrads through EMBA programs, offering
-			competitive team-based learning with rich metrics and scenario planning.
+			competitive team-based learning with rich metrics and scenario planning<sup><a href="#ref-8">8</a>,<a href="#ref-9">9</a>,<a href="#ref-10">10</a></sup>.
 		</p>
 
 		<p>
@@ -403,14 +486,14 @@
 			economic modeling, company management, production, R&D, marketing, competition, and even
 			political dynamics. Many users praise its depth and realism, and its startup-focused mode
 			allows players to prototype a company, experience growth challenges, and test strategy
-			execution without real-world risk.
+			execution without real-world risk<sup><a href="#ref-11">11</a></sup>.
 		</p>
 
 		<p>
 			Markstrat is a flagship marketing strategy simulation developed by StratX. It is used by over
 			500 academic institutions globally, including many of the world's top business schools.
 			Players manage marketing budgets, product development, market research, and competitive
-			positioning in sequential rounds.
+			positioning in sequential rounds<sup><a href="#ref-12">12</a></sup>.
 		</p>
 
 		<p>
@@ -419,7 +502,7 @@
 			layers or AI-driven variability. Research indicates that while serious games and simulations
 			enhance learning outcomes for instance, boosting entrepreneurial competence and engagement
 			successful integration depends heavily on curriculum fit, instructor facilitation, and
-			scenario realism.
+			scenario realism<sup><a href="#ref-13">13</a>,<a href="#ref-2">2</a>,<a href="#ref-14">14</a></sup>.
 		</p>
 
 		<p>
@@ -433,13 +516,13 @@
 			learning needs, or they are too rigid for diverse teaching styles. They often lack strong
 			emotional hooks or replayability, and they may not integrate well into academic or accelerator
 			workflows. As noted in game design research, even well-intended projects falter if they fail
-			on execution or user engagement.
+			on execution or user engagement<sup><a href="#ref-1">1</a></sup>.
 		</p>
 
 		<p>
 			The Startup Games seeks to overcome this by combining structured gameplay with narrative
 			realism, AI-driven scenario generation, and built-in social feedback. Players step into
-			roles—founder, team member, investor—and face randomly generated yet rule-based challenges.
+			roles such as founder, team member, or investor, and face randomly generated yet rule-based challenges.
 			They make choices that matter in two ways: metrics-altering actions and discussion-triggering
 			reflections. This multi-layered approach aims to facilitate emotional engagement, learning
 			through immersion, and flexible integration into various learning settings. It positions the
@@ -910,16 +993,20 @@
 		<div class="note-section-break"></div>
 
 		<p>
-			The Startup Games is seeking a USD 500k to 750k pre-seed raise, targeting 15 to 20 percent
-			ownership post-money. This implies a post-money valuation range of USD 3.3m to 3.75m, but of
+			The founder is seeking a USD 500k to 750k pre-seed raise, targeting 10 to 20 percent
+			ownership post-money. This implies a post-money valuation range of USD 2.5m to 7.5m, but of
 			course this would be driven by the market and the valuation offered by the VCs.
+		</p>
+
+		<p>
+			The founder is also open to a smaller round focused on building out the concept further and using the enhanced product to attract a co-founder with complementary commercial skills. This alternative approach would prioritise team building and product validation over immediate scale.
 		</p>
 
 		<p>The cap table after the raise would be structured as follows:</p>
 
 		<ul>
-			<li><strong>Founders:</strong> 70–75 percent</li>
-			<li><strong>Investors (pre-seed):</strong> 15–20 percent</li>
+			<li><strong>Founders:</strong> 70–80 percent</li>
+			<li><strong>Investors (pre-seed):</strong> 10–20 percent</li>
 			<li><strong>ESOP:</strong> 10 percent reserved for early hires</li>
 		</ul>
 
@@ -968,20 +1055,149 @@
 
 		<h3 class="note-heading-h3">Acquisition by an EdTech platform</h3>
 		<p>
-			Companies like Coursera, Udemy, or Pearson may see value in adding a simulation layer to their
-			course offerings. This strengthens their experiential learning portfolio.
+			This represents the most likely and strategically aligned exit path. Major EdTech platforms are actively seeking to differentiate their offerings and move beyond traditional video-based learning towards more interactive, experiential formats.
+		</p>
+
+		<h4 class="note-heading-h4">Strategic Rationale</h4>
+		<p>
+			Companies like Coursera, Udemy, and LinkedIn Learning face increasing competition and commoditisation of online courses. Adding a simulation layer to their entrepreneurship and business courses would create a premium offering that justifies higher price points. The Startup Games would plug directly into their existing course catalogues, particularly MBA-level content, entrepreneurship specialisations, and corporate training programmes.
+		</p>
+
+		<p>
+			For platforms like MasterClass, which already positions itself as premium content, The Startup Games could complement their existing business and leadership classes by providing hands-on application of concepts taught by their instructors. This transforms passive learning into active practice.
+		</p>
+
+		<h4 class="note-heading-h4">Potential Acquirers and Rationale</h4>
+		<ul>
+			<li>
+				<strong>Coursera:</strong> Already partners with universities globally and has strong B2B relationships. The Startup Games would enhance their business school offerings and provide a differentiated experience for corporate clients.
+			</li>
+			<li>
+				<strong>LinkedIn Learning:</strong> Perfect strategic fit given LinkedIn's professional focus. The simulation could integrate with LinkedIn's networking features, allowing users to connect with other "founders" from their cohorts.
+			</li>
+			<li>
+				<strong>Udemy Business:</strong> Focused on corporate training market. The Startup Games would add a premium, interactive component to their entrepreneurship and innovation training offerings.
+			</li>
+			<li>
+				<strong>Pearson:</strong> Major textbook and educational content publisher looking to modernise. Could integrate The Startup Games with their business school textbooks and digital learning platforms.
+			</li>
+		</ul>
+
+		<h4 class="note-heading-h4">Valuation Considerations</h4>
+		<p>
+			EdTech acquisitions typically trade at 5-15x revenue multiples, depending on growth rate and strategic value. Given The Startup Games' projected USD 4-6m ARR by year four, this suggests a valuation range of USD 20-90m. The higher end would require demonstrating strong engagement metrics, institutional adoption, and clear synergies with the acquirer's existing platform.
+		</p>
+
+		<p>
+			Strategic value could push valuations higher if The Startup Games demonstrates unique capabilities around AI-driven personalisation, community engagement, or measurable learning outcomes that the acquirer cannot easily replicate.
 		</p>
 
 		<h3 class="note-heading-h3">Acquisition by a corporate training or consulting firm</h3>
 		<p>
-			Firms such as McKinsey, BCG, or large L&D providers could use The Startup Games as a tool for
-			internal innovation and leadership training.
+			This exit path offers compelling strategic value, particularly as corporations increasingly focus on innovation, intrapreneurship, and developing entrepreneurial thinking within their organisations.
+		</p>
+
+		<h4 class="note-heading-h4">Strategic Rationale</h4>
+		<p>
+			Management consulting firms and corporate training providers face pressure to deliver measurable outcomes from leadership development programmes. The Startup Games provides a controlled environment where executives can practise high-stakes decision-making, experience failure safely, and develop entrepreneurial mindsets without real business consequences.
+		</p>
+
+		<p>
+			For consulting firms, this creates a differentiated training offering that goes beyond traditional case study analysis. Clients can experience the emotional reality of startup challenges, making lessons more memorable and applicable to corporate innovation initiatives.
+		</p>
+
+		<h4 class="note-heading-h4">Potential Acquirers and Rationale</h4>
+		<ul>
+			<li>
+				<strong>McKinsey & Company:</strong> Could integrate The Startup Games into their leadership development programmes and innovation consulting practice. Particularly valuable for their work with corporate venture capital arms and innovation labs.
+			</li>
+			<li>
+				<strong>Boston Consulting Group (BCG):</strong> Strong focus on digital transformation and innovation consulting. The Startup Games would complement their existing digital learning platforms and innovation methodologies.
+			</li>
+			<li>
+				<strong>Deloitte:</strong> Large corporate learning division with established relationships across industries. Could package The Startup Games as part of their leadership development and digital transformation offerings.
+			</li>
+			<li>
+				<strong>Corporate Universities (GE Crotonville, McDonald's Hamburger University):</strong> Internal corporate training organisations seeking innovative approaches to develop entrepreneurial leadership capabilities.
+			</li>
+			<li>
+				<strong>Specialist L&D Providers (Dale Carnegie, Franklin Covey):</strong> Looking to modernise their curriculum with interactive, technology-driven learning experiences.
+			</li>
+		</ul>
+
+		<h4 class="note-heading-h4">Value Proposition for Acquirers</h4>
+		<p>
+			Corporate training acquisitions are often valued based on the ability to scale existing client relationships and create recurring revenue streams. The Startup Games would allow acquirers to:
+		</p>
+		<ul>
+			<li>Charge premium rates for experiential learning programmes</li>
+			<li>Extend engagement with existing clients through multi-cohort implementations</li>
+			<li>Differentiate from competitors offering only traditional training methods</li>
+			<li>Develop proprietary IP around entrepreneurial leadership development</li>
+		</ul>
+
+		<h4 class="note-heading-h4">Valuation Considerations</h4>
+		<p>
+			Corporate training and consulting acquisitions typically trade at 3-8x revenue multiples, lower than pure EdTech but with more predictable enterprise sales cycles. Strategic value could be significant if the acquirer can demonstrate improved client outcomes and retention through simulation-based learning.
+		</p>
+
+		<p>
+			The key differentiator would be proving measurable impact on client innovation programmes and leadership development initiatives, which could justify premium valuations in the USD 15-50m range for a business generating USD 4-6m ARR.
 		</p>
 
 		<h3 class="note-heading-h3">Acquisition by a gaming or simulation publisher</h3>
 		<p>
-			Serious game studios or education-focused publishers may see this as a way to enter the
-			entrepreneurship learning market.
+			This represents the most technically aligned exit path, where acquirers would primarily value the AI-driven game engine, content creation capabilities, and proven engagement mechanics rather than educational distribution channels.
+		</p>
+
+		<h4 class="note-heading-h4">Strategic Rationale</h4>
+		<p>
+			Serious games and simulation publishers face challenges in creating compelling content that balances entertainment with learning outcomes. The Startup Games demonstrates a successful formula for narrative-driven, AI-powered scenarios that maintain engagement while delivering measurable educational value.
+		</p>
+
+		<p>
+			Gaming publishers increasingly recognise the value of the "serious games" market, particularly as corporate training budgets shift towards more engaging, interactive formats. The Startup Games provides a proven template that could be adapted for other professional development areas such as leadership, sales training, or project management.
+		</p>
+
+		<h4 class="note-heading-h4">Potential Acquirers and Rationale</h4>
+		<ul>
+			<li>
+				<strong>Serious Game Studios (Learning Games Network, Designing Digitally):</strong> Specialist developers looking to expand their portfolio with proven IP and enter the entrepreneurship education vertical.
+			</li>
+			<li>
+				<strong>Educational Publishers (Houghton Mifflin Harcourt, McGraw-Hill):</strong> Traditional textbook companies seeking digital transformation and interactive learning capabilities.
+			</li>
+			<li>
+				<strong>Simulation Companies (AnyLogic, Simio):</strong> Technical simulation providers wanting to add gamified, user-friendly interfaces to their enterprise offerings.
+			</li>
+			<li>
+				<strong>Gaming Publishers with Educational Focus (PlayMob, Filament Games):</strong> Companies bridging entertainment and education, seeking established content in the business/entrepreneurship niche.
+			</li>
+		</ul>
+
+		<h4 class="note-heading-h4">Technical and IP Value</h4>
+		<p>
+			For gaming acquirers, the core value lies in the AI engine that generates dynamic, realistic business scenarios. This technology could be repurposed for:
+		</p>
+		<ul>
+			<li>Corporate training simulations across different industries</li>
+			<li>Academic business school curricula and case study platforms</li>
+			<li>Consumer entertainment games with business/management themes</li>
+			<li>White-label simulation platforms for other educational publishers</li>
+		</ul>
+
+		<h4 class="note-heading-h4">Market Position and Growth</h4>
+		<p>
+			The serious games market is projected to reach USD 24.5 billion by 2030, with corporate training representing the fastest-growing segment. An acquirer could leverage The Startup Games' proven engagement model to capture a larger share of this expanding market.
+		</p>
+
+		<h4 class="note-heading-h4">Valuation Considerations</h4>
+		<p>
+			Gaming and simulation acquisitions often trade at lower multiples (2-6x revenue) than pure EdTech, but with potential for higher growth through content licensing and white-label opportunities. The technical IP around AI-driven scenario generation could justify premium valuations if it demonstrates broad applicability beyond entrepreneurship education.
+		</p>
+
+		<p>
+			Strategic value would be highest for acquirers seeking to establish a platform play, where The Startup Games becomes the foundation for multiple simulation products across different professional development verticals.
 		</p>
 
 		<p>
@@ -1002,47 +1218,111 @@
 			customer interviews, and product validation before making any investment decision.
 		</p>
 
-		<ul>
-			<li>
-				How effectively can AI generate scenarios that feel authentic and emotionally engaging to
-				real founders?
-			</li>
-			<li>
-				Will universities and accelerators adopt simulation-based learning at the pace and scale
-				required for the business model?
-			</li>
-			<li>
-				Can the product maintain long-term engagement without becoming repetitive or predictable?
-			</li>
-			<li>
-				What is the real willingness of consumers to pay for premium entrepreneurship education
-				content?
-			</li>
-			<li>
-				How will established players in business simulation and educational gaming respond to this
-				market entry?
-			</li>
-			<li>
-				Is the institutional sales cycle faster or slower than projected, and how does this affect
-				runway and growth?
-			</li>
-			<li>
-				Can the founder successfully transition from technical leadership to the commercial
-				execution required for B2B sales?
-			</li>
-			<li>
-				What is the true market size for founder education tools when accounting for regional and
-				cultural differences?
-			</li>
-			<li>
-				Will corporate training budgets prioritise entrepreneurship simulation over other L&D
-				investments?
-			</li>
-			<li>
-				How sensitive is the business model to economic downturns affecting educational and
-				corporate training spending?
-			</li>
-		</ul>
+		<!-- Problem Statement -->
+		<section id="open-questions-problem" class="note-subsection">
+			<h3 class="note-heading-h3">Problem Statement</h3>
+			
+			<ul>
+				<li>
+					What is the real willingness of consumers to pay for premium entrepreneurship education
+					content?
+				</li>
+				<li>
+					What is the true market size for founder education tools when accounting for regional and
+					cultural differences?
+				</li>
+				<li>
+					Is the primary problem educational (lack of startup training) or professional networking (lack of founder community)? Would pivoting to a LinkedIn-style social platform for entrepreneurs solve a more pressing need?
+				</li>
+				<li>
+					If positioned as a social platform, whose problem are we solving - aspiring founders seeking community, existing founders needing networking, or investors looking for deal flow?
+				</li>
+			</ul>
+		</section>
+
+		<!-- Product -->
+		<section id="open-questions-product" class="note-subsection">
+			<h3 class="note-heading-h3">Product</h3>
+			
+			<ul>
+				<li>
+					How effectively can AI generate scenarios that feel authentic and emotionally engaging to
+					real founders?
+				</li>
+				<li>
+					Can the product maintain long-term engagement without becoming repetitive or predictable?
+				</li>
+				<li>
+					Could the gaming mechanics serve as the foundation for a professional networking platform, where completed scenarios become portfolio pieces and game interactions lead to real business connections?
+				</li>
+				<li>
+					What would differentiate a founder-focused social platform from existing networks like LinkedIn, AngelList, or Founder Groups?
+				</li>
+			</ul>
+		</section>
+
+		<!-- Market -->
+		<section id="open-questions-market" class="note-subsection">
+			<h3 class="note-heading-h3">Market</h3>
+			
+			<ul>
+				<li>
+					Will universities and accelerators adopt simulation-based learning at the pace and scale
+					required for the business model?
+				</li>
+				<li>
+					How will established players in business simulation and educational gaming respond to this
+					market entry?
+				</li>
+				<li>
+					Will corporate training budgets prioritise entrepreneurship simulation over other L&D
+					investments?
+				</li>
+				<li>
+					Is there sufficient unmet demand for a founder-specific professional network, or is the market already adequately served by existing platforms?
+				</li>
+				<li>
+					How would network effects work in a founder-focused social platform - would early users attract others, or would it suffer from the "empty restaurant" problem?
+				</li>
+			</ul>
+		</section>
+
+		<!-- Business Model -->
+		<section id="open-questions-business" class="note-subsection">
+			<h3 class="note-heading-h3">Business Model</h3>
+			
+			<ul>
+				<li>
+					Is the institutional sales cycle faster or slower than projected, and how does this affect
+					runway and growth?
+				</li>
+				<li>
+					How sensitive is the business model to economic downturns affecting educational and
+					corporate training spending?
+				</li>
+				<li>
+					What would be the revenue model for a LinkedIn-style founder platform - premium subscriptions, recruitment fees, event monetisation, or advertising?
+				</li>
+				<li>
+					Could a social platform approach unlock larger revenue streams (recruitment, deal flow, premium networking) that dwarf the educational licensing model?
+				</li>
+				<li>
+					Is there a way to combine the gaming/simulation core with social networking features, or do these represent fundamentally different value propositions that would confuse users?
+				</li>
+			</ul>
+		</section>
+
+		<!-- Fundraising -->
+		<section id="open-questions-fundraising" class="note-subsection">
+			<h3 class="note-heading-h3">Fundraising</h3>
+			
+			<ul>
+				<li>
+					Can the founder successfully transition from technical leadership to the commercial
+					execution required for B2B sales? The founder is actively interested in bringing in another co-founder to expand the team and complement their technical expertise.
+				</li>
+			</ul>
+		</section>
 	</section>
 
 	<!-- References -->
@@ -1051,39 +1331,7 @@
 		<div class="note-section-break"></div>
 
 		<ol>
-			<li>
-				Marketplace Simulations. Experiential Learning Simulations.<br />
-				<a href="https://www.marketplace-simulation.com/" target="_blank" rel="noopener noreferrer"
-					>https://www.marketplace-simulation.com/</a
-				>
-			</li>
-
-			<li>
-				Virtonomics. Business Simulation Game Blog.<br />
-				<a
-					href="https://virtonomics.com/blogs/author/minvydas/"
-					target="_blank"
-					rel="noopener noreferrer">https://virtonomics.com/blogs/author/minvydas/</a
-				>
-			</li>
-
-			<li>
-				NBEA Library. Marketplace Simulations Company Profile.<br />
-				<a
-					href="https://nbealibrary.org/company/marketplace-simulations"
-					target="_blank"
-					rel="noopener noreferrer">https://nbealibrary.org/company/marketplace-simulations</a
-				>
-			</li>
-
-			<li>
-				Wikipedia. Markstrat.<br />
-				<a href="https://en.wikipedia.org/wiki/Markstrat" target="_blank" rel="noopener noreferrer"
-					>https://en.wikipedia.org/wiki/Markstrat</a
-				>
-			</li>
-
-			<li>
+			<li id="ref-1">
 				Academic Conferences. Analysing the Required Properties of Business Simulation Games.<br />
 				<a
 					href="https://papers.academic-conferences.org/index.php/ecgbl/article/download/3001/2650/10668"
@@ -1093,7 +1341,108 @@
 				>
 			</li>
 
-			<li>
+			<li id="ref-2">
+				PMC. Game-Based Learning and Gamification in Entrepreneurship Education.<br />
+				<a
+					href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8829425/"
+					target="_blank"
+					rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC8829425/</a
+				>
+			</li>
+
+			<li id="ref-3">
+				DemandSage. Startup Statistics.<br />
+				<a
+					href="https://www.demandsage.com/startup-statistics/"
+					target="_blank"
+					rel="noopener noreferrer"
+					>https://www.demandsage.com/startup-statistics/</a
+				>
+			</li>
+
+			<li id="ref-4">
+				Limelight Digital. Startup Statistics.<br />
+				<a
+					href="https://www.limelightdigital.co.uk/startup-statistics/"
+					target="_blank"
+					rel="noopener noreferrer"
+					>https://www.limelightdigital.co.uk/startup-statistics/</a
+				>
+			</li>
+
+			<li id="ref-5">
+				Wikipedia. Startup India.<br />
+				<a
+					href="https://en.wikipedia.org/wiki/Startup_India"
+					target="_blank"
+					rel="noopener noreferrer"
+					>https://en.wikipedia.org/wiki/Startup_India</a
+				>
+			</li>
+
+			<li id="ref-6">
+				Times of India. Startup Policy to Create 1.3 Lakh Entrepreneurs in 5 Years Rolled Out.<br />
+				<a
+					href="https://timesofindia.indiatimes.com/city/mumbai/startup-policy-to-create-1-3-lakh-entrepreneurs-in-5-yrs-rolled-out/articleshow/123724429.cms"
+					target="_blank"
+					rel="noopener noreferrer"
+					>https://timesofindia.indiatimes.com/city/mumbai/startup-policy-to-create-1-3-lakh-entrepreneurs-in-5-yrs-rolled-out/articleshow/123724429.cms</a
+				>
+			</li>
+
+			<li id="ref-7">
+				KNN India. Maharashtra Approves New Startup Policy to Create 1.25 Lakh Entrepreneurs, 50000 Startups in Next 5 Years.<br />
+				<a
+					href="https://knnindia.co.in/news/newsdetails/state/maharashtra-approves-new-startup-policy-to-create-125-lakh-entrepreneurs-50000-startups-in-next-5-years"
+					target="_blank"
+					rel="noopener noreferrer"
+					>https://knnindia.co.in/news/newsdetails/state/maharashtra-approves-new-startup-policy-to-create-125-lakh-entrepreneurs-50000-startups-in-next-5-years</a
+				>
+			</li>
+
+			<li id="ref-8">
+				Marketplace Simulations. Experiential Learning Simulations.<br />
+				<a href="https://www.marketplace-simulation.com/" target="_blank" rel="noopener noreferrer"
+					>https://www.marketplace-simulation.com/</a
+				>
+			</li>
+
+			<li id="ref-9">
+				NBEA Library. Marketplace Simulations Company Profile.<br />
+				<a
+					href="https://nbealibrary.org/company/marketplace-simulations"
+					target="_blank"
+					rel="noopener noreferrer">https://nbealibrary.org/company/marketplace-simulations</a
+				>
+			</li>
+
+			<li id="ref-10">
+				Marketplace Simulations. The Marketplace Game Review by Stan Shapiro.<br />
+				<a
+					href="https://www.marketplace-simulation.com/wp-content/the-marketplace-game-review-by-stan-shapiro.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+					>https://www.marketplace-simulation.com/wp-content/the-marketplace-game-review-by-stan-shapiro.pdf</a
+				>
+			</li>
+
+			<li id="ref-11">
+				Virtonomics. Business Simulation Game Blog.<br />
+				<a
+					href="https://virtonomics.com/blogs/author/minvydas/"
+					target="_blank"
+					rel="noopener noreferrer">https://virtonomics.com/blogs/author/minvydas/</a
+				>
+			</li>
+
+			<li id="ref-12">
+				Wikipedia. Markstrat.<br />
+				<a href="https://en.wikipedia.org/wiki/Markstrat" target="_blank" rel="noopener noreferrer"
+					>https://en.wikipedia.org/wiki/Markstrat</a
+				>
+			</li>
+
+			<li id="ref-13">
 				ResearchGate. Analysing the Required Properties of Business Simulation Games to Be Used in
 				E-Learning and Education.<br />
 				<a
@@ -1104,31 +1453,12 @@
 				>
 			</li>
 
-			<li>
-				PMC. Game-Based Learning and Gamification in Entrepreneurship Education.<br />
-				<a
-					href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8829425/"
-					target="_blank"
-					rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC8829425/</a
-				>
-			</li>
-
-			<li>
+			<li id="ref-14">
 				SAGE Journals. Entrepreneurship Education through Simulation Games.<br />
 				<a
 					href="https://journals.sagepub.com/doi/10.1177/2515127417737285"
 					target="_blank"
 					rel="noopener noreferrer">https://journals.sagepub.com/doi/10.1177/2515127417737285</a
-				>
-			</li>
-
-			<li>
-				Marketplace Simulations. The Marketplace Game Review by Stan Shapiro.<br />
-				<a
-					href="https://www.marketplace-simulation.com/wp-content/the-marketplace-game-review-by-stan-shapiro.pdf"
-					target="_blank"
-					rel="noopener noreferrer"
-					>https://www.marketplace-simulation.com/wp-content/the-marketplace-game-review-by-stan-shapiro.pdf</a
 				>
 			</li>
 		</ol>

@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { getNoteBySlug } from '$lib/startup-notes.js';
 	import Breadcrumbs from '$lib/components/navigation/Breadcrumbs.svelte';
+	import PageLayout from '$lib/components/layout/PageLayout.svelte';
 
 	// Import all possible note components
 	import BuildBearLabsNote from '../2025-08-buildbear-labs/+page.svelte';
@@ -58,8 +59,8 @@
 	<svelte:component this={CurrentComponent} />
 {:else}
 	<!-- Fallback for missing components -->
-	<div class="container mx-auto px-4 py-8 max-w-4xl">
-		<h1 class="text-3xl font-bold mb-4">Note Not Available</h1>
+	<PageLayout>
+		<h1 class="heading-page-title">Note Not Available</h1>
 		<p class="text-gray-400">This analysis note is not yet available.</p>
-	</div>
+	</PageLayout>
 {/if}
