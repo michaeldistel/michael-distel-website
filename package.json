@@ -1,6 +1,24 @@
 {
-	"name": "mywebsite",
-	"version": "0.0.1",
+	"name": "michael-distel-website",
+	"version": "1.0.0",
+	"description": "Personal website and digital garden exploring startups, Web3 infrastructure, and industrial automation",
+	"author": "Michael Distel <michael@distel.me>",
+	"homepage": "https://michaeldistel.com",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/michaeldistel/michael-distel-website.git"
+	},
+	"bugs": {
+		"url": "https://github.com/michaeldistel/michael-distel-website/issues"
+	},
+	"keywords": [
+		"sveltekit",
+		"personal-website",
+		"digital-garden",
+		"startup-notes",
+		"web3",
+		"industrial-automation"
+	],
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
