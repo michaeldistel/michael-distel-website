@@ -1,38 +1,84 @@
-# create-svelte
+# Michael Distel's Personal Website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Personal website and digital garden for exploring ideas about startups, Web3 infrastructure, and industrial automation.
 
-## Creating a project
+**Live:** [michaeldistel.com](https://michaeldistel.com)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Tech Stack
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+- **Framework:** SvelteKit 2 (static site generation)
+- **Styling:** Tailwind CSS 3 with custom design system
+- **Deployment:** Docker + nginx
+- **Reverse Proxy:** Traefik with automatic TLS
 
-# create a new project in my-app
-npm create svelte@latest my-app
+## Project Structure
+
+```
+src/
+├── routes/              # Pages and content
+│   ├── startup/         # Startup & fundraising notes
+│   ├── web3/            # Web3 infrastructure topics
+│   ├── industrial/      # Industrial automation projects
+│   └── about/           # Personal background
+├── lib/
+│   ├── components/      # Reusable Svelte components
+│   └── styles/          # Typography & design system CSS
+scripts/                 # Build & note management utilities
+nginx/                   # Production nginx config
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Development
 
 ```bash
-npm run dev
+# Install dependencies
+pnpm install
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# Start dev server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
 ```
 
-## Building
+## Note Management
 
-To create a production version of your app:
+Built-in CLI for managing startup notes:
 
 ```bash
-npm run build
+pnpm notes:list           # List all notes with status
+pnpm notes:publish        # Publish a draft note
+pnpm notes:unpublish      # Unpublish a note
+pnpm notes:show-drafts    # Show drafts in production
+pnpm notes:hide-drafts    # Hide drafts in production
 ```
 
-You can preview the production build with `npm run preview`.
+## Design System
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Custom design system with:
+
+- Typography scale based on modular scale ratio
+- Semantic spacing system
+- Component prop abstractions for consistency
+- Color system with semantic naming
+
+## Deployment
+
+Manual deployment via rsync + Docker Compose:
+
+```bash
+pnpm prod:deploy
+```
+
+Serves via nginx:alpine with:
+
+- Gzip compression
+- Security headers (CSP, HSTS, etc.)
+- Cloudflare IP trust configuration
+- Static asset caching (1yr immutable)
+
+## Contributing
+
+This is a personal website, but feel free to open issues for bugs or suggestions. PRs welcome for typos/fixes.
