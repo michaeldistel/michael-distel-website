@@ -45,17 +45,35 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://michaeldistel.com/startup/notes/2025-09-startup-game</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- Adventures -->
   <url>
     <loc>https://michaeldistel.com/adventures</loc>
-    <lastmod>2025-09-10</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://michaeldistel.com/adventures/kicking-miles-japan-2017</loc>
-    <lastmod>2025-09-10</lastmod>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://michaeldistel.com/adventures/kicking-miles-japan-2023</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://michaeldistel.com/adventures/kicking-miles-korea-2025</loc>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

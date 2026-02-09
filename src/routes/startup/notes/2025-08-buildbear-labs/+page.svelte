@@ -27,7 +27,7 @@
 
 	// Component bindings - these will be bound from DetailedNote component
 	let detailedNote: DetailedNote;
-	
+
 	// Breadcrumbs for this note
 	const breadcrumbs = [
 		{ label: 'Home', href: '/' },
@@ -144,9 +144,9 @@
 			I should mention upfront that I have already invested in BuildBear and worked with them, so I
 			am biased here. I was also part of the investment team at Cocoon Capital that offered them a
 			term sheet during the seed round, though we were ultimately priced out on valuation. I later
-			worked as Operations lead at BuildBear from February 2024 to July 2025. While I no longer work
-			there, I am still an investor in the business and friends with the founders. I know both
-			founders well and have seen the business from the inside.
+			worked as COO at BuildBear from January 2024 to October 2025. While I no longer work there, I
+			am still an investor in the business and friends with the founders. I know both founders well
+			and have seen the business from the inside.
 		</p>
 
 		<p class="note-space-md">
@@ -306,10 +306,10 @@
 				className="note-link-primary"
 			>
 				Electric Capital Developer Report 2024
-			</ExternalLink> shows the reality is much more modest: 23,613 monthly active crypto developers in 2024, down
-			7% year-over-year. Even accounting for private repositories and enterprise development not captured
-			in their GitHub analysis, we are talking about maybe 50,000-80,000 total developers globally, not
-			the hundreds of thousands BuildBear is banking on.
+			</ExternalLink> shows the reality is much more modest: 23,613 monthly active crypto developers
+			in 2024, down 7% year-over-year. Even accounting for private repositories and enterprise development
+			not captured in their GitHub analysis, we are talking about maybe 50,000-80,000 total developers
+			globally, not the hundreds of thousands BuildBear is banking on.
 		</p>
 
 		<!-- Web3 Developer Growth Projections Chart -->
@@ -564,9 +564,7 @@
 				<p class="note-text-caption mb-3">
 					The platform play. Third-party developers build tools, BuildBear takes 30%.
 				</p>
-				<div class="note-text-label">
-					High-margin revenue that scales with ecosystem growth
-				</div>
+				<div class="note-text-label">High-margin revenue that scales with ecosystem growth</div>
 			</div>
 
 			<!-- Enterprise Deals -->
@@ -698,7 +696,9 @@
 		</div>
 
 		<h3 class="note-heading-h3">Near Term Focus (Next 12-18 Months)</h3>
-		<p class="note-space-md">The immediate priorities make sense given where the product is today.</p>
+		<p class="note-space-md">
+			The immediate priorities make sense given where the product is today.
+		</p>
 
 		<div class="grid md:grid-cols-2 gap-4 note-space-lg not-prose">
 			<div class="note-card-md">
@@ -826,8 +826,8 @@
 		<h3 class="note-heading-h3">What Could Go Wrong</h3>
 		<div class="info-callout-red">
 			<p class="note-text-caption">
-				<strong class="note-color-error">⚠️ Key Risk:</strong> Strategy assumes continued Web3 adoption and
-				developer growth. If the space stagnates, BuildBear becomes a niche tool for a niche market.
+				<strong class="note-color-error">⚠️ Key Risk:</strong> Strategy assumes continued Web3 adoption
+				and developer growth. If the space stagnates, BuildBear becomes a niche tool for a niche market.
 				Enterprise focus helps hedge this risk, but execution remains the key variable.
 			</p>
 		</div>
@@ -914,7 +914,9 @@
 
 		<!-- Unit Economics -->
 		<div class="note-card-md note-space-lg">
-			<h4 class="text-lg font-semibold note-color-warning note-space-md">Unit Economics Snapshot</h4>
+			<h4 class="text-lg font-semibold note-color-warning note-space-md">
+				Unit Economics Snapshot
+			</h4>
 			<div class="grid md:grid-cols-3 gap-6">
 				<div class="text-center">
 					<div class="text-2xl font-bold note-color-success mb-1">85%+</div>
@@ -924,9 +926,7 @@
 				<div class="text-center">
 					<div class="text-2xl font-bold text-blue-400 mb-1">Low</div>
 					<div class="note-text-caption mb-2">CAC</div>
-					<div class="note-text-label">
-						Ecosystem partnerships vs traditional SaaS marketing
-					</div>
+					<div class="note-text-label">Ecosystem partnerships vs traditional SaaS marketing</div>
 				</div>
 				<div class="text-center">
 					<div class="text-2xl font-bold text-purple-400 mb-1">High</div>
@@ -1692,8 +1692,8 @@
 		<h3 class="note-heading-h3">Disclosure</h3>
 		<p class="note-text-caption-muted mt-6">
 			This analysis combines publicly available information with insights gained during my time as
-			Operations Lead at BuildBear Labs (February 2024 - July 2025). All forward-looking statements
-			and projections are based on available data and should be considered estimates subject to
+			COO at BuildBear Labs (January 2024 - October 2025). All forward-looking statements and
+			projections are based on available data and should be considered estimates subject to
 			significant uncertainty.
 		</p>
 	</section>

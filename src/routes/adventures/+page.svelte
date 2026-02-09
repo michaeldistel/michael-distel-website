@@ -21,7 +21,7 @@
 	/>
 
 	<!-- Adventures Grid -->
-	<CardGrid columns={2} className="note-space-xl">
+	<CardGrid columns={3} className="note-space-xl">
 		<!-- Kicking Miles Japan 2017 -->
 		<Card
 			title="Kicking Miles Japan 2017"
@@ -33,9 +33,37 @@
 				and the value of small daily progress.
 			</p>
 			<div class="flex justify-between items-center">
-				<ActionButton href="/adventures/kicking-miles-japan-2017" size="sm">
-					Read the full journey →
-				</ActionButton>
+				<ActionButton href="/adventures/kicking-miles-japan-2017" size="sm">Read</ActionButton>
+			</div>
+		</Card>
+
+		<!-- Japan 2023 -->
+		<Card
+			title="Japan 2023: Tokyo to Nasu"
+			badge="Oct 16 - Oct 18, 2023 • 3 days • ~150km"
+			titleColor="text-green-400"
+		>
+			<p class="note-text-caption note-space-md">
+				A shorter return to Japan with Alex. Urban exit, autumn colours, and a different kind of
+				rhythm.
+			</p>
+			<div class="flex justify-between items-center">
+				<ActionButton href="/adventures/kicking-miles-japan-2023" size="sm">Read</ActionButton>
+			</div>
+		</Card>
+
+		<!-- Korea 2025 -->
+		<Card
+			title="Korea 2025: Busan to Seoul"
+			badge="Oct 2025 • 11 days • 560km"
+			titleColor="text-orange-400"
+		>
+			<p class="note-text-caption note-space-md">
+				560km across Korea on kick scooters, mostly following the bike-path network from coast to
+				capital.
+			</p>
+			<div class="flex justify-between items-center">
+				<ActionButton href="/adventures/kicking-miles-korea-2025" size="sm">Read</ActionButton>
 			</div>
 		</Card>
 

@@ -6,29 +6,33 @@
 
 	// Import all possible note components
 	import BuildBearLabsNote from '../2025-08-buildbear-labs/+page.svelte';
+	import StartupGameNote from '../2025-09-startup-game/+page.svelte';
 
 	// Map slugs to components
 	const noteComponents: Record<string, any> = {
-		'2025-08-buildbear-labs': BuildBearLabsNote
+		'2025-08-buildbear-labs': BuildBearLabsNote,
+		'2025-09-startup-game': StartupGameNote
 	};
 
 	$: slug = $page.params.slug;
 	$: note = getNoteBySlug(slug || '');
 	$: CurrentComponent = slug ? noteComponents[slug] || null : null;
-	
-	$: breadcrumbs = note ? [
-		{ label: 'Home', href: '/' },
-		{ label: 'Startup', href: '/startup' },
-		{ label: 'Notes', href: '/startup/notes' },
-		{ label: note.title }
-	] : [];
+
+	$: breadcrumbs = note
+		? [
+				{ label: 'Home', href: '/' },
+				{ label: 'Startup', href: '/startup' },
+				{ label: 'Notes', href: '/startup/notes' },
+				{ label: note.title }
+			]
+		: [];
 </script>
 
 <svelte:head>
 	{#if note}
 		<title>{note.title} | Michael Distel</title>
 		<meta name="description" content={note.description} />
-		
+
 		<!-- Structured Data for Article -->
 		<script type="application/ld+json">
 			{
@@ -42,7 +46,7 @@
 					"url": "https://michaeldistel.com/about"
 				},
 				"publisher": {
-					"@type": "Person", 
+					"@type": "Person",
 					"name": "Michael Distel"
 				},
 				"datePublished": "{note.date}",
