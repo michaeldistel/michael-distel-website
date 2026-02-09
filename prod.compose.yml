@@ -32,7 +32,7 @@ services:
     labels:
       - 'traefik.enable=true'
       - 'traefik.docker.network=proxy'
-      - 'traefik.http.routers.michael-website.rule=Host(`michael.antonshubin.com`) || Host(`michaeldistel.com`)|| Host(`distel.me`)'
+      - 'traefik.http.routers.michael-website.rule=Host(`michaeldistel.com`) || Host(`distel.me`)'
       - 'traefik.http.routers.michael-website.entrypoints=websecure'
       - 'traefik.http.routers.michael-website.tls=true'
       - 'traefik.http.routers.michael-website.tls.certresolver=myresolver'
