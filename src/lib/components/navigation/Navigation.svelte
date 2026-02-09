@@ -7,7 +7,6 @@
 		{ path: '/', label: 'Home' },
 		{ path: '/about', label: 'About' },
 		{ path: '/startup', label: 'Startup' },
-		{ path: '/web3', label: 'Web3' },
 		{ path: '/industrial', label: 'Industrial' },
 		{ path: '/adventures', label: 'Adventures' },
 		{ path: '/contact', label: 'Contact' }

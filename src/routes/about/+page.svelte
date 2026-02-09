@@ -8,7 +8,7 @@
 	<title>About Michael Distel</title>
 	<meta
 		name="description"
-		content="Personal notes and reflections from someone exploring ideas about startups, industrial automation, and Web3 through direct experience and ongoing learning."
+		content="Personal notes and reflections from someone exploring ideas about startups, industrial automation, and blockchain development through direct experience and ongoing learning."
 	/>
 
 	<!-- Structured Data for Person -->
@@ -26,7 +26,7 @@
 			},
 			"knowsAbout": [
 				"Startup Fundraising",
-				"Web3 Infrastructure",
+				"Blockchain Infrastructure",
 				"Industrial Automation",
 				"Early Stage Investing"
 			],
@@ -56,7 +56,7 @@
 		settling in, I found work at Citect (2006–2008) and then
 		<ExternalLink href="https://www.se.com">Schneider Electric</ExternalLink>
 		(2008–2011), writing software for power plants and water treatment facilities. Schneider acquired
-		Citect in 2008 for around A$287 million. The work was not as flashy as Web3 or AI, but I learned
+		Citect in 2008 for around A$287 million. The work was not as flashy as blockchain or AI, but I learned
 		to appreciate the precision required when things absolutely cannot fail. Eventually, though, the
 		slower pace did not suit me, and I started looking for something different.
 	</p>
@@ -71,8 +71,8 @@
 		(feelbeautiful.com.sg). We grew to around twenty people across multiple countries. I learned more
 		about finance and operations than I expected. After that, I did freelance consulting (2017–2021)
 		and worked as an interim CTO, helping startups with technology questions. This was also when I first
-		encountered Web3, building a Bitcoin exchange for a private bank in Australia and working on other
-		crypto projects.
+		encountered blockchain development, building a Bitcoin exchange for a private bank in Australia and
+		working on other crypto projects.
 	</p>
 
 	<!-- Section: Learning about VC -->
@@ -95,9 +95,9 @@
 	<p class="mb-6 md:text-xl sm:text-base">
 		From January 2024 to October 2025, I worked at
 		<ExternalLink href="https://buildbear.io">BuildBear Labs</ExternalLink>
-		on Web3 testing infrastructure, helping developers test their applications against blockchain networks
-		without the usual complexity. BuildBear raised US$1.9m seed from US VCs during my time there. At
-		the moment, I do not have anything solid planned and am hunting around for the next thing to do.
+		on blockchain testing infrastructure, helping developers test their applications against blockchain
+		networks without the usual complexity. BuildBear raised US$1.9m seed from US VCs during my time there.
+		At the moment, I do not have anything solid planned and am hunting around for the next thing to do.
 		I am curious about what problems are worth solving and where I might be useful.
 	</p>
 </PageLayout>

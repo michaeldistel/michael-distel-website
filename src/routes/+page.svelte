@@ -15,7 +15,7 @@
 			"@type": "WebSite",
 			"name": "Michael Distel",
 			"url": "https://michaeldistel.com",
-			"description": "Personal website for exploring ideas about startups, Web3 infrastructure, and industrial automation",
+			"description": "Personal website for exploring ideas about startups, blockchain development, and industrial automation",
 			"author": {
 				"@type": "Person",
 				"name": "Michael Distel"
@@ -23,7 +23,7 @@
 			"mainEntity": {
 				"@type": "Blog",
 				"name": "Michael Distel's Notes",
-				"description": "Notes and experiments on startups, Web3, and industrial automation"
+				"description": "Notes and experiments on startups, blockchain testing, and industrial automation"
 			}
 		}
 	</script>
@@ -32,7 +32,7 @@
 <PageLayout>
 	<PageHeader
 		title="Notes and experiments"
-		subtitle="This website is mainly for me, but of course feel free to look around. It is a place to think through ideas and keep track of what I am learning. I am curious about early-stage investing, Web3 infrastructure, and industrial automation, themes that keep reappearing as I try to understand what actually works."
+		subtitle="This website is mainly for me, but of course feel free to look around. It is a place to think through ideas and keep track of what I am learning. I am curious about early-stage investing, blockchain infrastructure, and industrial automation, themes that keep reappearing as I try to understand what actually works."
 	/>
 
 	<!-- Introduction continuation -->
