@@ -1,4 +1,5 @@
 /* Site-Wide Notes and Analysis Styles */
+@reference "tailwindcss";
 
 @layer components {
 	/* Spacing System - Consistent vertical rhythm */
@@ -40,7 +41,7 @@
 
 	/* Section dividers - standardized spacing */
 	.note-section-break {
-		@apply border-b border-slate-700 note-space-lg;
+		@apply border-b border-slate-700 mb-6;
 	}
 
 	/* Color System - Semantic color abstractions */
@@ -177,15 +178,15 @@
 
 	/* Link Styles */
 	.note-link-primary {
-		@apply note-color-primary hover:text-blue-300 transition-colors;
+		@apply text-blue-400 hover:text-blue-300 transition-colors;
 	}
 
 	.note-link-external {
-		@apply note-link-primary hover:underline;
+		@apply text-blue-400 hover:text-blue-300 transition-colors hover:underline;
 	}
 
 	.note-link-internal {
-		@apply note-link-primary underline;
+		@apply text-blue-400 hover:text-blue-300 transition-colors underline;
 	}
 
 	.note-link-contact {
@@ -230,81 +231,81 @@
 
 	/* Card Text Styles - For non-semantic titles within cards */
 	.note-card-title {
-		@apply text-lg font-semibold note-color-primary;
+		@apply text-lg font-semibold text-blue-400;
 	}
 
 	.note-card-subtitle {
-		@apply note-text-caption;
+		@apply text-sm text-gray-300 leading-normal;
 	}
 
 	.note-card-meta {
-		@apply note-text-label mt-3;
+		@apply text-xs text-gray-400 leading-tight mt-3;
 	}
 
 	/* List Styles */
 	.note-list {
-		@apply space-y-2 note-text-body list-disc ml-6 note-space-md;
+		@apply space-y-2 text-base text-gray-300 leading-relaxed list-disc ml-6 mb-4;
 	}
 
 	.note-list-sm {
-		@apply space-y-1 note-text-caption list-disc ml-6 note-space-md;
+		@apply space-y-1 text-sm text-gray-300 leading-normal list-disc ml-6 mb-4;
 	}
 
 	/* Auto-apply bullets to all ul elements in note sections */
 	.note-section ul:not(.note-text-caption) {
-		@apply list-disc ml-6 space-y-2 note-space-md;
+		@apply list-disc ml-6 space-y-2 mb-4;
 	}
 
 	/* Auto-apply bottom margin to all p elements in note sections */
 	.note-section p {
-		@apply note-space-md;
+		@apply mb-4;
 	}
 
 	/* Investment Note Typography */
 	.note-heading-h1 {
-		@apply text-3xl sm:text-4xl font-bold text-slate-100 note-space-xs;
+		@apply text-3xl sm:text-4xl font-bold text-slate-100 mb-2;
 	}
 
 	.note-heading-h2 {
-		@apply text-2xl font-bold text-amber-300 note-space-md;
+		@apply text-2xl font-bold text-amber-300 mb-4;
 	}
 
 	.note-heading-h3 {
-		@apply text-xl font-semibold text-emerald-300 note-space-md;
+		@apply text-xl font-semibold text-emerald-300 mb-4;
 	}
 
 	.note-heading-h4 {
-		@apply text-lg font-medium text-gray-300 note-space-sm;
+		@apply text-lg font-medium text-gray-300 mb-3;
 	}
 
 	.note-heading-card {
-		@apply text-xl font-semibold note-color-secondary note-space-md;
+		@apply text-xl font-semibold text-emerald-300 mb-4;
 	}
 
 	.note-heading-special {
-		@apply text-xl font-semibold note-color-accent note-space-md;
+		@apply text-xl font-semibold text-amber-300 mb-4;
 	}
 
 	.note-heading-toc {
-		@apply text-lg font-semibold text-slate-100 note-space-sm;
+		@apply text-lg font-semibold text-slate-100 mb-3;
 	}
 
 	/* Base Card Styles */
 	.note-card {
-		@apply note-bg-surface rounded-lg note-border-default border;
+		@apply bg-slate-800 rounded-lg border-slate-700 border;
 	}
 
 	.note-card-sm {
-		@apply note-card p-4;
+		@apply bg-slate-800 rounded-lg border-slate-700 border p-4;
 	}
 
 	.note-card-md {
-		@apply note-card p-6;
+		@apply bg-slate-800 rounded-lg border-slate-700 border p-6;
 	}
 
 	/* Metric Cards for KPIs and Numbers */
 	.metric-card {
-		@apply note-card-sm text-center;
+		@apply bg-slate-800 rounded-lg border-slate-700 border p-4 text-center;
 	}
 
 	/* Info Callout Styles */
@@ -313,36 +314,36 @@
 	}
 
 	.info-callout-blue {
-		@apply info-callout bg-blue-900/20 border-blue-400;
+		@apply border-l-4 rounded-none pl-4 py-4 pr-4 mb-6 bg-blue-900/20 border-blue-400;
 	}
 
 	.info-callout-red {
-		@apply info-callout bg-red-900/20 border-red-400;
+		@apply border-l-4 rounded-none pl-4 py-4 pr-4 mb-6 bg-red-900/20 border-red-400;
 	}
 
 	.info-callout-yellow {
-		@apply info-callout bg-yellow-900/20 border-yellow-400;
+		@apply border-l-4 rounded-none pl-4 py-4 pr-4 mb-6 bg-yellow-900/20 border-yellow-400;
 	}
 
 	.info-callout-green {
-		@apply info-callout bg-green-900/20 border-green-400;
+		@apply border-l-4 rounded-none pl-4 py-4 pr-4 mb-6 bg-green-900/20 border-green-400;
 	}
 
 	/* Risk Assessment Cards */
 	.risk-card {
-		@apply note-card-md;
+		@apply bg-slate-800 rounded-lg border-slate-700 border p-6;
 	}
 
 	.risk-card-high {
-		@apply risk-card note-bg-error note-border-error border;
+		@apply bg-slate-800 rounded-lg border p-6 bg-red-500/20 border-red-600/50;
 	}
 
 	.risk-card-medium {
-		@apply risk-card note-bg-warning note-border-warning border;
+		@apply bg-slate-800 rounded-lg border p-6 bg-yellow-500/20 border-yellow-600/50;
 	}
 
 	.risk-card-low {
-		@apply risk-card note-bg-success note-border-success border;
+		@apply bg-slate-800 rounded-lg border p-6 bg-green-500/20 border-green-600/50;
 	}
 
 	/* Risk Badge Styles */
@@ -351,28 +352,28 @@
 	}
 
 	.risk-badge-high {
-		@apply risk-badge note-bg-error note-color-error;
+		@apply px-3 py-1 rounded text-sm font-medium text-center bg-red-500/20 text-red-400;
 	}
 
 	.risk-badge-medium {
-		@apply risk-badge note-bg-warning note-color-warning;
+		@apply px-3 py-1 rounded text-sm font-medium text-center bg-yellow-500/20 text-yellow-400;
 	}
 
 	.risk-badge-low {
-		@apply risk-badge note-bg-success note-color-success;
+		@apply px-3 py-1 rounded text-sm font-medium text-center bg-green-500/20 text-green-400;
 	}
 
 	/* Grid Layouts for Cards */
 	.card-grid-2 {
-		@apply grid md:grid-cols-2 note-gap-lg;
+		@apply grid md:grid-cols-2 gap-6;
 	}
 
 	.card-grid-3 {
-		@apply grid md:grid-cols-2 lg:grid-cols-3 note-gap-md;
+		@apply grid md:grid-cols-2 lg:grid-cols-3 gap-4;
 	}
 
 	.card-grid-metrics {
-		@apply grid md:grid-cols-3 note-gap-md note-space-lg;
+		@apply grid md:grid-cols-3 gap-4 mb-6;
 	}
 }
 

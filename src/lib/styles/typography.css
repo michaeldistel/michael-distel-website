@@ -1,4 +1,5 @@
 /* Site-Wide Typography System */
+@reference "tailwindcss";
 
 /* Main Page Headings */
 .heading-page-title {
