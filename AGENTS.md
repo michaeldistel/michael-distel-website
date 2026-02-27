@@ -1,8 +1,8 @@
-# Copilot Instructions for Michael Distel's Website
+# Agent Instructions for Michael Distel's Website
 
 ## Project Overview
 
-SvelteKit-based personal website with statiion, Docker containerization, and remote deployment pipeline. Built for simplicity with production-ready infrastructure.
+SvelteKit-based personal website with static generation, Docker containerization, and remote deployment pipeline. Built for simplicity with production-ready infrastructure.
 
 ## Architecture & Stack
 
