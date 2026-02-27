@@ -42,10 +42,20 @@
 
 		<div class="prose prose-invert max-w-none">
 			<p class="lead">
-				I keep a running list of industrial automation repos because the space is noisy and weirdly
-				cyclical. Every few years someone "rediscovers" open PLCs, SCADA-in-a-browser, protocol
-				gateways, and IDE tooling. Most of it is hobby-grade. Some of it is quietly becoming
-				infrastructure.
+				I spent years in industrial environments — power plants, water treatment facilities, process
+				manufacturing — before writing a line of software professionally. I ran instrumentation, sat
+				in control rooms, and watched operators fight with tools that had not changed since the
+				1990s. That context is why I now build <ExternalLink href="https://controlforge.dev"
+					>ControlForge</ExternalLink
+				>, a VS Code extension for Structured Text. It is also why I keep a running list of
+				industrial automation repos.
+			</p>
+
+			<p>
+				The space is noisy and weirdly cyclical. Every few years someone "rediscovers" open PLCs,
+				SCADA-in-a-browser, protocol gateways, and IDE tooling. Most of it is hobby-grade. Some of
+				it is quietly becoming infrastructure. The hard part is knowing which is which before you
+				commit to a dependency.
 			</p>
 
 			<p>
@@ -82,6 +92,12 @@
 					If you are building here, your differentiation is rarely the protocol. It is the workflow,
 					operability, and distribution.
 				</p>
+				<p>
+					From the field: the protocols are solved. Operators and engineers do not care whether you
+					used <code>open62541</code> or a commercial stack — they care whether the system stays up,
+					whether they can diagnose it at 2am, and whether upgrades can happen without a maintenance
+					window. The repos that win long-term are the ones that internalize this.
+				</p>
 			</section>
 
 			<section>
@@ -95,6 +111,13 @@
 					</li>
 					<li>"Popular" (rule: >= 1,000 stars or >= 500 forks): 19/90.</li>
 				</ul>
+				<p>
+					24% stale is not alarming for a niche list. Industrial automation moves slowly by design —
+					a protocol library that hit 1.0 in 2018 and has not been touched since may still be
+					exactly what you need. The question is whether the stale repos are "done" or "abandoned".
+					The archive section is the latter. For the active 68, freshness is a useful but imperfect
+					signal: a burst of activity can mean a real release or just someone cleaning up issues.
+				</p>
 
 				<h3>List Composition (By Category)</h3>
 				<p>
@@ -175,6 +198,18 @@
 					<li>Rust: 4</li>
 				</ul>
 				<p>Translation: the glue is still .NET and Python; the protocol stacks are still C/C++.</p>
+				<p>
+					Rust at 4 repos is worth watching. Not because Rust will replace C in field devices
+					anytime soon — it will not — but because newer gateway and tooling work is starting there
+					deliberately. The choice signals something about maintainer culture: people who pick Rust
+					for this work tend to care about correctness in a way that matters when the thing you are
+					connecting to runs a turbine.
+				</p>
+				<p>
+					TypeScript at 9 tells you the browser-facing layer is real. VS Code extensions, SCADA web
+					UIs, edge dashboards. The OT/IT boundary is not a wall anymore; it is a gradient, and the
+					TypeScript repos are sitting right on it.
+				</p>
 			</section>
 
 			<section>
@@ -202,6 +237,20 @@
 					If you are building something that competes with these, you are not "building an
 					integration". You are picking a fight with incumbent open source gravity.
 				</p>
+				<p>
+					The star counts also reveal where the developer-facing interface is. Telegraf and
+					Mosquitto get stars from backend engineers and DevOps people who have never touched a PLC.
+					That cross-pollination is structural — once your industrial data is in InfluxDB or flowing
+					over MQTT, the toolchain from there is indistinguishable from any other time-series or
+					messaging problem. That is a feature. It means the talent pool for operating these systems
+					is far larger than the OT headcount would suggest.
+				</p>
+				<p>
+					The absence of CODESYS, Beckhoff TwinCAT, and Rockwell Studio 5000 from this list is
+					intentional — they are commercial and not open source. But their gravity shapes everything
+					here. Most of the "developer experience" repos exist because those vendors' tooling is
+					expensive, locked-in, or both.
+				</p>
 			</section>
 
 			<section>
@@ -220,6 +269,19 @@
 				<p>
 					This matters if you are betting on these projects: maintainer bandwidth and triage culture
 					are part of your supply chain.
+				</p>
+				<p>
+					883 open issues on <code>open62541</code> sounds alarming. It is not — it is a sign that the
+					project is load-bearing for a lot of real deployments across multiple industries and countries,
+					many of which have divergent edge cases. The issue queue is the project's surface area made
+					visible. Compare it to a project with 12 stars and 0 issues: the latter is not healthier; it
+					is just unknown.
+				</p>
+				<p>
+					What would worry me is a project with high star count, high issue count, and a commit
+					history that shows one or two people doing all the work with no sign of succession
+					planning. That is a supply chain risk in the real sense. FUXA at 360 open issues with a
+					small maintainer team is worth watching on that axis.
 				</p>
 			</section>
 
@@ -242,6 +304,20 @@
 				<p>
 					If you are a tooling startup, assume VS Code is the browser. Assume LSP is the product.
 				</p>
+				<p>
+					I built ControlForge in this space, so I have skin in the game here. The pattern is real:
+					when I ask automation engineers what they want, they do not ask for a new IDE. They ask
+					for the thing they already use (VS Code) to stop being useless with their language.
+					Diagnostics on save. Go-to-definition. Rename that actually works across files. These are
+					table stakes for any modern language and Structured Text has almost none of it outside
+					vendor tools that cost thousands per seat and only run on Windows.
+				</p>
+				<p>
+					The two-camp split (syntax coverage vs. LSP) is also a business model split. Syntax
+					coverage is a free tier: low friction, easy to distribute, spreads by word of mouth. LSP
+					is where you can charge, because it requires real investment to build and teams feel the
+					absence acutely once their codebase grows past a few hundred POUs.
+				</p>
 			</section>
 
 			<section>
@@ -262,6 +338,21 @@
 					As a founder, do not misread this as "Siemens is going open". It is "Siemens is making
 					integration cheaper". Still useful, still not altruistic.
 				</p>
+				<p>
+					The design system (<code>ix</code>) is the most interesting item on that list. It is
+					Siemens betting that the UI layer for industrial applications converges toward the same
+					component patterns as enterprise SaaS, just with more status indicators and fewer
+					marketing gradients. They are probably right. The teams building HMI and SCADA
+					replacements do not want to design a button component from scratch; they want something
+					that looks like it belongs in a control room without requiring a UX consultant to approve
+					it.
+				</p>
+				<p>
+					The perimeter strategy also means Siemens is not going to kill the open source ecosystem
+					for TIA Portal tooling — they will tolerate and occasionally enable it, because every
+					automation engineer who can script against TIA Portal via Openness is more productive and
+					less likely to switch vendors. Lock-in through productivity, not walls.
+				</p>
 			</section>
 
 			<section>
@@ -279,6 +370,16 @@
 				<p>
 					The lesson is not "copy OpenPLC". The lesson is that narrative plus an end-to-end path
 					(even if imperfect) beats a pure library.
+				</p>
+				<p>
+					The deeper lesson from OpenPLC's staleness is about the maintenance contract implicit in
+					any open-source runtime. Building a PLC runtime is not the hard part — determinism, scan
+					cycle guarantees, and hardware IO support are hard, but solvable. The hard part is the
+					10-year support contract you implicitly sign when engineers start deploying it in real
+					facilities. Thiago Alves built something real and then could not sustain it alone. That is
+					not a failure of the project; it is the economics of single-maintainer infrastructure.
+					Anyone building in this space should have an answer to "who maintains this in year 5?"
+					before year 1.
 				</p>
 			</section>
 
@@ -300,6 +401,13 @@
 					<li>check for dual-licensing,</li>
 					<li>check for copyleft components in the dependency chain.</li>
 				</ul>
+				<p>
+					The copyleft chain is where people get burned. A gateway that pulls in a GPL'd protocol
+					stack — even transitively — changes the compliance picture for the firmware you ship on
+					that gateway. In industrial, where the customer is often a large manufacturer with a legal
+					team that has seen GPL enforcement cases, this is not theoretical. It kills deals. Run
+					your SBOM before you commit to a dependency, not after you have a customer asking for it.
+				</p>
 			</section>
 
 			<section>
@@ -326,6 +434,22 @@
 						dependencies.
 					</li>
 				</ul>
+				<p>
+					The "gateways that are operationally boring" point deserves more emphasis. I have seen
+					what happens in a water treatment facility when a gateway loses its config after a power
+					cycle, or when firmware updates require physically pulling hardware. The operational cost
+					of a gateway that lacks rollback, remote config, and telemetry is paid in on-call hours,
+					not in GitHub issues. The market for "gateway that just works at 3am" is real and
+					underserved by the open source list.
+				</p>
+				<p>
+					The cross-vendor Structured Text tooling point is personal. The pain of working with ST
+					across CODESYS, TwinCAT, Siemens, and Allen-Bradley — all of which have slightly different
+					dialects and completely different tooling — is constant. Every automation team I have
+					talked to has the same problem: they have code across vendors, no way to lint it
+					consistently, no formatter they trust, and no CI pipeline because the vendor tools do not
+					have one. That is the hill I picked.
+				</p>
 			</section>
 
 			<section>
