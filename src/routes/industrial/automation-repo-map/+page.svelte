@@ -347,6 +347,7 @@
 </PageLayout>
 
 <style>
+	@reference "tailwindcss";
 	.prose {
 		@apply text-gray-300;
 	}
