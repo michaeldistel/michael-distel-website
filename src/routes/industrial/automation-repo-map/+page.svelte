@@ -42,8 +42,8 @@
 
 		<div class="prose prose-invert max-w-none">
 			<p class="lead">
-				I spent years in industrial environments — power plants, water treatment facilities, process
-				manufacturing — before writing a line of software professionally. I ran instrumentation, sat
+				I spent years in industrial environments (power plants, water treatment facilities, process
+				manufacturing) before writing a line of software professionally. I ran instrumentation, sat
 				in control rooms, and watched operators fight with tools that had not changed since the
 				1990s. That context is why I now build <ExternalLink href="https://controlforge.dev"
 					>ControlForge</ExternalLink
@@ -94,9 +94,9 @@
 				</p>
 				<p>
 					From the field: the protocols are solved. Operators and engineers do not care whether you
-					used <code>open62541</code> or a commercial stack — they care whether the system stays up,
-					whether they can diagnose it at 2am, and whether upgrades can happen without a maintenance
-					window. The repos that win long-term are the ones that internalize this.
+					used <code>open62541</code> or a commercial stack. They care whether the system stays up, whether
+					they can diagnose it at 2am, and whether upgrades can happen without a maintenance window.
+					The repos that win long-term are the ones that internalize this.
 				</p>
 			</section>
 
@@ -112,8 +112,8 @@
 					<li>"Popular" (rule: >= 1,000 stars or >= 500 forks): 19/90.</li>
 				</ul>
 				<p>
-					24% stale is not alarming for a niche list. Industrial automation moves slowly by design —
-					a protocol library that hit 1.0 in 2018 and has not been touched since may still be
+					24% stale is not alarming for a niche list. Industrial automation moves slowly by design.
+					A protocol library that hit 1.0 in 2018 and has not been touched since may still be
 					exactly what you need. The question is whether the stale repos are "done" or "abandoned".
 					The archive section is the latter. For the active 68, freshness is a useful but imperfect
 					signal: a burst of activity can mean a real release or just someone cleaning up issues.
@@ -200,7 +200,7 @@
 				<p>Translation: the glue is still .NET and Python; the protocol stacks are still C/C++.</p>
 				<p>
 					Rust at 4 repos is worth watching. Not because Rust will replace C in field devices
-					anytime soon — it will not — but because newer gateway and tooling work is starting there
+					anytime soon (it will not), but because newer gateway and tooling work is starting there
 					deliberately. The choice signals something about maintainer culture: people who pick Rust
 					for this work tend to care about correctness in a way that matters when the thing you are
 					connecting to runs a turbine.
@@ -240,14 +240,14 @@
 				<p>
 					The star counts also reveal where the developer-facing interface is. Telegraf and
 					Mosquitto get stars from backend engineers and DevOps people who have never touched a PLC.
-					That cross-pollination is structural — once your industrial data is in InfluxDB or flowing
+					That cross-pollination is structural. Once your industrial data is in InfluxDB or flowing
 					over MQTT, the toolchain from there is indistinguishable from any other time-series or
 					messaging problem. That is a feature. It means the talent pool for operating these systems
 					is far larger than the OT headcount would suggest.
 				</p>
 				<p>
 					The absence of CODESYS, Beckhoff TwinCAT, and Rockwell Studio 5000 from this list is
-					intentional — they are commercial and not open source. But their gravity shapes everything
+					intentional: they are commercial and not open source. But their gravity shapes everything
 					here. Most of the "developer experience" repos exist because those vendors' tooling is
 					expensive, locked-in, or both.
 				</p>
@@ -271,7 +271,7 @@
 					are part of your supply chain.
 				</p>
 				<p>
-					883 open issues on <code>open62541</code> sounds alarming. It is not — it is a sign that the
+					883 open issues on <code>open62541</code> sounds alarming. It is not. It is a sign that the
 					project is load-bearing for a lot of real deployments across multiple industries and countries,
 					many of which have divergent edge cases. The issue queue is the project's surface area made
 					visible. Compare it to a project with 12 stars and 0 issues: the latter is not healthier; it
@@ -349,7 +349,7 @@
 				</p>
 				<p>
 					The perimeter strategy also means Siemens is not going to kill the open source ecosystem
-					for TIA Portal tooling — they will tolerate and occasionally enable it, because every
+					for TIA Portal tooling. They will tolerate and occasionally enable it, because every
 					automation engineer who can script against TIA Portal via Openness is more productive and
 					less likely to switch vendors. Lock-in through productivity, not walls.
 				</p>
@@ -373,7 +373,7 @@
 				</p>
 				<p>
 					The deeper lesson from OpenPLC's staleness is about the maintenance contract implicit in
-					any open-source runtime. Building a PLC runtime is not the hard part — determinism, scan
+					any open-source runtime. Building a PLC runtime is not the hard part. Determinism, scan
 					cycle guarantees, and hardware IO support are hard, but solvable. The hard part is the
 					10-year support contract you implicitly sign when engineers start deploying it in real
 					facilities. Thiago Alves built something real and then could not sustain it alone. That is
@@ -403,10 +403,10 @@
 				</ul>
 				<p>
 					The copyleft chain is where people get burned. A gateway that pulls in a GPL'd protocol
-					stack — even transitively — changes the compliance picture for the firmware you ship on
-					that gateway. In industrial, where the customer is often a large manufacturer with a legal
-					team that has seen GPL enforcement cases, this is not theoretical. It kills deals. Run
-					your SBOM before you commit to a dependency, not after you have a customer asking for it.
+					stack, even transitively, changes the compliance picture for the firmware you ship on that
+					gateway. In industrial, where the customer is often a large manufacturer with a legal team
+					that has seen GPL enforcement cases, this is not theoretical. It kills deals. Run your
+					SBOM before you commit to a dependency, not after you have a customer asking for it.
 				</p>
 			</section>
 
@@ -444,8 +444,8 @@
 				</p>
 				<p>
 					The cross-vendor Structured Text tooling point is personal. The pain of working with ST
-					across CODESYS, TwinCAT, Siemens, and Allen-Bradley — all of which have slightly different
-					dialects and completely different tooling — is constant. Every automation team I have
+					across CODESYS, TwinCAT, Siemens, and Allen-Bradley (all of which have slightly different
+					dialects and completely different tooling) is constant. Every automation team I have
 					talked to has the same problem: they have code across vendors, no way to lint it
 					consistently, no formatter they trust, and no CI pipeline because the vendor tools do not
 					have one. That is the hill I picked.
