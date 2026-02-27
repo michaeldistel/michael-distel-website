@@ -81,9 +81,15 @@
   <!-- Other Sections -->
   <url>
     <loc>https://michaeldistel.com/industrial</loc>
-    <lastmod>2026-02-09</lastmod>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://michaeldistel.com/industrial/automation-repo-map</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://michaeldistel.com/travel</loc>
