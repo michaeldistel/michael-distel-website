@@ -216,6 +216,13 @@
 		color: rgb(147 197 253) !important;
 	}
 
+	/* Button overrides - must come after global link rules */
+	a.primary-button,
+	a.primary-button:hover {
+		color: rgb(209 213 219) !important;
+		text-decoration: none !important;
+	}
+
 	/* Ordered list styling for references */
 	.note-section ol {
 		list-style-type: decimal;

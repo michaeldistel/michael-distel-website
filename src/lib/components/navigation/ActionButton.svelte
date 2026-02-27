@@ -36,14 +36,5 @@
 </a>
 
 <style>
-	/* Override global link styles specifically for primary buttons */
-	:global(a.primary-button) {
-		color: rgb(209 213 219) !important;
-		text-decoration: none !important;
-	}
-
-	:global(a.primary-button:hover) {
-		color: rgb(209 213 219) !important;
-		text-decoration: none !important;
-	}
+	/* Color overrides handled globally in notes.css */
 </style>
