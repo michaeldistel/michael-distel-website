@@ -11,7 +11,7 @@
 	// Variant-specific styling
 	$: variantClasses = {
 		primary:
-			'bg-blue-600 text-white hover:bg-blue-500 focus:ring-2 focus:ring-blue-300 rounded-lg border border-transparent font-semibold',
+			'bg-blue-600 text-gray-300 hover:bg-blue-500 focus:ring-2 focus:ring-blue-300 rounded-lg border border-transparent font-semibold',
 		secondary:
 			'note-bg-surface-elevated text-gray-200 hover:bg-slate-600 focus:ring-2 focus:ring-slate-400 rounded-lg border border-transparent font-semibold',
 		link: 'text-blue-400 hover:text-blue-300 hover:underline underline-offset-4 decoration-2'
@@ -38,12 +38,12 @@
 <style>
 	/* Override global link styles specifically for primary buttons */
 	:global(a.primary-button) {
-		color: white !important;
+		color: rgb(209 213 219) !important;
 		text-decoration: none !important;
 	}
 
 	:global(a.primary-button:hover) {
-		color: white !important;
+		color: rgb(209 213 219) !important;
 		text-decoration: none !important;
 	}
 </style>
