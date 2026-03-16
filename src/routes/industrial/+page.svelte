@@ -22,9 +22,33 @@
 		Code extension at <ExternalLink href="https://controlforge.dev">controlforge.dev</ExternalLink>.
 	</p>
 
-	<!-- Placeholder for content -->
-	<p class="mb-6 md:text-xl sm:text-base">
-		Content coming soon. This will cover workflow improvements, testing patterns, and the small
-		utilities that can save surprising amounts of effort in industrial environments.
-	</p>
+	<!-- Content -->
+	<div class="space-y-8">
+		<!-- Blog Posts / Notes -->
+		<section>
+			<h2 class="text-2xl font-semibold mb-4">Notes</h2>
+			<div class="space-y-4">
+				<article
+					class="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors"
+				>
+					<h3 class="text-xl font-semibold mb-2">
+						<a href="/industrial/automation-repo-map" class="hover:text-blue-400 transition-colors">
+							Industrial Automation Repo Map
+						</a>
+					</h3>
+					<time class="text-gray-400 text-sm mb-3 block">27 February 2026</time>
+					<p class="text-gray-300 mb-4">
+						Analysis of 90 industrial automation open source repos: protocol plumbing, edge tooling,
+						and developer experience. Where the real adoption sits and what matters operationally.
+					</p>
+					<a
+						href="/industrial/automation-repo-map"
+						class="text-blue-400 hover:text-blue-300 text-sm font-medium"
+					>
+						Read more →
+					</a>
+				</article>
+			</div>
+		</section>
+	</div>
 </PageLayout>
