@@ -37,29 +37,20 @@
 
 	<!-- Introduction continuation -->
 	<p class="mb-4 note-text-body-lg">
-		I have worked on a few companies, helped with <a href="/startup" class="note-link-primary"
-			>fundraising</a
-		>, and built systems where reliability matters. These experiences taught me some practical
+		I have worked on a few companies, helped with fundraising, and built systems where reliability
+		matters. These experiences taught me some practical
 		lessons about timing, capital efficiency, and what tends to break when systems scale. I am still
 		working out how far those lessons carry beyond the specific cases I have seen.
 	</p>
 	<p class="note-text-body-lg mb-8">
-		The <a href="/startup/notes" class="note-link-primary">notes here</a> are part of that process. They
-		reflect ongoing learning rather than fixed conclusions. Writing helps me clarify my thinking, and
+		The notes here are part of that process. They reflect ongoing learning rather than fixed
+		conclusions. Writing helps me clarify my thinking, and
 		making it public adds just enough pressure to be more precise about ideas that might otherwise stay
 		half-formed.
 	</p>
 
 	<!-- Topic Cards -->
-	<CardGrid columns={3} className="mb-8">
-		<Card
-			title="Startup & Fundraising"
-			subtitle="Early-stage fundraising, founder experiences, capital efficiency. Based on experience raising funds and observing the startup ecosystem."
-			titleColor="note-color-primary"
-		>
-			<ActionButton href="/startup" size="sm">Read notes →</ActionButton>
-		</Card>
-
+	<CardGrid columns={2} className="mb-8">
 		<Card
 			title="Adventures"
 			subtitle="Slow travel, persistence, and small daily progress. Including Kicking Miles journeys across Japan and Korea."
