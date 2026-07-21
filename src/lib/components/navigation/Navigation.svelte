@@ -6,7 +6,6 @@
 	const navItems = [
 		{ path: '/', label: 'Home' },
 		{ path: '/about', label: 'About' },
-		{ path: '/startup', label: 'Startup' },
 		{ path: '/industrial', label: 'Industrial' },
 		{ path: '/adventures', label: 'Adventures' },
 		{ path: '/contact', label: 'Contact' }
@@ -18,10 +17,8 @@
 	let scrollingDown = false;
 	let showMenu = false;
 
-	// Reactive values for note detection and current path
+	// Reactive value for current path
 	$: currentPath = $page.url.pathname;
-	$: isNotePage =
-		currentPath.includes('/startup/notes/') && !currentPath.endsWith('/startup/notes');
 
 	// Reactive function to check if current path matches nav item
 	$: checkActivePath = (path: string) => {
@@ -77,15 +74,6 @@
 
 	function closeMenu() {
 		showMenu = false;
-	}
-
-	// Note control functions
-	function handleToggleTOC() {
-		// Dispatch custom event that DetailedNote can listen to
-		if (typeof window !== 'undefined') {
-			window.dispatchEvent(new CustomEvent('toggleTOC'));
-		}
-		closeMenu();
 	}
 
 	// Handle escape key
@@ -166,28 +154,6 @@
 						</a>
 					{/each}
 				</nav>
-
-				<!-- Note Controls (desktop) -->
-				{#if isNotePage}
-					<div class="flex items-center space-x-4">
-						<!-- Table of Contents -->
-						<button
-							on:click={handleToggleTOC}
-							class="text-sm text-gray-300 hover:text-white transition-colors"
-							title="Table of Contents"
-							aria-label="Table of Contents"
-						>
-							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M4 6h16M4 12h16M4 18h16"
-								></path>
-							</svg>
-						</button>
-					</div>
-				{/if}
 			</div>
 		</div>
 	</div>
@@ -226,30 +192,6 @@
 					{/each}
 				</ul>
 			</nav>
-
-			<!-- Note Controls (only show on note pages) -->
-			{#if isNotePage}
-				<div class="border-t border-slate-700 pt-8 w-full max-w-sm">
-					<h3 class="text-lg font-medium text-gray-300 mb-4 text-center">Note Controls</h3>
-					<div class="space-y-4">
-						<!-- Table of Contents -->
-						<button
-							on:click={handleToggleTOC}
-							class="w-full flex items-center justify-center gap-3 px-6 py-3 text-gray-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-						>
-							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M4 6h16M4 12h16M4 18h16"
-								></path>
-							</svg>
-							Table of Contents
-						</button>
-					</div>
-				</div>
-			{/if}
 		</div>
 	</div>
 {/if}
