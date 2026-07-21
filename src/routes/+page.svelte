@@ -50,7 +50,7 @@
 	</p>
 
 	<!-- Topic Cards -->
-	<CardGrid columns={2} className="mb-8">
+	<CardGrid columns={3} className="mb-8">
 		<Card
 			title="Adventures"
 			subtitle="Slow travel, persistence, and small daily progress. Including Kicking Miles journeys across Japan and Korea."
@@ -65,6 +65,14 @@
 				<ExternalLink href="https://controlforge.dev">controlforge.dev</ExternalLink>.
 			</p>
 			<ActionButton href="/industrial" size="sm">View projects →</ActionButton>
+		</Card>
+
+		<Card
+			title="Family Archive"
+			subtitle="Letters, diaries and photographs from the Distel family, gathered and shared one story at a time. Starting with Willi Distel's 1920s diary."
+			titleColor="text-amber-400"
+		>
+			<ActionButton href="https://distelfamily.com" size="sm" newTab>Visit archive →</ActionButton>
 		</Card>
 	</CardGrid>
 </PageLayout>
