@@ -110,25 +110,20 @@ production. The user must confirm deployment first.
 
 > **This section is historical.** Before the move to Cloudflare Pages, the site
 > was served by containerised nginx on a self-hosted server, deployed over rsync
-> and restarted with Docker Compose (`pnpm prod:deploy`).
->
-> That path is **retired**. Do not use it, and do not follow it when reasoning
-> about how the site ships. It is recorded only so the leftover files below make
-> sense.
+> and restarted with Docker Compose. That path is **retired** - do not follow it
+> when reasoning about how the site ships.
 
-The files `nginx/`, `prod.compose.yml` and `prod.deploy.files.txt` remain in the
-repo but are dead weight. Their behaviour was:
+The `nginx/`, `prod.compose.yml` and `prod.deploy.files.txt` files have been
+removed. What they used to do now lives here:
 
-- Domain redirect from the secondary domain to `michaeldistel.com` - now handled
-  by a Cloudflare redirect rule
+- Domain redirect from the secondary domain to `michaeldistel.com` - a
+  Cloudflare redirect rule on the zone
 - Static asset caching and security headers (CSP, HSTS, permissions policy) -
-  now in `static/_headers`
-- A health check endpoint and container resource limits - not applicable to
-  Pages
+  `static/_headers`
+- Health check endpoint and container resource limits - not applicable to Pages
 
-If you are touching headers, caching or redirects, edit `static/_headers` (or
-the Cloudflare dashboard). Editing `nginx/default.conf` has no effect on
-production.
+If you are touching headers, caching or redirects, edit `static/_headers` or the
+Cloudflare dashboard.
 
 ## Component Architecture
 
@@ -187,9 +182,6 @@ Use the established component system to maintain visual consistency and eliminat
 - `src/app.html`: GTM analytics integration and meta tags
 - `static/_headers`: Production security headers and cache policy (Cloudflare Pages)
 - `AGENTS.md`: This file - agent instructions and conventions
-
-Historical only, safe to ignore: `nginx/default.conf`, `prod.compose.yml`,
-`prod.deploy.files.txt`.
 
 ## Project-Specific Conventions
 

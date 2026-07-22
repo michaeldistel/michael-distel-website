@@ -77,9 +77,7 @@ Response headers (CSP, HSTS, permissions policy) and cache rules are defined in
 
 The site used to be served by containerised nginx behind Traefik on a
 self-hosted server, deployed over rsync and Docker Compose. That path is
-**retired**. The leftover `nginx/`, `prod.compose.yml` and
-`prod.deploy.files.txt` files are kept for reference only and have no effect on
-production.
+**retired** and its files have been removed from the repo.
 
 ## Contributing
 
