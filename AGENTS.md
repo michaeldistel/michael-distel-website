@@ -51,6 +51,28 @@ pnpm check           # Type checking and svelte-check
 pnpm format          # Prettier formatting
 ```
 
+### Git Workflow
+
+`main` is protected: it requires a pull request and `enforce_admins` is on, so
+direct pushes to `main` are rejected even for the repo owner. All changes land
+via PR.
+
+PRs are merged with squash or rebase, which rewrites commit hashes. A merged
+branch therefore no longer looks merged to git, and any further commits on it
+strand quietly - `git status` reports "ahead by N" against a remote branch that
+has already been deleted.
+
+After a PR merges, always resync before starting new work:
+
+```bash
+git checkout main
+git pull
+git fetch --prune     # Clears remote-tracking refs for deleted branches
+```
+
+Then branch off the updated `main`. Never keep committing to a branch whose PR
+has already merged.
+
 ### Production Deployment
 
 ```bash
