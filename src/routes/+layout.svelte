@@ -14,7 +14,7 @@
 <div class="min-h-screen flex flex-col">
 	<!-- Navigation -->
 	<Navigation />
-	
+
 	<main class="flex-grow md:pt-16">
 		<slot />
 	</main>

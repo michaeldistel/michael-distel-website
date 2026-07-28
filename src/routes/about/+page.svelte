@@ -2,15 +2,15 @@
 	import PageLayout from '$lib/components/layout/PageLayout.svelte';
 	import PageHeader from '$lib/components/layout/PageHeader.svelte';
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>About Michael Distel</title>
-	<meta
-		name="description"
-		content="Personal notes and reflections from someone exploring ideas about startups, industrial automation, and blockchain development through direct experience and ongoing learning."
-	/>
+<Seo
+	title="About Michael Distel"
+	description="Personal notes and reflections from someone exploring ideas about startups, industrial automation, and blockchain development through direct experience and ongoing learning."
+/>
 
+<svelte:head>
 	<!-- Structured Data for Person -->
 	<script type="application/ld+json">
 		{

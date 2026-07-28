@@ -2,6 +2,7 @@
 	import PageLayout from '$lib/components/layout/PageLayout.svelte';
 	import Breadcrumbs from '$lib/components/navigation/Breadcrumbs.svelte';
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	const breadcrumbs = [
 		{ label: 'Home', href: '/' },
@@ -39,19 +40,13 @@
 	];
 </script>
 
+<Seo
+	title="Industrial Automation Repo Map | Michael Distel"
+	description="Analysis of 90 industrial automation open source repos: protocol plumbing, edge tooling, and developer experience. Where the real adoption sits and what matters operationally."
+	ogType="article"
+/>
+
 <svelte:head>
-	<title>Industrial Automation Repo Map | Michael Distel</title>
-	<meta
-		name="description"
-		content="Analysis of 90 industrial automation open source repos: protocol plumbing, edge tooling, and developer experience. Where the real adoption sits and what matters operationally."
-	/>
-	<meta property="og:type" content="article" />
-	<meta property="og:url" content="https://michaeldistel.com/industrial/automation-repo-map" />
-	<meta property="og:title" content="Industrial Automation Repo Map" />
-	<meta
-		property="og:description"
-		content="Analysis of 90 industrial automation open source repos: protocol plumbing, edge tooling, and developer experience."
-	/>
 	<meta property="og:site_name" content="Michael Distel" />
 	<meta property="article:published_time" content="2026-02-27" />
 	<meta property="article:author" content="Michael Distel" />

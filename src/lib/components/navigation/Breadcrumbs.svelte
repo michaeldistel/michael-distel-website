@@ -14,14 +14,14 @@
 					{:else}
 						<span class="note-text-caption">{item.label}</span>
 					{/if}
-					
+
 					{#if index < items.length - 1}
 						<span class="mx-2 note-text-label-muted">→</span>
 					{/if}
 				</li>
 			{/each}
 		</ol>
-		
+
 		<!-- Structured Data for Breadcrumbs -->
 		<script type="application/ld+json">
 			{

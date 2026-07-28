@@ -1,7 +1,14 @@
 <script>
 	import PageLayout from '$lib/components/layout/PageLayout.svelte';
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 </script>
+
+<Seo
+	title="Server error | Michael Distel"
+	description="Something went wrong on the server. Please try again later."
+	noindex
+/>
 
 <PageLayout>
 	<div class="text-center py-8">

@@ -1,15 +1,13 @@
 <script>
 	import PageLayout from '$lib/components/layout/PageLayout.svelte';
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>Korea 2025 | Busan to Seoul | Kicking Miles | Michael Distel</title>
-	<meta
-		name="description"
-		content="A 560km, 11-day kick-scooter trip across South Korea from Busan to Seoul in October 2025. Daily journal and route notes on Kicking Miles."
-	/>
-</svelte:head>
+<Seo
+	title="Korea 2025 | Busan to Seoul | Kicking Miles | Michael Distel"
+	description="A 560km, 11-day kick-scooter trip across South Korea from Busan to Seoul in October 2025. Daily journal and route notes on Kicking Miles."
+/>
 
 <PageLayout>
 	<h1 class="heading-page-title">Korea 2025</h1>

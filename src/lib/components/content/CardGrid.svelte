@@ -12,7 +12,7 @@
 
 	const gapClasses = {
 		sm: 'note-gap-md',
-		md: 'note-gap-lg', 
+		md: 'note-gap-lg',
 		lg: 'note-gap-xl'
 	};
 </script>

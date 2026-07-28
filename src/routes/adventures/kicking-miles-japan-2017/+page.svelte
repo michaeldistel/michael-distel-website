@@ -1,15 +1,13 @@
 <script>
 	import PageLayout from '$lib/components/layout/PageLayout.svelte';
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>Kicking Miles Japan 2017 | 1,800km Kick-Scooter Adventure | Michael Distel</title>
-	<meta
-		name="description"
-		content="The complete story of kick-scootering 1,800 kilometres across Japan in 40 days. From Fukuoka to Hakodate, daily progress, challenges, and lessons learned on the road."
-	/>
-</svelte:head>
+<Seo
+	title="Kicking Miles Japan 2017 | 1,800km Kick-Scooter Adventure | Michael Distel"
+	description="The complete story of kick-scootering 1,800 kilometres across Japan in 40 days. From Fukuoka to Hakodate, daily progress, challenges, and lessons learned on the road."
+/>
 
 <PageLayout>
 	<!-- Main Heading -->
@@ -96,9 +94,7 @@
 
 		<div class="grid md:grid-cols-2 gap-4 mb-4">
 			<div>
-				<h4 class="heading-subheading">
-					Southern Route (Kyushu & Western Honshu):
-				</h4>
+				<h4 class="heading-subheading">Southern Route (Kyushu & Western Honshu):</h4>
 				<ul class="list-disc list-inside space-y-1 text-base ml-4">
 					<li>Fukuoka (Start)</li>
 					<li>Kitakyushu</li>
@@ -110,9 +106,7 @@
 			</div>
 
 			<div>
-				<h4 class="heading-subheading">
-					Northern Route (Eastern Honshu & Hokkaido):
-				</h4>
+				<h4 class="heading-subheading">Northern Route (Eastern Honshu & Hokkaido):</h4>
 				<ul class="list-disc list-inside space-y-1 text-base ml-4">
 					<li>Kyoto</li>
 					<li>Tokyo</li>

@@ -50,11 +50,6 @@
 		<link rel="manifest" href="%sveltekit.assets%/site.webmanifest" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Michael Distel | Notes and experiments</title>
-		<meta
-			name="description"
-			content="Personal website for exploring ideas about startups, blockchain infrastructure, and industrial automation. Notes from someone trying to understand what actually works."
-		/>
 		<meta name="author" content="Michael Distel" />
 		<!-- Add relevant keywords for your site -->
 		<meta
@@ -62,31 +57,15 @@
 			content="michael distel, startup notes, early stage, fundraising, blockchain infrastructure, industrial automation, controlforge"
 		/>
 
-		<!-- Open Graph Meta Tags (for social media like Facebook, LinkedIn) -->
-		<!-- Ensure 'your-social-image.png' exists in your 'static' folder or update the path -->
-		<meta property="og:title" content="Michael Distel | Notes and experiments" />
-		<meta
-			property="og:description"
-			content="Personal website for exploring ideas about startups, blockchain infrastructure, and industrial automation. Notes from someone trying to understand what works."
-		/>
-		<meta property="og:type" content="website" />
-		<!-- Replace with your actual deployed website URL -->
-		<meta property="og:url" content="https://michaeldistel.com/" />
-		<meta property="og:image" content="%sveltekit.assets%/android-chrome-512x512.png" />
-		<!-- Recommended image size: 1200x630 pixels -->
+		<!-- Title, description and the og:/twitter: text tags are per-page and live in
+		     Seo.svelte. Putting them here as well gives every page two of each. -->
 
-		<!-- Twitter Card Meta Tags -->
-		<!-- Ensure 'your-twitter-image.png' exists in your 'static' folder or update the path -->
+		<!-- Social card image, shared by every page. Must be an absolute URL:
+		     %sveltekit.assets% resolves to a relative path under adapter-static,
+		     which Facebook, LinkedIn and X all ignore. -->
+		<meta property="og:image" content="https://michaeldistel.com/android-chrome-512x512.png" />
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Michael Distel | Notes and experiments" />
-		<meta
-			name="twitter:description"
-			content="Personal website for exploring ideas about startups, blockchain infrastructure, and industrial automation. Notes from someone trying to understand what works."
-		/>
-		<meta name="twitter:image" content="%sveltekit.assets%/android-chrome-512x512.png" />
-		<!-- Recommended image size: Same as og:image or specific Twitter sizes -->
-		<!-- <meta name="twitter:site" content="@yourTwitterHandle"> -->
-		<!-- <meta name="twitter:creator" content="@yourTwitterHandle"> -->
+		<meta name="twitter:image" content="https://michaeldistel.com/android-chrome-512x512.png" />
 
 		<!-- Speculation Rules API for Speed Brain functionality -->
 		<script type="speculationrules">
