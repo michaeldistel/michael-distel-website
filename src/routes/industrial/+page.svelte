@@ -2,15 +2,13 @@
 	import PageLayout from '$lib/components/layout/PageLayout.svelte';
 	import PageHeader from '$lib/components/layout/PageHeader.svelte';
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>Industrial Automation | Michael Distel</title>
-	<meta
-		name="description"
-		content="Industrial automation workflows and efficiency improvements. Experience with power plants, water treatment facilities, and VS Code extension development at controlforge.dev."
-	/>
-</svelte:head>
+<Seo
+	title="Industrial Automation | Michael Distel"
+	description="Industrial automation workflows and efficiency improvements. Experience with power plants, water treatment facilities, and VS Code extension development at controlforge.dev."
+/>
 
 <PageLayout>
 	<PageHeader title="Industrial" subtitle="Automation workflows and small efficiency gains" />

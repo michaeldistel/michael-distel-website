@@ -2,15 +2,13 @@
 	import PageLayout from '$lib/components/layout/PageLayout.svelte';
 	import PageHeader from '$lib/components/layout/PageHeader.svelte';
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>Research Bot Information | Michael Distel</title>
-	<meta
-		name="description"
-		content="Information about MichaelDistelResearchBot web crawler used for investment research and data gathering. Bot policy, contact information, and usage guidelines."
-	/>
-</svelte:head>
+<Seo
+	title="Research Bot Information | Michael Distel"
+	description="Information about MichaelDistelResearchBot web crawler used for investment research and data gathering. Bot policy, contact information, and usage guidelines."
+/>
 
 <PageLayout maxWidth="3xl">
 	<PageHeader title="Research Bot Information" />

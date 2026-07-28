@@ -1,15 +1,13 @@
 <script>
 	import PageLayout from '$lib/components/layout/PageLayout.svelte';
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>Japan 2023 | Tokyo to Nasu | Kicking Miles | Michael Distel</title>
-	<meta
-		name="description"
-		content="A 3-day, ~150km kick-scooter trip from Tokyo to Nasu (Tochigi) in October 2023. A shorter return to Japan with a daily journal on Kicking Miles."
-	/>
-</svelte:head>
+<Seo
+	title="Japan 2023 | Tokyo to Nasu | Kicking Miles | Michael Distel"
+	description="A 3-day, ~150km kick-scooter trip from Tokyo to Nasu (Tochigi) in October 2023. A shorter return to Japan with a daily journal on Kicking Miles."
+/>
 
 <PageLayout>
 	<h1 class="heading-page-title">Japan 2023</h1>

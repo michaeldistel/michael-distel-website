@@ -2,15 +2,13 @@
 	import PageLayout from '$lib/components/layout/PageLayout.svelte';
 	import PageHeader from '$lib/components/layout/PageHeader.svelte';
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>Contact Michael Distel</title>
-	<meta
-		name="description"
-		content="Get in touch with Michael Distel via email, LinkedIn, and Telegram for conversations about startups, automation, or other shared interests."
-	/>
-</svelte:head>
+<Seo
+	title="Contact Michael Distel"
+	description="Get in touch with Michael Distel via email, LinkedIn, and Telegram for conversations about startups, automation, or other shared interests."
+/>
 
 <PageLayout>
 	<PageHeader
@@ -22,30 +20,21 @@
 	<div class="space-y-4">
 		<div class="note-space-md">
 			<h3 class="heading-contact">Email</h3>
-			<ExternalLink
-				href="mailto:michael@distel.me"
-				className="note-link-contact"
-			>
+			<ExternalLink href="mailto:michael@distel.me" className="note-link-contact">
 				michael@distel.me
 			</ExternalLink>
 		</div>
 
 		<div class="note-space-md">
 			<h3 class="heading-contact">LinkedIn</h3>
-			<ExternalLink
-				href="https://www.linkedin.com/in/michaeldistel/"
-				className="note-link-contact"
-			>
+			<ExternalLink href="https://www.linkedin.com/in/michaeldistel/" className="note-link-contact">
 				linkedin.com/in/michaeldistel/
 			</ExternalLink>
 		</div>
 
 		<div class="note-space-md">
 			<h3 class="heading-contact">Telegram</h3>
-			<ExternalLink
-				href="https://t.me/michaeldistel"
-				className="note-link-contact"
-			>
+			<ExternalLink href="https://t.me/michaeldistel" className="note-link-contact">
 				@michaeldistel
 			</ExternalLink>
 		</div>

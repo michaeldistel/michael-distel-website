@@ -5,7 +5,13 @@
 	import Card from '$lib/components/content/Card.svelte';
 	import ActionButton from '$lib/components/navigation/ActionButton.svelte';
 	import ExternalLink from '$lib/components/navigation/ExternalLink.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 </script>
+
+<Seo
+	title="Michael Distel | Notes and experiments"
+	description="Personal website for exploring ideas about startups, blockchain infrastructure, and industrial automation. Notes from someone trying to understand what actually works."
+/>
 
 <svelte:head>
 	<!-- Structured Data for Website -->
@@ -38,15 +44,14 @@
 	<!-- Introduction continuation -->
 	<p class="mb-4 note-text-body-lg">
 		I have worked on a few companies, helped with fundraising, and built systems where reliability
-		matters. These experiences taught me some practical
-		lessons about timing, capital efficiency, and what tends to break when systems scale. I am still
-		working out how far those lessons carry beyond the specific cases I have seen.
+		matters. These experiences taught me some practical lessons about timing, capital efficiency,
+		and what tends to break when systems scale. I am still working out how far those lessons carry
+		beyond the specific cases I have seen.
 	</p>
 	<p class="note-text-body-lg mb-8">
 		The notes here are part of that process. They reflect ongoing learning rather than fixed
-		conclusions. Writing helps me clarify my thinking, and
-		making it public adds just enough pressure to be more precise about ideas that might otherwise stay
-		half-formed.
+		conclusions. Writing helps me clarify my thinking, and making it public adds just enough
+		pressure to be more precise about ideas that might otherwise stay half-formed.
 	</p>
 
 	<!-- Topic Cards -->

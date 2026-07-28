@@ -4,15 +4,13 @@
 	import CardGrid from '$lib/components/content/CardGrid.svelte';
 	import Card from '$lib/components/content/Card.svelte';
 	import ActionButton from '$lib/components/navigation/ActionButton.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>Adventures | Michael Distel</title>
-	<meta
-		name="description"
-		content="Adventure stories and lessons in persistence, including the 1,800km kick-scooter journey across Japan. Notes on slow travel, daily progress, and what you learn when you take the long way."
-	/>
-</svelte:head>
+<Seo
+	title="Adventures | Michael Distel"
+	description="Adventure stories and lessons in persistence, including the 1,800km kick-scooter journey across Japan. Notes on slow travel, daily progress, and what you learn when you take the long way."
+/>
 
 <PageLayout>
 	<PageHeader
