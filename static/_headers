@@ -6,27 +6,31 @@
 # never in /* - to avoid concatenated, conflicting values. HTML pages fall
 # back to the Pages default cache behaviour.
 #
-# CSP and GA4: the analytics allowances below are deliberate, not incidental.
-#   *.google-analytics.com   GA4 routes hits to regionN.google-analytics.com
-#                            based on visitor location. The old policy named
-#                            region1 only, so visitors routed anywhere else
-#                            had their hits blocked outright.
-#   analytics.google.com     second collection endpoint GA4 fires alongside
-#   stats.g.doubleclick.net  Google Signals: cross-device and demographics
-#   www.google.com           Google Signals, same purpose
+# CSP and analytics: the allowances below are deliberate, not incidental.
+# Analytics is direct GA4 loaded from our own static/analytics.js (no Google
+# Tag Manager), same setup as distelfamily.com, plus Cloudflare Web Analytics
+# (cookieless, injected by Cloudflare). That needs exactly:
+#   www.googletagmanager.com   script-src and connect-src: gtag.js itself is
+#                              served from this host
+#   *.google-analytics.com     GA4 routes hits to regionN.google-analytics.com
+#                              based on visitor location; a named region would
+#                              block everyone routed elsewhere
+#   *.analytics.google.com     second collection endpoint GA4 fires alongside
+#   cloudflareinsights.com     Cloudflare Web Analytics beacon
+# Google Signals endpoints (stats.g.doubleclick.net, www.google.com) are gone
+# on purpose: analytics.js sets allow_google_signals false, so nothing calls
+# them. Anything else external would need its own entry here - do not add one
+# without deciding it is worth the exposure.
 #
-# Still blocked on purpose: the ga-audiences remarketing pixel, which fires
-# against the visitor's local Google domain (www.google.com.sg, .co.uk, and
-# so on). CSP has no wildcard for top-level domains, so allowing it properly
-# would mean enumerating every ccTLD. It only feeds Google Ads remarketing
-# audiences and has no effect on measurement. If the console noise is
-# irritating, turn Google Signals off in GA4 rather than widening this.
+# frame-src: the Japan 2017 adventure page embeds a Google My Maps iframe;
+# without this entry frames fall back to default-src 'self' and the map is
+# blocked.
 
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.google-analytics.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://stats.g.doubleclick.net https://www.google.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.google.com https://cloudflareinsights.com;
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://*.google-analytics.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://cloudflareinsights.com; frame-src https://www.google.com
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
 
