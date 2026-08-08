@@ -17,7 +17,7 @@ run", not "which machine it lands on".
 - **Design Philosophy**: Mobile-first responsive design - all components and layouts prioritize mobile experience
 - **Build**: Vite, TypeScript, pnpm package manager
 - **Deployment**: Cloudflare Pages (static upload of the `build/` directory)
-- **Analytics**: Simple Google Tag Manager integration
+- **Analytics**: Direct GA4 via self-hosted `static/analytics.js` (no tag manager)
 - **CDN**: Cloudflare for DNS, caching, and security
 - **Git Management**: GitHub CLI (`gh`) for repository operations and workflow management
 
@@ -44,8 +44,15 @@ run", not "which machine it lands on".
 
 ### Privacy & Analytics
 
-- Basic Google Tag Manager integration loaded directly in `src/app.html`
-- Simple analytics setup without privacy consent requirements
+- Direct GA4 in `static/analytics.js`, loaded by one script tag before
+  `</body>` in `src/app.html` - same pattern as distelfamily.com. No Google
+  Tag Manager. The measurement ID lives only in that file; emptying it turns
+  analytics off
+- Privacy-tight config: anonymised IP, Google Signals and ad personalisation
+  off. No consent banner needed
+- `static/_headers` caches `/*.js` as immutable for a year, so any edit to
+  `analytics.js` must bump the `?v=` on the script tag in `src/app.html`
+- Cloudflare Web Analytics runs alongside (cookieless, injected by Cloudflare)
 
 ## Critical Workflows
 
@@ -179,7 +186,8 @@ Use the established component system to maintain visual consistency and eliminat
 
 - `package.json`: Scripts show deployment pipeline and build process
 - `src/routes/+layout.svelte`: Global layout patterns and canonical URL handling
-- `src/app.html`: GTM analytics integration and meta tags
+- `src/app.html`: Site-wide meta tags and the analytics script tag
+- `static/analytics.js`: GA4 measurement ID and all analytics logic
 - `static/_headers`: Production security headers and cache policy (Cloudflare Pages)
 - `AGENTS.md`: This file - agent instructions and conventions
 

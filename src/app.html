@@ -3,25 +3,6 @@
 	<head>
 		<meta charset="utf-8" />
 
-		<!-- Google Tag Manager -->
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			(function (w, d, s, l, i) {
-				w[l] = w[l] || [];
-				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-				var f = d.getElementsByTagName(s)[0],
-					j = d.createElement(s),
-					dl = l != 'dataLayer' ? '&l=' + l : '';
-				j.async = true;
-				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-				j.onerror = () => {
-					console.error('Failed to load GTM');
-				};
-				f.parentNode.insertBefore(j, f);
-			})(window, document, 'script', 'dataLayer', 'GTM-KG6VCVB');
-		</script>
-		<!-- End Google Tag Manager -->
-
 		<!-- Standard Favicon -->
 		<link rel="icon" href="%sveltekit.assets%/favicon.ico" type="image/x-icon" />
 
@@ -89,17 +70,11 @@
 	</head>
 
 	<body class="bg-slate-900 text-gray-100" data-sveltekit-preload-data="hover">
-		<!-- Google Tag Manager (noscript) -->
-		<noscript
-			><iframe
-				src="https://www.googletagmanager.com/ns.html?id=GTM-KG6VCVB"
-				height="0"
-				width="0"
-				style="display: none; visibility: hidden"
-			></iframe
-		></noscript>
-		<!-- End Google Tag Manager (noscript) -->
-
 		<div style="display: contents">%sveltekit.body%</div>
+
+		<!-- Direct GA4, no tag manager. The measurement ID and all analytics logic
+		     live in static/analytics.js; bump ?v= whenever that file changes
+		     (_headers caches /*.js as immutable for a year). -->
+		<script src="%sveltekit.assets%/analytics.js?v=1" defer></script>
 	</body>
 </html>
